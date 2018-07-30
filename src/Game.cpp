@@ -5,6 +5,7 @@
 #include <chrono>
 #include "./Utility.h"
 #include "./GameRender.h"
+#include "./GameMap.h"
 #include "./InputController.h"
 #include "./LevelManager.h"
 #include "./ScoreBoard.h"
@@ -59,6 +60,7 @@ Game::Game(int gameMode) {
 
     void Game::changeMap(InputController *inputObject, LevelManager *levelManager,
                    ScoreBoard *scoreBoard) {
+        levelManager->getPlayer()->setIsMoving(false);
         int row = inputObject->getAxisY();
         int col = inputObject->getAxisX();
         if ((levelManager->getMapSymbol(levelManager->getPlayerRow() + row,
@@ -73,8 +75,8 @@ Game::Game(int gameMode) {
             }
             levelManager->setMapSymbol(levelManager->getPlayerRow(),
                                        levelManager->getPlayerCol(), '.');
-            levelManager->setPlayerRow(levelManager->getPlayerRow()+row);
-            levelManager->setPlayerCol(levelManager->getPlayerCol()+col);
+            levelManager->setPlayerRow(levelManager->getPlayerRow() + row);
+            levelManager->setPlayerCol(levelManager->getPlayerCol() + col);
             levelManager->setMapSymbol(levelManager->getPlayerRow(),
                                        levelManager->getPlayerCol(), levelManager->getPlayer()->getSymbol());
         } else if (levelManager->getMapSymbol(levelManager->getPlayerRow() + row,
@@ -83,7 +85,6 @@ Game::Game(int gameMode) {
                                   static_cast<int>(levelManager->getSecondsUsed()));
             setGameMode(1);
             bool isNextLevelExist = levelManager->nextLevel();
-            inputObject->setDirection(4);
             if (!isNextLevelExist) {
                 gameEnd(levelManager,  scoreBoard, true);
             }
@@ -93,26 +94,31 @@ Game::Game(int gameMode) {
         }
     }
 
+//    void Game::eachSecondUpdate(InputController *inputObject, LevelManager *levelObject,
+//                      ScoreBoard *scoreBoard) {
+//        // здесь производить ресурсы и прочее посекундное дело
+//    }
+
     void Game::update(InputController *inputObject, LevelManager *levelObject,
                       ScoreBoard *scoreBoard, double deltaTime) {
         if (getGameMode() == 0) {
             levelObject->setSecondsUsed(levelObject->getSecondsUsed() + deltaTime);
             levelObject->setTickCounter(levelObject->getTickCounter() + 1);
         }
-        if (levelObject->getSecondsUsed() - levelObject->getCoinCount() *
-                                            levelObject->getCoinValue()
-            >= levelObject->getLevelSecondsLimit()) {
-            levelObject->loadLevel(1);
-            inputObject->setDirection(4);
-            gameEnd(levelObject, scoreBoard, false);
-            return;
-        }
-        if (inputObject->isInBuffer(113)) {  // выход из игры
+//        if (levelObject->getSecondsUsed() - levelObject->getCoinCount() *
+//                                            levelObject->getCoinValue()
+//            >= levelObject->getLevelSecondsLimit()) {
+//            levelObject->loadLevel(1);
+//            gameEnd(levelObject, scoreBoard, false);
+//            return;
+//        }
+        if (inputObject->isInBuffer(0)) {  // выход из игры
             setLooping(false);
         } else {
+            inputObject->setDirection(-1);
             while (!inputObject->getKeyBuffer().empty()) {
                 int firstKeyInBuffer = inputObject->getFirstKeyFromBuffer();
-                if ((firstKeyInBuffer == 10) && (gameMode != 0)) {
+                if ((firstKeyInBuffer == 6) && (gameMode != 0)) {
                     if (gameMode == 1) {
                         setGameMode(0);
                         scoreBoard->setScoreBoard(levelObject->getLevelNumber(), 10, 13);
@@ -123,7 +129,7 @@ Game::Game(int gameMode) {
                 }
                 inputObject->setDirection(firstKeyInBuffer);
             }
-            levelObject->DeclarePlayerMovement();
+            levelObject->DeclarePlayerMovement(inputObject->getAxisY(), inputObject->getAxisX());
             if (levelObject->getPlayer()->getIsMoving()) {
                 changeMap(inputObject, levelObject, scoreBoard);
             }
@@ -135,6 +141,7 @@ Game::Game(int gameMode) {
         auto *inputObject = new InputController();
         auto *levelObject = new LevelManager(1);
         auto *scoreBoard = new ScoreBoard(1, 10, 13);
+        auto *gameMap = new GameMap();
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
         double lag = 0.0;
@@ -147,7 +154,11 @@ Game::Game(int gameMode) {
                 inputObject->symbolInput();
                 update(inputObject, levelObject, scoreBoard, MS_PER_UPDATE);
                 lag -= MS_PER_UPDATE;
+                renderObject->clearScreen();
                 renderObject->render(levelObject, scoreBoard, getGameMode());
+                gameMap->changePosition(inputObject->getAxisY(), inputObject->getAxisX(),
+                                        levelObject->getSizeRow(), levelObject->getSizeCol());
+                gameMap->render(levelObject);
             }
         }
         renderObject->endWindow();

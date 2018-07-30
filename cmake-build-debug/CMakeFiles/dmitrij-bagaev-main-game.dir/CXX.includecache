@@ -20,6 +20,8 @@ vector
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ScoreBoard.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Building.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Coin.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./FileManager.h
@@ -33,6 +35,10 @@ vector
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././LevelManager.h
 ./ScoreBoard.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ScoreBoard.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./GameMap.h
+./LevelManager.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././LevelManager.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./GameRender.h
 ./LevelManager.h
@@ -55,6 +61,10 @@ vector
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Utility.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Wall.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Building.cpp
+./Building.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Building.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Coin.cpp
 ./Coin.h
@@ -87,12 +97,22 @@ chrono
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Utility.h
 ./GameRender.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./GameRender.h
+./GameMap.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./GameMap.h
 ./InputController.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./InputController.h
 ./LevelManager.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./LevelManager.h
 ./ScoreBoard.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ScoreBoard.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameMap.cpp
+./GameMap.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./GameMap.h
+ncurses.h
+-
+string
+-
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameRender.cpp
 ./GameRender.h

@@ -6,6 +6,11 @@
     GameRender::GameRender() {
         initWindow();
     }
+
+    void GameRender::clearScreen() {
+        clear();
+    }
+
     void GameRender::redrawConsole(LevelManager *levelManager, int rowConsole, int colConsole) {  // Render
         mvwprintw(stdscr, rowConsole + 10, colConsole, "Level ");
         mvwprintw(stdscr, rowConsole + 10, colConsole + 7, "%i", levelManager->getLevelNumber());
@@ -47,13 +52,12 @@
 
     void GameRender::render(LevelManager *levelObject, ScoreBoard *scoreBoard, int mode) {
         // mode: 0 map/console ,1 - scoreBoard,  3 - losePicture, 4 - winPicture
-        clear();
         switch (mode) {
             case 0: {
-                redrawConsole(levelObject, levelObject->getSizeRow(), 10);
-                redrawMap(levelObject->getSizeRow(),
-                          levelObject->getSizeCol(),
-                          levelObject->getMap());
+                // redrawConsole(levelObject, levelObject->getSizeRow(), 10);
+//                redrawMap(levelObject->getSizeRow(),
+//                          levelObject->getSizeCol(),
+//                          levelObject->getMap());
                 break;
             }
             case 1: {

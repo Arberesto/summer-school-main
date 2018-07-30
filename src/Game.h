@@ -17,6 +17,8 @@ class Game {
                    ScoreBoard *scoreBoard);
     void update(InputController *inputObject, LevelManager *levelObject, ScoreBoard *scoreBoard, double deltaTime);
     void gameLoop();
+//    void eachSecondUpdate(InputController *inputObject, LevelManager *levelObject,
+//                           ScoreBoard *scoreBoard);
 
  private:
     char symbol = '@';        // символ игрока

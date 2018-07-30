@@ -30,8 +30,19 @@ char ** LevelManager::getMap() {
     return level.Map;
 }
 
+void LevelManager::setLastSecond(int newLastSecond) {
+    lastSecond = newLastSecond;
+}
+
+int LevelManager::getLastSecond() {
+    return lastSecond;
+}
+
 void LevelManager::setSecondsUsed(double newSecondsUsed) {
     level.secondsUsed = newSecondsUsed;
+    if (static_cast<int>(getSecondsUsed()) - getLastSecond() > 0) {
+        setLastSecond(static_cast<int>(getSecondsUsed()));
+    }
 }
 
 double LevelManager::getSecondsUsed() {
@@ -124,6 +135,7 @@ void LevelManager::setStructLevel(int *variables, int levelNumber) {
     setTickCounter(0);
     setSecondsUsed(0);
     setCoinCount(0);
+    setLastSecond(0);
     setSizeRow(variables[0]);
     setSizeCol(variables[1]);
     setLevelSecondsLimit(static_cast<double>(variables[2]));
@@ -145,7 +157,7 @@ int LevelManager::getTickCounter() {
     return tickCounter;
 }
 
-void LevelManager::DeclarePlayerMovement() {
+void LevelManager::DeclarePlayerMovement(int rowDirection, int colDirection) {
     if (getTickCounter() < player->getPlayerSpeed()) {
         player->setIsMoving(false);
     } else {
@@ -163,15 +175,15 @@ void LevelManager::loadLevel(int levelNumber) {
     std::string fullPath = stringPath + std::to_string(levelNumber);
     const char *path = fullPath.c_str();
     auto *fileObject = new FileManager(path);
-    auto parametersAndMap = fileObject->readWithParameters(24, 2, 6);  // first line - parameters
+    auto parametersAndMap = fileObject->readWithParameters(24, 3, 6);  // first line - parameters
     std::string stringTemp;
     stringTemp.assign(parametersAndMap[0]);
     const char *var = stringTemp.c_str();
-    int *variables = convertStringToVariables(var, 6, 2);
+    int *variables = convertStringToVariables(var, 6, 3);
     // delete parametersAndMap[0];
     // 6 variables(6 whitespace):sizeY(2),sizeX(2),stepLimit(2),coinValue(2),characterY(2),characterX(2),endline(1)
     setStructLevel(variables, levelNumber);
-    player = new Player(variables[4], variables[5], 10, '@');
+    player = new Player(variables[4], variables[5], 6, '@');
     // delete variables;
     for (int i = 0; i < getSizeRow(); i++) {
         for (int j = 0; j < getSizeCol(); j++) {
@@ -182,4 +194,5 @@ void LevelManager::loadLevel(int levelNumber) {
     setMapSymbol(variables[4], variables[5], player->getSymbol());
     // delete parametersAndMap;
     // delete fileObject;
+    delete fileObject;
 }

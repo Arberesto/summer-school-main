@@ -136,6 +136,33 @@ dmitrij-bagaev-main-game/fast:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/build
 .PHONY : dmitrij-bagaev-main-game/fast
 
+src/Building.o: src/Building.cpp.o
+
+.PHONY : src/Building.o
+
+# target to build an object file
+src/Building.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.o
+.PHONY : src/Building.cpp.o
+
+src/Building.i: src/Building.cpp.i
+
+.PHONY : src/Building.i
+
+# target to preprocess a source file
+src/Building.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.i
+.PHONY : src/Building.cpp.i
+
+src/Building.s: src/Building.cpp.s
+
+.PHONY : src/Building.s
+
+# target to generate assembly for a file
+src/Building.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.s
+.PHONY : src/Building.cpp.s
+
 src/Coin.o: src/Coin.cpp.o
 
 .PHONY : src/Coin.o
@@ -243,6 +270,33 @@ src/Game.s: src/Game.cpp.s
 src/Game.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
+
+src/GameMap.o: src/GameMap.cpp.o
+
+.PHONY : src/GameMap.o
+
+# target to build an object file
+src/GameMap.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameMap.cpp.o
+.PHONY : src/GameMap.cpp.o
+
+src/GameMap.i: src/GameMap.cpp.i
+
+.PHONY : src/GameMap.i
+
+# target to preprocess a source file
+src/GameMap.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameMap.cpp.i
+.PHONY : src/GameMap.cpp.i
+
+src/GameMap.s: src/GameMap.cpp.s
+
+.PHONY : src/GameMap.s
+
+# target to generate assembly for a file
+src/GameMap.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameMap.cpp.s
+.PHONY : src/GameMap.cpp.s
 
 src/GameRender.o: src/GameRender.cpp.o
 
@@ -470,6 +524,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... lint"
 	@echo "... dmitrij-bagaev-main-game"
+	@echo "... src/Building.o"
+	@echo "... src/Building.i"
+	@echo "... src/Building.s"
 	@echo "... src/Coin.o"
 	@echo "... src/Coin.i"
 	@echo "... src/Coin.s"
@@ -482,6 +539,9 @@ help:
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
+	@echo "... src/GameMap.o"
+	@echo "... src/GameMap.i"
+	@echo "... src/GameMap.s"
 	@echo "... src/GameRender.o"
 	@echo "... src/GameRender.i"
 	@echo "... src/GameRender.s"

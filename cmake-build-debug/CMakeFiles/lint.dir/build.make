@@ -53,6 +53,8 @@ CMAKE_BINARY_DIR = /home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-bu
 # Include the progress variables for this target.
 include CMakeFiles/lint.dir/progress.make
 
+CMakeFiles/lint: ../src/Building.cpp
+CMakeFiles/lint: ../src/Building.h
 CMakeFiles/lint: ../src/Coin.cpp
 CMakeFiles/lint: ../src/Coin.h
 CMakeFiles/lint: ../src/FileManager.cpp
@@ -61,6 +63,8 @@ CMakeFiles/lint: ../src/Floor.cpp
 CMakeFiles/lint: ../src/Floor.h
 CMakeFiles/lint: ../src/Game.cpp
 CMakeFiles/lint: ../src/Game.h
+CMakeFiles/lint: ../src/GameMap.cpp
+CMakeFiles/lint: ../src/GameMap.h
 CMakeFiles/lint: ../src/GameRender.cpp
 CMakeFiles/lint: ../src/GameRender.h
 CMakeFiles/lint: ../src/InputController.cpp
@@ -77,7 +81,7 @@ CMakeFiles/lint: ../src/Wall.cpp
 CMakeFiles/lint: ../src/Wall.h
 CMakeFiles/lint: ../src/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linting lint"
-	/usr/bin/cmake -E chdir /home/arcades/CLionProjects/dmitrij-bagaev-main-game /usr/bin/python /home/arcades/CLionProjects/dmitrij-bagaev-main-game/misc/cpplint/cpplint.py --filter=-whitespace/ending_newline,-build/namespaces,-build/header_guard,-readability/todo,-readability/namespace,-legal/copyright, --counting=detailed --linelength=120 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Coin.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Coin.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/FileManager.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/FileManager.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Floor.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Floor.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Game.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Game.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameRender.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameRender.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/InputController.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/InputController.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/LevelManager.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/LevelManager.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Player.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Player.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ScoreBoard.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ScoreBoard.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Utility.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Utility.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wall.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wall.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/main.cpp
+	/usr/bin/cmake -E chdir /home/arcades/CLionProjects/dmitrij-bagaev-main-game /usr/bin/python /home/arcades/CLionProjects/dmitrij-bagaev-main-game/misc/cpplint/cpplint.py --filter=-whitespace/ending_newline,-build/namespaces,-build/header_guard,-readability/todo,-readability/namespace,-legal/copyright, --counting=detailed --linelength=120 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Building.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Building.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Coin.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Coin.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/FileManager.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/FileManager.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Floor.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Floor.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Game.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Game.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameMap.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameMap.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameRender.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameRender.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/InputController.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/InputController.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/LevelManager.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/LevelManager.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Player.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Player.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ScoreBoard.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ScoreBoard.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Utility.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Utility.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wall.cpp /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wall.h /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/main.cpp
 
 lint: CMakeFiles/lint
 lint: CMakeFiles/lint.dir/build.make

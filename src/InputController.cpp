@@ -8,7 +8,7 @@ InputController::InputController() {
     setLastKey(32);
     setKeyCodes();
     setLastKeyCode(getLastKey());
-    setDirection(4);
+    setDirection(-1);
 }
 
 void InputController::setKeyCodes() {
@@ -16,6 +16,7 @@ void InputController::setKeyCodes() {
     const char *path = stringPath.c_str();
     auto *fileObject = new FileManager(path);
     keyCodes = fileObject->readConfig();
+    delete fileObject;
 }
 
 int** InputController::getKeyCodes() {
@@ -26,13 +27,12 @@ void InputController::getKey() {
         setLastKey(getch());
         setLastKeyCode(getLastKey());
         if (getLastKeyCode() != -1) {
-            addKeyBuffer(getLastKey());
+            addKeyBuffer(getLastKeyCode());
         }
 }
 
 void InputController::symbolInput() {
     getKey();
-    setDirection(getLastKeyCode());
 }
 
 void InputController::setDirection(int keyCode) {
@@ -58,6 +58,8 @@ void InputController::setDirection(int keyCode) {
             break;
         }
         default:
+            setAxisY(0);
+            setAxisX(0);
             break;
     }
 }

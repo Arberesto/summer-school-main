@@ -33,7 +33,7 @@ char** FileManager::readWithParameters(int parametersLineSize, int parametersSiz
     // localCurrentRow
     auto ** result = new char *[variables[0] + 1];
     result[0] = new char[parametersLineSize];
-    for (int i = 0; i< parametersLineSize; i++) {
+    for (int i = 0; i < parametersLineSize; i++) {
         result[0][i] = stringTemp[i];
     }
     char temp;

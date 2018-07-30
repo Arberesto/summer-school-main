@@ -13,6 +13,7 @@ class GameRender {
     void drawWinPicture(LevelManager *levelObject);
     void initWindow();
     void endWindow();
+    void clearScreen();
 
  private:
     const int CONSOLEROW = 20;

@@ -38,6 +38,7 @@ void ScoreBoard::addPlayer(const char* name, int score) {
         const char *path = fullPath.c_str();
         auto *fileObject = new FileManager(path);
         fileObject->write(getScoreRow(), getScoreCol(), getScoreBoard());
+        delete fileObject;
     }
 }
 
@@ -50,6 +51,7 @@ void ScoreBoard::setScoreBoard(int levelNumber, int rowSize, int colSize) {
     setScoreRow(rowSize);
     setScoreCol(colSize);
     setLevelNumber(levelNumber);
+    delete fileObject;
     // delete fileObject;
 }
 

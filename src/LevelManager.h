@@ -44,13 +44,16 @@ class LevelManager {
     double getPrevSeconds();
     void setPrevSeconds(double newPrevSeconds);
     bool nextLevel();
-    void DeclarePlayerMovement();
+    void DeclarePlayerMovement(int rowDirection, int colDirection);
     void setTickCounter(int newTickCounter);
     int getTickCounter();
     Player* getPlayer();
+    void setLastSecond(int newLastSecond);
+    int getLastSecond();
 
  private:
     Level level;
+    int lastSecond;
     int tickCounter;
     Player* player;
 };
