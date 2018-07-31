@@ -61,8 +61,8 @@ Game::Game(int gameMode) {
     void Game::changeMap(InputController *inputObject, LevelManager *levelManager,
                    ScoreBoard *scoreBoard) {
         levelManager->getPlayer()->setIsMoving(false);
-        int row = inputObject->getAxisY();
-        int col = inputObject->getAxisX();
+        int row = 0;
+        int col = 0;
         if ((levelManager->getMapSymbol(levelManager->getPlayerRow() + row,
                                         levelManager->getPlayerCol() + col) == '.' )
             ||(levelManager->getMapSymbol(levelManager->getPlayerRow() + row,

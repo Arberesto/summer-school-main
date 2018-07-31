@@ -46,9 +46,17 @@ vector
 ./ScoreBoard.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ScoreBoard.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IObject.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./InputController.h
 vector
 -
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IoCContainer.h
+map
+-
+./IObject.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IObject.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./LevelManager.h
 ./Player.h
@@ -140,6 +148,16 @@ iterator
 ./FileManager.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./FileManager.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/IoCContainer.cpp
+./IoCContainer.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IoCContainer.h
+map
+-
+utility
+-
+./IObject.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IObject.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/LevelManager.cpp
 string
 -
@@ -179,4 +197,8 @@ cmath
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/main.cpp
 ./Game.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Game.h
+./IoCContainer.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IoCContainer.h
+./IObject.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IObject.h
 

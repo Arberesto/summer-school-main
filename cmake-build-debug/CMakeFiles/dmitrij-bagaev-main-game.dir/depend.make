@@ -40,6 +40,10 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.o: ../src/./File
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.o: ../src/./InputController.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.o: ../src/InputController.cpp
 
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.o: ../src/./IObject.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.o: ../src/./IoCContainer.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.o: ../src/IoCContainer.cpp
+
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.o: ../src/./FileManager.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.o: ../src/./LevelManager.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.o: ../src/./Player.h
@@ -65,5 +69,7 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/././InputControll
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/././LevelManager.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/././ScoreBoard.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/./Game.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/./IObject.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/./IoCContainer.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/main.cpp
 

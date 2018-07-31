@@ -352,6 +352,33 @@ src/InputController.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.s
 .PHONY : src/InputController.cpp.s
 
+src/IoCContainer.o: src/IoCContainer.cpp.o
+
+.PHONY : src/IoCContainer.o
+
+# target to build an object file
+src/IoCContainer.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.o
+.PHONY : src/IoCContainer.cpp.o
+
+src/IoCContainer.i: src/IoCContainer.cpp.i
+
+.PHONY : src/IoCContainer.i
+
+# target to preprocess a source file
+src/IoCContainer.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.i
+.PHONY : src/IoCContainer.cpp.i
+
+src/IoCContainer.s: src/IoCContainer.cpp.s
+
+.PHONY : src/IoCContainer.s
+
+# target to generate assembly for a file
+src/IoCContainer.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.s
+.PHONY : src/IoCContainer.cpp.s
+
 src/LevelManager.o: src/LevelManager.cpp.o
 
 .PHONY : src/LevelManager.o
@@ -548,6 +575,9 @@ help:
 	@echo "... src/InputController.o"
 	@echo "... src/InputController.i"
 	@echo "... src/InputController.s"
+	@echo "... src/IoCContainer.o"
+	@echo "... src/IoCContainer.i"
+	@echo "... src/IoCContainer.s"
 	@echo "... src/LevelManager.o"
 	@echo "... src/LevelManager.i"
 	@echo "... src/LevelManager.s"

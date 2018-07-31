@@ -40,6 +40,10 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.o
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./FileManager.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./InputController.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/InputController.cpp
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.o
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IObject.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IoCContainer.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/IoCContainer.cpp
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.o
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./FileManager.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./LevelManager.h
@@ -66,4 +70,6 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././LevelManager.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ScoreBoard.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Game.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IObject.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IoCContainer.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/main.cpp
