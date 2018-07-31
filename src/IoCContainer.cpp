@@ -18,18 +18,22 @@ IObject* IoCContainer::Get(int type) {
 }
 
 int IoCContainer::GetNextId(int type) {
-    return 0;
+    return 1;
 }
 
-void IoCContainer::Delete(int index, int type) {
-    std::map<int, IObject*>::const_iterator pos = objectContainer.find(index);
+void IoCContainer::Delete(IObject* object) {
+    auto pos = objectContainer.find(object->GetId());
     if (pos == objectContainer.end()) {
         // raise exception
         return;
     }
-    IObject *object = pos->second;
-    if (object->GetType() == type) {
-        delete object;
-        delete pos->second;
-    }
+    pos->second->Delete();
+    pos->second = nullptr;
+    objectContainer.erase(pos);
+}
+
+IoCContainer::IoCContainer() {
+}
+
+IoCContainer::~IoCContainer() {
 }
