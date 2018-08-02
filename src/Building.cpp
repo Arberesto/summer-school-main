@@ -1,8 +1,10 @@
 #include "./Building.h"
-Building::Building(int newId) {
+#include "./IoCContainer.h"
+#include "./IObject.h"
+Building::Building(int newId, char symbol, int type) {
     SetId(newId);
-    SetSymbol('#');
-    SetType(10);
+    SetSymbol(symbol);
+    // SetType(type);
 }
 
 int  Building::GetType() {
@@ -33,5 +35,5 @@ char Building::GetSymbol() {
 }
 
 void Building::SetType(int newType) {
-    typeOf = newType;
+    // typeOf = newType;
 }

@@ -9,7 +9,6 @@
 #include "./InputController.h"
 #include "./LevelManager.h"
 #include "./ScoreBoard.h"
-#include "./IoCContainer.h"
 #include "./House.h"
 #include "./ObjectRender.h"
 Game::Game(int gameMode) {
@@ -145,7 +144,7 @@ Game::Game(int gameMode) {
         auto *levelObject = new LevelManager(1);
         auto *scoreBoard = new ScoreBoard(1, 10, 13);
         auto *objectRender = new ObjectRender();
-        IoCContainer *container = new IoCContainer();
+        auto *container = new IoCContainer();
         container->Register<House>(&House::Create);
         container->New<House>();
         auto *gameMap = new GameMap();

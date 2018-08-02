@@ -2,26 +2,26 @@
 #include <map>
 #include <utility>
 #include "./IObject.h"
-void IoCContainer::Register(int type, OBJECT_CREATE_FUNC createFunc) {
-    objectTypes.insert(std::pair<int, OBJECT_CREATE_FUNC>(type, createFunc));
+void IoCContainer::Register(size_t type, OBJECT_CREATE_FUNC createFunc) {
+    objectTypes.insert(std::pair<size_t, OBJECT_CREATE_FUNC>(type, createFunc));
 }
 
-void IoCContainer::New(int type) {
-    std::map<int, OBJECT_CREATE_FUNC>::const_iterator pos = objectTypes.find(type);
+void IoCContainer::New(size_t type) {
+    auto pos = objectTypes.find(type);
     if (pos == objectTypes.end()) {
         // raise exception
     }
     OBJECT_CREATE_FUNC func = pos->second;
     int newId = GetNextId(type);
-    objectContainer.insert(std::pair<int, IObject*>(newId, func(type, this, newId)));
+    objectContainer.insert(std::pair<size_t, IObject*>(static_cast<size_t>(newId + type), func(type, this, newId)));
 }
 
-IObject* IoCContainer::Get(int index) {
-    return objectContainer.find(index)->second;
+IObject* IoCContainer::Get(int id, size_t type) {
+    return objectContainer.find(static_cast<size_t>(type + id))->second;
 }
 
 
-int IoCContainer::GetNextId(int type) {
+int IoCContainer::GetNextId(size_t type) {
     return 1;
 }
 

@@ -1,15 +1,17 @@
 #ifndef DMITRIJ_BAGAEV_MAIN_GAME_HOUSE_H
 #define DMITRIJ_BAGAEV_MAIN_GAME_HOUSE_H
 #include "./Building.h"
-#include "./IoCContainer.h"
-class House :Building{
+
+class House :public Building {
  public:
-    explicit House(int newId);
+    static const int typeOf = 11;
+    explicit House(int newId, char symbol, int type);
     int GetId() override;
     bool IsA(int type) override;
     void SetId(int newId) override;
-    static IObject* Create(int type, IoCContainer *iocContainer, int newId);
-
+    int GetType() override;
+    char GetSymbol() override;
+    static IObject* Create(size_t type, IoCContainer *iocContainer, int newId);
  private:
 };
 #endif  //  DMITRIJ_BAGAEV_MAIN_GAME_HOUSE_H

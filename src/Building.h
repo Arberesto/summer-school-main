@@ -1,10 +1,12 @@
 #ifndef DMITRIJ_BAGAEV_MAIN_GAME_BUILDING_H
 #define DMITRIJ_BAGAEV_MAIN_GAME_BUILDING_H
-#include "./IObject.h"
+#include "./IoCContainer.h"
 class Building : public IObject {
  public:
+    char symbol;
+    static const int typeOf = 10;
     Building() = default;
-    explicit Building(int newId);
+    explicit Building(int newId, char symbol, int type);
 
     int  GetType();
 
@@ -21,7 +23,5 @@ class Building : public IObject {
     void SetType(int newType);
 
     bool IsA(int type);
-
- private:
 };
 #endif  // DMITRIJ_BAGAEV_MAIN_GAME_BUILDING_H
