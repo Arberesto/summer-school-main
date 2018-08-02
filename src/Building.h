@@ -4,11 +4,8 @@
 class Building : public IObject {
  public:
     char symbol;
-    static const int typeOf = 10;
     Building() = default;
-    explicit Building(int newId, char symbol, int type);
-
-    int  GetType();
+    explicit Building(int newId, char symbol);
 
     int GetId();
 
@@ -20,8 +17,6 @@ class Building : public IObject {
 
     char GetSymbol();
 
-    void SetType(int newType);
-
-    bool IsA(int type);
+    bool IsA(size_t type);
 };
 #endif  // DMITRIJ_BAGAEV_MAIN_GAME_BUILDING_H

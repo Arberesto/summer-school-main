@@ -1,7 +1,7 @@
-#include "./GameMap.h"
+#include "./GameCamera.h"
 #include <ncurses.h>
 #include <string>
-GameMap::GameMap() {
+GameCamera::GameCamera() {
     setColSize(50);
     setRowSize(25);
     setConsoleLeftUpperCornerCol(2);
@@ -10,7 +10,7 @@ GameMap::GameMap() {
     setLeftUpperCornerRow(0);
 }
 
-void GameMap::changePosition(int rowShift, int colShift, int mapMaxRow, int mapMaxCol) {
+void GameCamera::changePosition(int rowShift, int colShift, int mapMaxRow, int mapMaxCol) {
     if ((isCorrectCoordinates(getLeftUpperCornerRow() + rowShift,
                              getLeftUpperCornerCol() + colShift , mapMaxRow + 1, mapMaxCol + 1))
         &&(isCorrectCoordinates(getLeftUpperCornerRow() + getRowSize() + rowShift,
@@ -20,12 +20,12 @@ void GameMap::changePosition(int rowShift, int colShift, int mapMaxRow, int mapM
     }
 }
 
-bool GameMap::isCorrectCoordinates(int cameraRow, int cameraCol, int levelSizeRow, int levelSizeCol) {
+bool GameCamera::isCorrectCoordinates(int cameraRow, int cameraCol, int levelSizeRow, int levelSizeCol) {
     return (cameraRow < levelSizeRow)
            && (cameraCol < levelSizeCol) && (cameraRow >= 0)&& (cameraCol >= 0);
 }
 
-void GameMap::render(LevelManager *levelObject) {
+void GameCamera::render(LevelManager *levelObject) {
     int LUR = getLeftUpperCornerRow();
     int LUC = getLeftUpperCornerCol();
     int CLUR = getConsoleLeftUpperCornerRow();
@@ -45,53 +45,53 @@ void GameMap::render(LevelManager *levelObject) {
     // refresh();
 }
 
-void GameMap::refreshMap() {
+void GameCamera::refreshCamera() {
 }
 
-int GameMap::getRowSize() {
+int GameCamera::getRowSize() {
     return rowSize;
 }
 
-void GameMap::setRowSize(int newRowSize) {
+void GameCamera::setRowSize(int newRowSize) {
     rowSize = newRowSize;
 }
 
-int GameMap::getColSize() {
+int GameCamera::getColSize() {
     return  colSize;
 }
 
-void GameMap::setColSize(int newColSize) {
+void GameCamera::setColSize(int newColSize) {
     colSize = newColSize;
 }
 
-int GameMap::getConsoleLeftUpperCornerRow() {
+int GameCamera::getConsoleLeftUpperCornerRow() {
     return  consoleLeftUpperCornerRow;
 }
 
-void GameMap::setConsoleLeftUpperCornerRow(int newRightBottomCornerRow) {
+void GameCamera::setConsoleLeftUpperCornerRow(int newRightBottomCornerRow) {
     consoleLeftUpperCornerRow = newRightBottomCornerRow;
 }
 
-int GameMap::getConsoleLeftUpperCornerCol() {
+int GameCamera::getConsoleLeftUpperCornerCol() {
     return  consoleLeftUpperCornerCol;
 }
 
-void GameMap::setConsoleLeftUpperCornerCol(int newRightBottomCornerCol) {
+void GameCamera::setConsoleLeftUpperCornerCol(int newRightBottomCornerCol) {
     consoleLeftUpperCornerCol = newRightBottomCornerCol;
 }
 
-int GameMap::getLeftUpperCornerRow() {
+int GameCamera::getLeftUpperCornerRow() {
     return  leftUpperCornerRow;
 }
 
-void GameMap::setLeftUpperCornerRow(int newLeftUpperCornerRow) {
+void GameCamera::setLeftUpperCornerRow(int newLeftUpperCornerRow) {
     leftUpperCornerRow = newLeftUpperCornerRow;
 }
 
-int GameMap::getLeftUpperCornerCol() {
+int GameCamera::getLeftUpperCornerCol() {
     return leftUpperCornerCol;
 }
 
-void GameMap::setLeftUpperCornerCol(int newLeftUpperCornerCol) {
+void GameCamera::setLeftUpperCornerCol(int newLeftUpperCornerCol) {
     leftUpperCornerCol = newLeftUpperCornerCol;
 }

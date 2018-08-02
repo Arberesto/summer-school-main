@@ -3,8 +3,14 @@
 #include "./Utility.h"
 #include "./FileManager.h"
 #include "./Player.h"
-LevelManager::LevelManager(int levelNumber) {
-    loadLevel(levelNumber);
+#include "./IObject.h"
+LevelManager::LevelManager(int newId) {
+    SetId(newId);
+    loadLevel(START_LEVEL);
+}
+
+static IObject* Create(size_t type, IoCContainer *iocContainer, int newId) {
+    return new LevelManager(newId);
 }
 
 bool LevelManager::nextLevel() {
@@ -195,4 +201,19 @@ void LevelManager::loadLevel(int levelNumber) {
     // delete parametersAndMap;
     // delete fileObject;
     delete fileObject;
+}
+
+int LevelManager::GetId() {
+    return id;
+}
+void LevelManager::SetId(int newId) {
+    id = newId;
+}
+bool LevelManager::IsA(size_t type) {
+    return typeid(LevelManager).hash_code() == type;
+}
+char LevelManager::GetSymbol() {
+    return 'm';
+}
+void LevelManager::Delete() {
 }

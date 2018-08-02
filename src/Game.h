@@ -1,8 +1,10 @@
+#pragma once
 #ifndef REAL_TIME_DEMO_GAME_H
 #define REAL_TIME_DEMO_GAME_H
 #include "./InputController.h"
 #include "./LevelManager.h"
 #include "./ScoreBoard.h"
+#include "./House.h"
 class Game {
  public:
     explicit Game(int gameMode);
@@ -12,10 +14,10 @@ class Game {
     int getColConsole();
     int getGameMode();
     void setGameMode(int newGameMode);
-    void gameEnd(LevelManager *levelManager, ScoreBoard *scoreBoard, bool WinNotLose);
-    void changeMap(InputController *inputObject, LevelManager *levelManager,
+    void gameEnd(IoCContainer *container, ScoreBoard *scoreBoard, bool WinNotLose);
+    void changeMap(InputController *inputObject, IoCContainer *container,
                    ScoreBoard *scoreBoard);
-    void update(InputController *inputObject, LevelManager *levelObject, ScoreBoard *scoreBoard, double deltaTime);
+    void update(InputController *inputObject, IoCContainer *container, ScoreBoard *scoreBoard, double deltaTime);
     void gameLoop();
 //    void eachSecondUpdate(InputController *inputObject, LevelManager *levelObject,
 //                           ScoreBoard *scoreBoard);

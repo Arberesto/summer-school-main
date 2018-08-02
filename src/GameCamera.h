@@ -1,10 +1,10 @@
-#ifndef DMITRIJ_BAGAEV_MAIN_GAME_GAMEMAP_H
-#define DMITRIJ_BAGAEV_MAIN_GAME_GAMEMAP_H
+#ifndef DMITRIJ_BAGAEV_MAIN_GAME_GAMECAMERA_H
+#define DMITRIJ_BAGAEV_MAIN_GAME_GAMECAMERA_H
 #include "./LevelManager.h"
-class GameMap {
+class GameCamera {
  public:
-    explicit GameMap();
-    void refreshMap();
+    explicit GameCamera();
+    void refreshCamera();
     void render(LevelManager *levelObject);
     int getRowSize();
     void setRowSize(int newRowSize);
@@ -29,4 +29,4 @@ class GameMap {
     int leftUpperCornerRow;
     int leftUpperCornerCol;
 };
-#endif  // DMITRIJ_BAGAEV_MAIN_GAME_GAMEMAP_H
+#endif  // DMITRIJ_BAGAEV_MAIN_GAME_GAMECAMERA_H

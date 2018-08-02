@@ -3,6 +3,7 @@
 #include <string>
 #include <cmath>
 #include "./Utility.h"
+#include "./ObjectRender.h"
     GameRender::GameRender() {
         initWindow();
     }
@@ -50,8 +51,10 @@
                   "Press Enter to load next map(or finish)");
     }
 
-    void GameRender::render(LevelManager *levelObject, ScoreBoard *scoreBoard, int mode) {
+    void GameRender::render(IoCContainer *container, ScoreBoard *scoreBoard, int mode) {
         // mode: 0 map/console ,1 - scoreBoard,  3 - losePicture, 4 - winPicture
+        auto *gameMap = new GameCamera();
+        auto levelObject = container->Get<LevelManager>(1);
         switch (mode) {
             case 0: {
                 // redrawConsole(levelObject, levelObject->getSizeRow(), 10);
@@ -75,7 +78,7 @@
             default:
                 break;
         }
-        // refresh();
+        // refreshScreen();
     }
 
     void GameRender::drawLosePicture(LevelManager *levelObject) {

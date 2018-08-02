@@ -1,18 +1,14 @@
 #include "./House.h"
 #include "./Building.h"
-House::House(int newId, char symbol, int type) : Building(newId, symbol, type) {
+House::House(int newId, char symbol) : Building(newId, symbol) {
 }
 
-bool House::IsA(int type) {
-return typeOf == type || Building::IsA(type);
+bool House::IsA(size_t type) {
+return typeid(House).hash_code() == type || Building::IsA(type);
 }
 
 int House::GetId() {
 return id;
-}
-
-int House::GetType() {
-    return typeOf;
 }
 
 void House::SetId(int newId) {
@@ -24,5 +20,5 @@ char House::GetSymbol() {
 }
 
 IObject* House::Create(size_t type, IoCContainer *iocContainer, int newId) {
-    return new House(newId, '^' , 11);
+    return new House(newId, '^');
 }

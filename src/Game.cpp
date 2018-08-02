@@ -5,12 +5,11 @@
 #include <chrono>
 #include "./Utility.h"
 #include "./GameRender.h"
-#include "./GameMap.h"
 #include "./InputController.h"
 #include "./LevelManager.h"
 #include "./ScoreBoard.h"
 #include "./House.h"
-#include "./ObjectRender.h"
+#include "./GameCamera.h"
 Game::Game(int gameMode) {
     setGameMode(gameMode);
 }
@@ -39,7 +38,7 @@ Game::Game(int gameMode) {
         gameMode = newGameMode;
     }
 
-    void Game::gameEnd(LevelManager *levelManager, ScoreBoard *scoreBoard, bool WinNotLose) {  // Game
+    void Game::gameEnd(IoCContainer *container, ScoreBoard *scoreBoard, bool WinNotLose) {  // Game
         // показываем таблицу текущего
         // уровня,либо закрываем игру
 
@@ -60,8 +59,9 @@ Game::Game(int gameMode) {
         }
     }
 
-    void Game::changeMap(InputController *inputObject, LevelManager *levelManager,
+    void Game::changeMap(InputController *inputObject, IoCContainer *container,
                    ScoreBoard *scoreBoard) {
+        auto levelManager = container->Get<LevelManager>(1);
         levelManager->getPlayer()->setIsMoving(false);
         int row = 0;
         int col = 0;
@@ -88,7 +88,7 @@ Game::Game(int gameMode) {
             setGameMode(1);
             bool isNextLevelExist = levelManager->nextLevel();
             if (!isNextLevelExist) {
-                gameEnd(levelManager,  scoreBoard, true);
+                gameEnd(container,  scoreBoard, true);
             }
         } else if (levelManager->getMapSymbol(levelManager->getPlayerRow() + row,
                                               levelManager->getPlayerCol() + col)  == '<') {
@@ -101,8 +101,9 @@ Game::Game(int gameMode) {
 //        // здесь производить ресурсы и прочее посекундное дело
 //    }
 
-    void Game::update(InputController *inputObject, LevelManager *levelObject,
+    void Game::update(InputController *inputObject, IoCContainer *container,
                       ScoreBoard *scoreBoard, double deltaTime) {
+        auto levelObject = container->Get<LevelManager>(1);
         if (getGameMode() == 0) {
             levelObject->setSecondsUsed(levelObject->getSecondsUsed() + deltaTime);
             levelObject->setTickCounter(levelObject->getTickCounter() + 1);
@@ -133,7 +134,7 @@ Game::Game(int gameMode) {
             }
             levelObject->DeclarePlayerMovement(inputObject->getAxisY(), inputObject->getAxisX());
             if (levelObject->getPlayer()->getIsMoving()) {
-                changeMap(inputObject, levelObject, scoreBoard);
+                changeMap(inputObject, container, scoreBoard);
             }
         }
     }
@@ -141,13 +142,13 @@ Game::Game(int gameMode) {
     void Game::gameLoop() {
         auto *renderObject = new GameRender();
         auto *inputObject = new InputController();
-        auto *levelObject = new LevelManager(1);
         auto *scoreBoard = new ScoreBoard(1, 10, 13);
-        auto *objectRender = new ObjectRender();
         auto *container = new IoCContainer();
+        auto gameCamera = new GameCamera();
         container->Register<House>(&House::Create);
+        container->Register<LevelManager>(&LevelManager::Create);
         container->New<House>();
-        auto *gameMap = new GameMap();
+        container->New<LevelManager>();
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
         double lag = 0.0;
@@ -158,14 +159,14 @@ Game::Game(int gameMode) {
             lag += elapsed.count();
             while (lag >= MS_PER_UPDATE) {
                 inputObject->symbolInput();
-                update(inputObject, levelObject, scoreBoard, MS_PER_UPDATE);
+                update(inputObject, container, scoreBoard, MS_PER_UPDATE);
                 lag -= MS_PER_UPDATE;
                 renderObject->clearScreen();
-                renderObject->render(levelObject, scoreBoard, getGameMode());
-                gameMap->changePosition(inputObject->getAxisY(), inputObject->getAxisX(),
-                                        levelObject->getSizeRow(), levelObject->getSizeCol());
-                gameMap->render(levelObject);
-                objectRender->Render(container);
+                renderObject->render(container, scoreBoard, getGameMode());
+                gameCamera->changePosition(inputObject->getAxisY(), inputObject->getAxisX(),
+                                           container->Get<LevelManager>(1)->getSizeRow(), container->Get<LevelManager>(1)->getSizeCol());
+                gameCamera->render(container->Get<LevelManager>(1));
+                // objectRender->Render(container);
                 renderObject->refreshScreen();
             }
         }

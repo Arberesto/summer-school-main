@@ -1,6 +1,7 @@
 #ifndef ROUGE_DEMO_LEVELMANAGER_H
 #define ROUGE_DEMO_LEVELMANAGER_H
 #include "./Player.h"
+#include "./IoCContainer.h"
 struct Level{
     int current_row;      // текущие координаты персонажа
     int current_col;
@@ -14,9 +15,9 @@ struct Level{
     double secondsUsed;
     char **Map;
 };
-class LevelManager {
+class LevelManager : public IObject{
  public:
-    explicit LevelManager(int level);
+    explicit LevelManager(int newId);
     char **getMap();
     void loadLevel(int level);
     Level getStructLevel();
@@ -50,8 +51,14 @@ class LevelManager {
     Player* getPlayer();
     void setLastSecond(int newLastSecond);
     int getLastSecond();
-
+    int GetId();
+    void SetId(int newId);
+    bool IsA(size_t type);
+    char GetSymbol();
+    void Delete();
+    static IObject* Create(size_t type, IoCContainer *iocContainer, int newId);
  private:
+    const int START_LEVEL = 1;
     Level level;
     int lastSecond;
     int tickCounter;

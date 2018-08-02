@@ -7,7 +7,7 @@ class GameRender {
     explicit GameRender();
     void redrawConsole(LevelManager *levelManager, int rowConsole, int colConsole);
     void redrawMap(int rowSize, int colSize, char** Map);
-    void render(LevelManager *levelObject, ScoreBoard *scoreBoard, int mode);
+    void render(IoCContainer *container, ScoreBoard *scoreBoard, int mode);
     void drawScoreBoard(ScoreBoard *scoreBoard);
     void drawLosePicture(LevelManager *levelObject);
     void drawWinPicture(LevelManager *levelObject);

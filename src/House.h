@@ -4,12 +4,10 @@
 
 class House :public Building {
  public:
-    static const int typeOf = 11;
-    explicit House(int newId, char symbol, int type);
+    explicit House(int newId, char symbol);
     int GetId() override;
-    bool IsA(int type) override;
+    bool IsA(size_t type) override;
     void SetId(int newId) override;
-    int GetType() override;
     char GetSymbol() override;
     static IObject* Create(size_t type, IoCContainer *iocContainer, int newId);
  private:

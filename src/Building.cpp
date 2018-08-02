@@ -1,14 +1,9 @@
 #include "./Building.h"
 #include "./IoCContainer.h"
 #include "./IObject.h"
-Building::Building(int newId, char symbol, int type) {
+Building::Building(int newId, char symbol) {
     SetId(newId);
     SetSymbol(symbol);
-    // SetType(type);
-}
-
-int  Building::GetType() {
-    return typeOf;
 }
 
 int Building::GetId() {
@@ -22,8 +17,8 @@ void Building::SetId(int newId) {
     id = newId;
 }
 
-bool Building::IsA(int type) {
-    return typeOf == type;
+bool Building::IsA(size_t type) {
+    return typeid(Building).hash_code() == type;
 }
 
 void Building::SetSymbol(char newSymbol) {
@@ -32,8 +27,4 @@ void Building::SetSymbol(char newSymbol) {
 
 char Building::GetSymbol() {
     return  symbol;
-}
-
-void Building::SetType(int newType) {
-    // typeOf = newType;
 }
