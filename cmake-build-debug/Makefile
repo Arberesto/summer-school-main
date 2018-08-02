@@ -325,6 +325,33 @@ src/GameRender.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.s
 .PHONY : src/GameRender.cpp.s
 
+src/House.o: src/House.cpp.o
+
+.PHONY : src/House.o
+
+# target to build an object file
+src/House.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.o
+.PHONY : src/House.cpp.o
+
+src/House.i: src/House.cpp.i
+
+.PHONY : src/House.i
+
+# target to preprocess a source file
+src/House.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.i
+.PHONY : src/House.cpp.i
+
+src/House.s: src/House.cpp.s
+
+.PHONY : src/House.s
+
+# target to generate assembly for a file
+src/House.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.s
+.PHONY : src/House.cpp.s
+
 src/InputController.o: src/InputController.cpp.o
 
 .PHONY : src/InputController.o
@@ -405,6 +432,60 @@ src/LevelManager.s: src/LevelManager.cpp.s
 src/LevelManager.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.s
 .PHONY : src/LevelManager.cpp.s
+
+src/MainBuilding.o: src/MainBuilding.cpp.o
+
+.PHONY : src/MainBuilding.o
+
+# target to build an object file
+src/MainBuilding.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.o
+.PHONY : src/MainBuilding.cpp.o
+
+src/MainBuilding.i: src/MainBuilding.cpp.i
+
+.PHONY : src/MainBuilding.i
+
+# target to preprocess a source file
+src/MainBuilding.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.i
+.PHONY : src/MainBuilding.cpp.i
+
+src/MainBuilding.s: src/MainBuilding.cpp.s
+
+.PHONY : src/MainBuilding.s
+
+# target to generate assembly for a file
+src/MainBuilding.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.s
+.PHONY : src/MainBuilding.cpp.s
+
+src/ObjectRender.o: src/ObjectRender.cpp.o
+
+.PHONY : src/ObjectRender.o
+
+# target to build an object file
+src/ObjectRender.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ObjectRender.cpp.o
+.PHONY : src/ObjectRender.cpp.o
+
+src/ObjectRender.i: src/ObjectRender.cpp.i
+
+.PHONY : src/ObjectRender.i
+
+# target to preprocess a source file
+src/ObjectRender.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ObjectRender.cpp.i
+.PHONY : src/ObjectRender.cpp.i
+
+src/ObjectRender.s: src/ObjectRender.cpp.s
+
+.PHONY : src/ObjectRender.s
+
+# target to generate assembly for a file
+src/ObjectRender.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ObjectRender.cpp.s
+.PHONY : src/ObjectRender.cpp.s
 
 src/Player.o: src/Player.cpp.o
 
@@ -572,6 +653,9 @@ help:
 	@echo "... src/GameRender.o"
 	@echo "... src/GameRender.i"
 	@echo "... src/GameRender.s"
+	@echo "... src/House.o"
+	@echo "... src/House.i"
+	@echo "... src/House.s"
 	@echo "... src/InputController.o"
 	@echo "... src/InputController.i"
 	@echo "... src/InputController.s"
@@ -581,6 +665,12 @@ help:
 	@echo "... src/LevelManager.o"
 	@echo "... src/LevelManager.i"
 	@echo "... src/LevelManager.s"
+	@echo "... src/MainBuilding.o"
+	@echo "... src/MainBuilding.i"
+	@echo "... src/MainBuilding.s"
+	@echo "... src/ObjectRender.o"
+	@echo "... src/ObjectRender.i"
+	@echo "... src/ObjectRender.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"

@@ -11,9 +11,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Floor.cpp.o"
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wall.cpp.o"
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o"
-  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.o"
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameMap.cpp.o"
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/ObjectRender.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.o"
   "dmitrij-bagaev-main-game.pdb"
   "dmitrij-bagaev-main-game"
 )

@@ -14,6 +14,7 @@ class GameRender {
     void initWindow();
     void endWindow();
     void clearScreen();
+    void refreshScreen();
 
  private:
     const int CONSOLEROW = 20;

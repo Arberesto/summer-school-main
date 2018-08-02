@@ -75,7 +75,7 @@
             default:
                 break;
         }
-        refresh();
+        // refresh();
     }
 
     void GameRender::drawLosePicture(LevelManager *levelObject) {
@@ -105,4 +105,8 @@
 
     void GameRender::endWindow() {
         endwin();
+    }
+
+    void GameRender::refreshScreen() {
+    refresh();
     }

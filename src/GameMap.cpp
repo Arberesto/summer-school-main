@@ -42,7 +42,7 @@ void GameMap::render(LevelManager *levelObject) {
             }
         }
     }
-    refresh();
+    // refresh();
 }
 
 void GameMap::refreshMap() {
