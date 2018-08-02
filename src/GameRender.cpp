@@ -53,7 +53,6 @@
 
     void GameRender::render(IoCContainer *container, ScoreBoard *scoreBoard, int mode) {
         // mode: 0 map/console ,1 - scoreBoard,  3 - losePicture, 4 - winPicture
-        auto *gameMap = new GameCamera();
         auto levelObject = container->Get<LevelManager>(1);
         switch (mode) {
             case 0: {

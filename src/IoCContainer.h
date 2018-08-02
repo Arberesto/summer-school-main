@@ -33,5 +33,4 @@ class IoCContainer {
     std::map<size_t, IObject*> objectContainer;  // index = type + id
     const int TYPE_MULTIPLIER = 100;
 };
-
 #endif  // DMITRIJ_BAGAEV_MAIN_GAME_IOCCONTAINER_H

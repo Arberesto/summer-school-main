@@ -152,6 +152,7 @@ Game::Game(int gameMode) {
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
         double lag = 0.0;
+        container->Get<LevelManager>(1)->setMapSymbol(4, 4, container->Get<House>(1)->GetSymbol());
         while (getLooping()) {
             auto current =  std::chrono::system_clock::now();
             std::chrono::duration<double> elapsed = current - previous;
@@ -164,9 +165,9 @@ Game::Game(int gameMode) {
                 renderObject->clearScreen();
                 renderObject->render(container, scoreBoard, getGameMode());
                 gameCamera->changePosition(inputObject->getAxisY(), inputObject->getAxisX(),
-                                           container->Get<LevelManager>(1)->getSizeRow(), container->Get<LevelManager>(1)->getSizeCol());
+                                           container->Get<LevelManager>(1)->getSizeRow(),
+                                           container->Get<LevelManager>(1)->getSizeCol());
                 gameCamera->render(container->Get<LevelManager>(1));
-                // objectRender->Render(container);
                 renderObject->refreshScreen();
             }
         }

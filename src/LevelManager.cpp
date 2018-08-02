@@ -9,7 +9,7 @@ LevelManager::LevelManager(int newId) {
     loadLevel(START_LEVEL);
 }
 
-static IObject* Create(size_t type, IoCContainer *iocContainer, int newId) {
+IObject* LevelManager::Create(size_t type, IoCContainer *iocContainer, int newId) {
     return new LevelManager(newId);
 }
 

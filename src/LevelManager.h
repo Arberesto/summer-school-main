@@ -57,6 +57,7 @@ class LevelManager : public IObject{
     char GetSymbol();
     void Delete();
     static IObject* Create(size_t type, IoCContainer *iocContainer, int newId);
+
  private:
     const int START_LEVEL = 1;
     Level level;

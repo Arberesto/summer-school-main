@@ -136,6 +136,492 @@ dmitrij-bagaev-main-game/fast:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/build
 .PHONY : dmitrij-bagaev-main-game/fast
 
+src/Building.o: src/Building.cpp.o
+
+.PHONY : src/Building.o
+
+# target to build an object file
+src/Building.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.o
+.PHONY : src/Building.cpp.o
+
+src/Building.i: src/Building.cpp.i
+
+.PHONY : src/Building.i
+
+# target to preprocess a source file
+src/Building.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.i
+.PHONY : src/Building.cpp.i
+
+src/Building.s: src/Building.cpp.s
+
+.PHONY : src/Building.s
+
+# target to generate assembly for a file
+src/Building.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.s
+.PHONY : src/Building.cpp.s
+
+src/Coin.o: src/Coin.cpp.o
+
+.PHONY : src/Coin.o
+
+# target to build an object file
+src/Coin.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Coin.cpp.o
+.PHONY : src/Coin.cpp.o
+
+src/Coin.i: src/Coin.cpp.i
+
+.PHONY : src/Coin.i
+
+# target to preprocess a source file
+src/Coin.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Coin.cpp.i
+.PHONY : src/Coin.cpp.i
+
+src/Coin.s: src/Coin.cpp.s
+
+.PHONY : src/Coin.s
+
+# target to generate assembly for a file
+src/Coin.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Coin.cpp.s
+.PHONY : src/Coin.cpp.s
+
+src/FileManager.o: src/FileManager.cpp.o
+
+.PHONY : src/FileManager.o
+
+# target to build an object file
+src/FileManager.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/FileManager.cpp.o
+.PHONY : src/FileManager.cpp.o
+
+src/FileManager.i: src/FileManager.cpp.i
+
+.PHONY : src/FileManager.i
+
+# target to preprocess a source file
+src/FileManager.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/FileManager.cpp.i
+.PHONY : src/FileManager.cpp.i
+
+src/FileManager.s: src/FileManager.cpp.s
+
+.PHONY : src/FileManager.s
+
+# target to generate assembly for a file
+src/FileManager.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/FileManager.cpp.s
+.PHONY : src/FileManager.cpp.s
+
+src/Floor.o: src/Floor.cpp.o
+
+.PHONY : src/Floor.o
+
+# target to build an object file
+src/Floor.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Floor.cpp.o
+.PHONY : src/Floor.cpp.o
+
+src/Floor.i: src/Floor.cpp.i
+
+.PHONY : src/Floor.i
+
+# target to preprocess a source file
+src/Floor.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Floor.cpp.i
+.PHONY : src/Floor.cpp.i
+
+src/Floor.s: src/Floor.cpp.s
+
+.PHONY : src/Floor.s
+
+# target to generate assembly for a file
+src/Floor.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Floor.cpp.s
+.PHONY : src/Floor.cpp.s
+
+src/Game.o: src/Game.cpp.o
+
+.PHONY : src/Game.o
+
+# target to build an object file
+src/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o
+.PHONY : src/Game.cpp.o
+
+src/Game.i: src/Game.cpp.i
+
+.PHONY : src/Game.i
+
+# target to preprocess a source file
+src/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.i
+.PHONY : src/Game.cpp.i
+
+src/Game.s: src/Game.cpp.s
+
+.PHONY : src/Game.s
+
+# target to generate assembly for a file
+src/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.s
+.PHONY : src/Game.cpp.s
+
+src/GameCamera.o: src/GameCamera.cpp.o
+
+.PHONY : src/GameCamera.o
+
+# target to build an object file
+src/GameCamera.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o
+.PHONY : src/GameCamera.cpp.o
+
+src/GameCamera.i: src/GameCamera.cpp.i
+
+.PHONY : src/GameCamera.i
+
+# target to preprocess a source file
+src/GameCamera.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.i
+.PHONY : src/GameCamera.cpp.i
+
+src/GameCamera.s: src/GameCamera.cpp.s
+
+.PHONY : src/GameCamera.s
+
+# target to generate assembly for a file
+src/GameCamera.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.s
+.PHONY : src/GameCamera.cpp.s
+
+src/GameRender.o: src/GameRender.cpp.o
+
+.PHONY : src/GameRender.o
+
+# target to build an object file
+src/GameRender.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.o
+.PHONY : src/GameRender.cpp.o
+
+src/GameRender.i: src/GameRender.cpp.i
+
+.PHONY : src/GameRender.i
+
+# target to preprocess a source file
+src/GameRender.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.i
+.PHONY : src/GameRender.cpp.i
+
+src/GameRender.s: src/GameRender.cpp.s
+
+.PHONY : src/GameRender.s
+
+# target to generate assembly for a file
+src/GameRender.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.s
+.PHONY : src/GameRender.cpp.s
+
+src/House.o: src/House.cpp.o
+
+.PHONY : src/House.o
+
+# target to build an object file
+src/House.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.o
+.PHONY : src/House.cpp.o
+
+src/House.i: src/House.cpp.i
+
+.PHONY : src/House.i
+
+# target to preprocess a source file
+src/House.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.i
+.PHONY : src/House.cpp.i
+
+src/House.s: src/House.cpp.s
+
+.PHONY : src/House.s
+
+# target to generate assembly for a file
+src/House.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.s
+.PHONY : src/House.cpp.s
+
+src/InputController.o: src/InputController.cpp.o
+
+.PHONY : src/InputController.o
+
+# target to build an object file
+src/InputController.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.o
+.PHONY : src/InputController.cpp.o
+
+src/InputController.i: src/InputController.cpp.i
+
+.PHONY : src/InputController.i
+
+# target to preprocess a source file
+src/InputController.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.i
+.PHONY : src/InputController.cpp.i
+
+src/InputController.s: src/InputController.cpp.s
+
+.PHONY : src/InputController.s
+
+# target to generate assembly for a file
+src/InputController.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.s
+.PHONY : src/InputController.cpp.s
+
+src/IoCContainer.o: src/IoCContainer.cpp.o
+
+.PHONY : src/IoCContainer.o
+
+# target to build an object file
+src/IoCContainer.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.o
+.PHONY : src/IoCContainer.cpp.o
+
+src/IoCContainer.i: src/IoCContainer.cpp.i
+
+.PHONY : src/IoCContainer.i
+
+# target to preprocess a source file
+src/IoCContainer.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.i
+.PHONY : src/IoCContainer.cpp.i
+
+src/IoCContainer.s: src/IoCContainer.cpp.s
+
+.PHONY : src/IoCContainer.s
+
+# target to generate assembly for a file
+src/IoCContainer.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.s
+.PHONY : src/IoCContainer.cpp.s
+
+src/LevelManager.o: src/LevelManager.cpp.o
+
+.PHONY : src/LevelManager.o
+
+# target to build an object file
+src/LevelManager.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.o
+.PHONY : src/LevelManager.cpp.o
+
+src/LevelManager.i: src/LevelManager.cpp.i
+
+.PHONY : src/LevelManager.i
+
+# target to preprocess a source file
+src/LevelManager.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.i
+.PHONY : src/LevelManager.cpp.i
+
+src/LevelManager.s: src/LevelManager.cpp.s
+
+.PHONY : src/LevelManager.s
+
+# target to generate assembly for a file
+src/LevelManager.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.s
+.PHONY : src/LevelManager.cpp.s
+
+src/MainBuilding.o: src/MainBuilding.cpp.o
+
+.PHONY : src/MainBuilding.o
+
+# target to build an object file
+src/MainBuilding.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.o
+.PHONY : src/MainBuilding.cpp.o
+
+src/MainBuilding.i: src/MainBuilding.cpp.i
+
+.PHONY : src/MainBuilding.i
+
+# target to preprocess a source file
+src/MainBuilding.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.i
+.PHONY : src/MainBuilding.cpp.i
+
+src/MainBuilding.s: src/MainBuilding.cpp.s
+
+.PHONY : src/MainBuilding.s
+
+# target to generate assembly for a file
+src/MainBuilding.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.s
+.PHONY : src/MainBuilding.cpp.s
+
+src/ObjectRender.o: src/ObjectRender.cpp.o
+
+.PHONY : src/ObjectRender.o
+
+# target to build an object file
+src/ObjectRender.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ObjectRender.cpp.o
+.PHONY : src/ObjectRender.cpp.o
+
+src/ObjectRender.i: src/ObjectRender.cpp.i
+
+.PHONY : src/ObjectRender.i
+
+# target to preprocess a source file
+src/ObjectRender.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ObjectRender.cpp.i
+.PHONY : src/ObjectRender.cpp.i
+
+src/ObjectRender.s: src/ObjectRender.cpp.s
+
+.PHONY : src/ObjectRender.s
+
+# target to generate assembly for a file
+src/ObjectRender.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ObjectRender.cpp.s
+.PHONY : src/ObjectRender.cpp.s
+
+src/Player.o: src/Player.cpp.o
+
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Player.cpp.o
+.PHONY : src/Player.cpp.o
+
+src/Player.i: src/Player.cpp.i
+
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
+
+src/Player.s: src/Player.cpp.s
+
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
+src/ScoreBoard.o: src/ScoreBoard.cpp.o
+
+.PHONY : src/ScoreBoard.o
+
+# target to build an object file
+src/ScoreBoard.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ScoreBoard.cpp.o
+.PHONY : src/ScoreBoard.cpp.o
+
+src/ScoreBoard.i: src/ScoreBoard.cpp.i
+
+.PHONY : src/ScoreBoard.i
+
+# target to preprocess a source file
+src/ScoreBoard.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ScoreBoard.cpp.i
+.PHONY : src/ScoreBoard.cpp.i
+
+src/ScoreBoard.s: src/ScoreBoard.cpp.s
+
+.PHONY : src/ScoreBoard.s
+
+# target to generate assembly for a file
+src/ScoreBoard.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ScoreBoard.cpp.s
+.PHONY : src/ScoreBoard.cpp.s
+
+src/Utility.o: src/Utility.cpp.o
+
+.PHONY : src/Utility.o
+
+# target to build an object file
+src/Utility.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Utility.cpp.o
+.PHONY : src/Utility.cpp.o
+
+src/Utility.i: src/Utility.cpp.i
+
+.PHONY : src/Utility.i
+
+# target to preprocess a source file
+src/Utility.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Utility.cpp.i
+.PHONY : src/Utility.cpp.i
+
+src/Utility.s: src/Utility.cpp.s
+
+.PHONY : src/Utility.s
+
+# target to generate assembly for a file
+src/Utility.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Utility.cpp.s
+.PHONY : src/Utility.cpp.s
+
+src/Wall.o: src/Wall.cpp.o
+
+.PHONY : src/Wall.o
+
+# target to build an object file
+src/Wall.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wall.cpp.o
+.PHONY : src/Wall.cpp.o
+
+src/Wall.i: src/Wall.cpp.i
+
+.PHONY : src/Wall.i
+
+# target to preprocess a source file
+src/Wall.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wall.cpp.i
+.PHONY : src/Wall.cpp.i
+
+src/Wall.s: src/Wall.cpp.s
+
+.PHONY : src/Wall.s
+
+# target to generate assembly for a file
+src/Wall.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wall.cpp.s
+.PHONY : src/Wall.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -146,6 +632,60 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... lint"
 	@echo "... dmitrij-bagaev-main-game"
+	@echo "... src/Building.o"
+	@echo "... src/Building.i"
+	@echo "... src/Building.s"
+	@echo "... src/Coin.o"
+	@echo "... src/Coin.i"
+	@echo "... src/Coin.s"
+	@echo "... src/FileManager.o"
+	@echo "... src/FileManager.i"
+	@echo "... src/FileManager.s"
+	@echo "... src/Floor.o"
+	@echo "... src/Floor.i"
+	@echo "... src/Floor.s"
+	@echo "... src/Game.o"
+	@echo "... src/Game.i"
+	@echo "... src/Game.s"
+	@echo "... src/GameCamera.o"
+	@echo "... src/GameCamera.i"
+	@echo "... src/GameCamera.s"
+	@echo "... src/GameRender.o"
+	@echo "... src/GameRender.i"
+	@echo "... src/GameRender.s"
+	@echo "... src/House.o"
+	@echo "... src/House.i"
+	@echo "... src/House.s"
+	@echo "... src/InputController.o"
+	@echo "... src/InputController.i"
+	@echo "... src/InputController.s"
+	@echo "... src/IoCContainer.o"
+	@echo "... src/IoCContainer.i"
+	@echo "... src/IoCContainer.s"
+	@echo "... src/LevelManager.o"
+	@echo "... src/LevelManager.i"
+	@echo "... src/LevelManager.s"
+	@echo "... src/MainBuilding.o"
+	@echo "... src/MainBuilding.i"
+	@echo "... src/MainBuilding.s"
+	@echo "... src/ObjectRender.o"
+	@echo "... src/ObjectRender.i"
+	@echo "... src/ObjectRender.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
+	@echo "... src/ScoreBoard.o"
+	@echo "... src/ScoreBoard.i"
+	@echo "... src/ScoreBoard.s"
+	@echo "... src/Utility.o"
+	@echo "... src/Utility.i"
+	@echo "... src/Utility.s"
+	@echo "... src/Wall.o"
+	@echo "... src/Wall.i"
+	@echo "... src/Wall.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
