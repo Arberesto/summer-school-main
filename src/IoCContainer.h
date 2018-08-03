@@ -24,6 +24,27 @@ class IoCContainer {
     }
     IObject* Get(int id, size_t type);
 
+    template<class T>
+    int GetY() {
+        return GetY(typeid(T).hash_code());
+    }
+
+    int GetY(size_t type);
+
+    template<class T>
+    int GetX() {
+        return GetX(typeid(T).hash_code());
+    }
+
+    int GetX(size_t type);
+
+    template<class T>
+    void SetCoordinates(int Y, int X) {
+        SetCoordinates(Y, X, typeid(T).hash_code());
+    }
+
+    void SetCoordinates(int Y, int X, size_t type);
+
     void Delete(IObject* object);
     int GetNextId(size_t type);
     ~IoCContainer();
@@ -31,6 +52,7 @@ class IoCContainer {
  private:
     std::map<size_t, OBJECT_CREATE_FUNC> objectTypes;
     std::map<size_t, IObject*> objectContainer;  // index = type + id
+    std::map<size_t, int> coordinatesContainer;  // type, y * 200 + x
     const int TYPE_MULTIPLIER = 100;
 };
 #endif  // DMITRIJ_BAGAEV_MAIN_GAME_IOCCONTAINER_H

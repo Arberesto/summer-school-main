@@ -4,6 +4,7 @@
 #include <cmath>
 #include "./Utility.h"
 #include "./ObjectRender.h"
+#include "./ResourceList.h"
     GameRender::GameRender() {
         initWindow();
     }
@@ -12,20 +13,19 @@
         clear();
     }
 
-    void GameRender::redrawConsole(LevelManager *levelManager, int rowConsole, int colConsole) {  // Render
-        mvwprintw(stdscr, rowConsole + 10, colConsole, "Level ");
-        mvwprintw(stdscr, rowConsole + 10, colConsole + 7, "%i", levelManager->getLevelNumber());
-        mvwprintw(stdscr, rowConsole + 12, colConsole, "Coin value ");
-        mvwprintw(stdscr, rowConsole + 12, colConsole + 12, "%i", levelManager->getCoinValue());
-        mvwprintw(stdscr, rowConsole + 14, colConsole, "Seconds available ");
-        double temp1 = levelManager->getLevelSecondsLimit() - levelManager->getSecondsUsed()
-                       + levelManager->getCoinValue() * levelManager->getCoinCount();
-        mvwprintw(stdscr, rowConsole + 14, colConsole + 17, " %i", static_cast<int>(temp1));
-        mvwprintw(stdscr, rowConsole + 16, colConsole, "Seconds used ");
-        double temp2 = levelManager->getSecondsUsed();
-        mvwprintw(stdscr, rowConsole + 16, colConsole + 12, " %i", static_cast<int>(temp2));
-        mvwprintw(stdscr, rowConsole + 18, colConsole, "Coins grabbed ");
-        mvwprintw(stdscr, rowConsole + 18, colConsole + 15, "%i", levelManager->getCoinCount());
+    void GameRender::redrawConsole(IoCContainer *container) {  // Render
+        mvwprintw(stdscr, CONSOLEROW, CONSOLECOL, "|%c : ", container->Get<People>(1)->GetSymbol());
+        mvwprintw(stdscr, CONSOLEROW, CONSOLECOL + 7, "%i | ", container->Get<People>(1)->GetValue());
+        mvwprintw(stdscr, CONSOLEROW + 2, CONSOLECOL, "|%c : ", container->Get<Gold>(1)->GetSymbol());
+        mvwprintw(stdscr, CONSOLEROW + 2, CONSOLECOL + 7, "%i | ", container->Get<Gold>(1)->GetValue());
+        mvwprintw(stdscr, CONSOLEROW + 4, CONSOLECOL, "|%c : ", container->Get<Food>(1)->GetSymbol());
+        mvwprintw(stdscr, CONSOLEROW + 4, CONSOLECOL + 7, "%i | ", container->Get<Food>(1)->GetValue());
+        mvwprintw(stdscr, CONSOLEROW + 6, CONSOLECOL, "|%c : ", container->Get<Clay>(1)->GetSymbol());
+        mvwprintw(stdscr, CONSOLEROW + 6, CONSOLECOL + 7, "%i | ", container->Get<Clay>(1)->GetValue());
+        mvwprintw(stdscr, CONSOLEROW + 8, CONSOLECOL, "|%c : ", container->Get<Wood>(1)->GetSymbol());
+        mvwprintw(stdscr, CONSOLEROW + 8, CONSOLECOL + 7, "%i | ", container->Get<Wood>(1)->GetValue());
+        mvwprintw(stdscr, CONSOLEROW + 10, CONSOLECOL, "|%c : ", container->Get<Ore>(1)->GetSymbol());
+        mvwprintw(stdscr, CONSOLEROW + 10, CONSOLECOL + 7, "%i | ", container->Get<Ore>(1)->GetValue());
     }
 
     void GameRender::redrawMap(int rowSize, int colSize, char **Map) {  // Render
@@ -56,7 +56,7 @@
         auto levelObject = container->Get<LevelManager>(1);
         switch (mode) {
             case 0: {
-                // redrawConsole(levelObject, levelObject->getSizeRow(), 10);
+                redrawConsole(container);
 //                redrawMap(levelObject->getSizeRow(),
 //                          levelObject->getSizeCol(),
 //                          levelObject->getMap());
@@ -77,7 +77,6 @@
             default:
                 break;
         }
-        // refreshScreen();
     }
 
     void GameRender::drawLosePicture(LevelManager *levelObject) {

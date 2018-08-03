@@ -20,6 +20,20 @@ IObject* IoCContainer::Get(int id, size_t type) {
     return objectContainer.find(static_cast<size_t>(type + id))->second;
 }
 
+int IoCContainer::GetY(size_t type) {
+    return coordinatesContainer.find(type)->second / 200;
+}
+
+int IoCContainer::GetX(size_t type) {
+    int temp = coordinatesContainer.find(type)->second;
+    int temp1 = temp / 200;
+    return temp - temp1 * 200;
+}
+
+void IoCContainer::SetCoordinates(int Y, int X, size_t type) {
+    coordinatesContainer.insert(std::pair<size_t, int>(type, Y * 200 + X));
+}
+
 
 int IoCContainer::GetNextId(size_t type) {
     return 1;

@@ -17,6 +17,7 @@ struct Level{
 };
 class LevelManager : public IObject{
  public:
+    bool abracadabra = true;
     explicit LevelManager(int newId);
     char **getMap();
     void loadLevel(int level);

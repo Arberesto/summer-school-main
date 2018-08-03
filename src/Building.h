@@ -4,10 +4,20 @@
 class Building : public IObject {
  public:
     char symbol;
+    int row;
+    int col;
     Building() = default;
-    explicit Building(int newId, char symbol);
+    explicit Building(int row, int col, int newId, char symbol);
 
     int GetId();
+
+    int GetRow();
+
+    void SetRow(int newRow);
+
+    int GetCol();
+
+    void SetCol(int newCol);
 
     void Delete();
 

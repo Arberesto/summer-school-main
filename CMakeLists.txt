@@ -17,7 +17,7 @@ SET(PROJECT_SOURCES_DIR ${PROJECT_SOURCE_DIR}/src)
 FILE(GLOB_RECURSE HEADERS ${PROJECT_HEADERS_DIR}/*.h)
 FILE(GLOB_RECURSE SOURCES ${PROJECT_SOURCES_DIR}/*.cpp)
 
-add_executable(${PROJECT_NAME} src/main.cpp src/GameRender.cpp src/GameRender.h src/InputController.cpp src/InputController.h src/LevelManager.cpp src/LevelManager.h src/Utility.cpp src/Utility.h src/ScoreBoard.cpp src/ScoreBoard.h src/FileManager.cpp src/FileManager.h src/Player.cpp src/Player.h src/Coin.cpp src/Coin.h src/Floor.cpp src/Floor.h src/Wall.cpp src/Wall.h src/Game.cpp src/Game.h src/Building.h src/GameCamera.cpp src/GameCamera.h src/IoCContainer.cpp src/IoCContainer.h src/IObject.h src/Building.cpp src/House.cpp src/House.h src/ObjectRender.cpp src/ObjectRender.h src/MainBuilding.cpp src/MainBuilding.h)
+add_executable(${PROJECT_NAME} src/main.cpp src/GameRender.cpp src/GameRender.h src/InputController.cpp src/InputController.h src/LevelManager.cpp src/LevelManager.h src/Utility.cpp src/Utility.h src/ScoreBoard.cpp src/ScoreBoard.h src/FileManager.cpp src/FileManager.h src/Player.cpp src/Player.h src/Coin.cpp src/Coin.h src/Floor.cpp src/Floor.h src/Wall.cpp src/Wall.h src/Game.cpp src/Game.h src/Building.h src/GameCamera.cpp src/GameCamera.h src/IoCContainer.cpp src/IoCContainer.h src/IObject.h src/Building.cpp src/House.cpp src/House.h src/ObjectRender.cpp src/ObjectRender.h src/MainBuilding.cpp src/MainBuilding.h src/Resource.cpp src/Resource.h src/Gold.cpp src/Gold.h src/Food.cpp src/Food.h src/People.cpp src/People.h src/Wood.cpp src/Wood.h src/Clay.cpp src/Clay.h src/Ore.cpp src/Ore.h src/IncludeObjects.h src/ResourceList.h src/BuildingList.h src/UnitList.h)
 
 # линкуем библиотеки к проекту
 target_link_libraries(${PROJECT_NAME} ${CURSES_LIBRARY})

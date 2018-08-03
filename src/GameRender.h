@@ -5,7 +5,7 @@
 class GameRender {
  public:
     explicit GameRender();
-    void redrawConsole(LevelManager *levelManager, int rowConsole, int colConsole);
+    void redrawConsole(IoCContainer *container);
     void redrawMap(int rowSize, int colSize, char** Map);
     void render(IoCContainer *container, ScoreBoard *scoreBoard, int mode);
     void drawScoreBoard(ScoreBoard *scoreBoard);
@@ -18,6 +18,6 @@ class GameRender {
 
  private:
     const int CONSOLEROW = 20;
-    const int CONSOLECOL = 10;
+    const int CONSOLECOL = 54;
 };
 #endif  //  ROUGE_DEMO_GAMERENDER_H

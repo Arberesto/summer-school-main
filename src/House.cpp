@@ -1,6 +1,6 @@
 #include "./House.h"
 #include "./Building.h"
-House::House(int newId, char symbol) : Building(newId, symbol) {
+House::House(int row, int col, int newId, char symbol) : Building(row, col, newId, symbol) {
 }
 
 bool House::IsA(size_t type) {
@@ -20,5 +20,5 @@ char House::GetSymbol() {
 }
 
 IObject* House::Create(size_t type, IoCContainer *iocContainer, int newId) {
-    return new House(newId, '^');
+    return new House(iocContainer->GetY<House>(), iocContainer->GetX<House>(), newId, '^');
 }

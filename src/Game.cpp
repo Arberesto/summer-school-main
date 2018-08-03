@@ -8,8 +8,8 @@
 #include "./InputController.h"
 #include "./LevelManager.h"
 #include "./ScoreBoard.h"
-#include "./House.h"
 #include "./GameCamera.h"
+#include "./IncludeObjects.h"
 Game::Game(int gameMode) {
     setGameMode(gameMode);
 }
@@ -108,6 +108,13 @@ Game::Game(int gameMode) {
             levelObject->setSecondsUsed(levelObject->getSecondsUsed() + deltaTime);
             levelObject->setTickCounter(levelObject->getTickCounter() + 1);
         }
+        if (levelObject->getLastSecond() % 10 == 0) {
+            if (levelObject->abracadabra) {
+                container->Get<Food>(1)->SetValue(container->Get<Food>(1)->GetValue() + 3);
+                container->Get<People>(1)->SetValue(container->Get<People>(1)->GetValue() + 3);
+                levelObject->abracadabra = false;
+            }
+        }
 //        if (levelObject->getSecondsUsed() - levelObject->getCoinCount() *
 //                                            levelObject->getCoinValue()
 //            >= levelObject->getLevelSecondsLimit()) {
@@ -134,7 +141,7 @@ Game::Game(int gameMode) {
             }
             levelObject->DeclarePlayerMovement(inputObject->getAxisY(), inputObject->getAxisX());
             if (levelObject->getPlayer()->getIsMoving()) {
-                changeMap(inputObject, container, scoreBoard);
+                // changeMap(inputObject, container, scoreBoard);
             }
         }
     }
@@ -147,12 +154,33 @@ Game::Game(int gameMode) {
         auto gameCamera = new GameCamera();
         container->Register<House>(&House::Create);
         container->Register<LevelManager>(&LevelManager::Create);
+        container->Register<MainBuilding>(&MainBuilding::Create);
+        container->Register<Ore>(&Ore::Create);
+        container->Register<Wood>(&Wood::Create);
+        container->Register<Food>(&Food::Create);
+        container->Register<People>(&People::Create);
+        container->Register<Gold>(&Gold::Create);
+        container->Register<Clay>(&Clay::Create);
+        container->SetCoordinates<MainBuilding>(4, 4);
+        container->SetCoordinates<House>(5, 5);
         container->New<House>();
         container->New<LevelManager>();
+        container->New<MainBuilding>();
+        container->New<Ore>();
+        container->New<Wood>();
+        container->New<Food>();
+        container->New<People>();
+        container->New<Gold>();
+        container->New<Clay>();
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
         double lag = 0.0;
-        container->Get<LevelManager>(1)->setMapSymbol(4, 4, container->Get<House>(1)->GetSymbol());
+        container->Get<LevelManager>(1)->setMapSymbol(container->Get<House>(1)->GetRow(),
+                                                      container->Get<House>(1)->GetCol(),
+                                                      container->Get<House>(1)->GetSymbol());
+        container->Get<LevelManager>(1)->setMapSymbol(container->Get<MainBuilding>(1)->GetRow(),
+                                                      container->Get<MainBuilding>(1)->GetCol(),
+                                                      container->Get<MainBuilding>(1)->GetSymbol());
         while (getLooping()) {
             auto current =  std::chrono::system_clock::now();
             std::chrono::duration<double> elapsed = current - previous;

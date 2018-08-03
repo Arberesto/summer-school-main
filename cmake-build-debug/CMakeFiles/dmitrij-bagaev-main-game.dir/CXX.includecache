@@ -8,9 +8,25 @@
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././IObject.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
+./IoCContainer.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././IoCContainer.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Building.h
 ./IoCContainer.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././IoCContainer.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Clay.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Food.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Gold.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IObject.h
 
@@ -22,11 +38,49 @@ typeinfo
 ./IObject.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././IObject.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././MainBuilding.h
+./Building.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Building.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Ore.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././People.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Player.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
+./IoCContainer.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././IoCContainer.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Wood.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Building.h
 ./IoCContainer.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IoCContainer.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././BuildingList.h
+./House.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././House.h
+./MainBuilding.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././MainBuilding.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Clay.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Food.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Gold.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././House.h
 ./Building.h
@@ -50,19 +104,55 @@ typeinfo
 ./IoCContainer.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IoCContainer.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Ore.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././People.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Player.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ResourceList.h
+./Food.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Food.h
+./Wood.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Wood.h
+./Ore.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Ore.h
+./Clay.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Clay.h
+./Gold.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Gold.h
+./People.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././People.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ScoreBoard.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././UnitList.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Wood.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Building.h
 ./IoCContainer.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Clay.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Coin.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./FileManager.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Floor.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Food.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Game.h
 ./InputController.h
@@ -84,11 +174,23 @@ typeinfo
 ./ScoreBoard.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ScoreBoard.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Gold.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Resource.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./House.h
 ./Building.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Building.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IObject.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IncludeObjects.h
+./BuildingList.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././BuildingList.h
+./ResourceList.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ResourceList.h
+./UnitList.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././UnitList.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./InputController.h
 vector
@@ -109,18 +211,50 @@ typeinfo
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./MainBuilding.h
+./Building.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Building.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ObjectRender.h
 ./IoCContainer.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Ore.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Resource.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./People.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Resource.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Player.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Resource.h
+./IoCContainer.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ResourceList.h
+./Food.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Food.h
+./Wood.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Wood.h
+./Ore.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Ore.h
+./Clay.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Clay.h
+./Gold.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Gold.h
+./People.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././People.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ScoreBoard.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Utility.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Wall.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Wood.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Building.cpp
 ./Building.h
@@ -129,6 +263,12 @@ typeinfo
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IoCContainer.h
 ./IObject.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IObject.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Clay.cpp
+./Clay.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Clay.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Coin.cpp
 ./Coin.h
@@ -145,6 +285,12 @@ cstdio
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Floor.cpp
 ./Floor.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Floor.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Food.cpp
+./Food.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Food.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Game.cpp
 ./Game.h
@@ -167,10 +313,10 @@ chrono
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./LevelManager.h
 ./ScoreBoard.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ScoreBoard.h
-./House.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./House.h
 ./GameCamera.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./GameCamera.h
+./IncludeObjects.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IncludeObjects.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameCamera.cpp
 ./GameCamera.h
@@ -193,6 +339,14 @@ cmath
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Utility.h
 ./ObjectRender.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ObjectRender.h
+./ResourceList.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ResourceList.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Gold.cpp
+./Gold.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Gold.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/House.cpp
 ./House.h
@@ -241,6 +395,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/MainBuilding.cpp
 ./MainBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./MainBuilding.h
+./Building.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Building.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ObjectRender.cpp
 ./ObjectRender.h
@@ -250,9 +406,29 @@ string
 ./ncurses.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ncurses.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Ore.cpp
+./Ore.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Ore.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Resource.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/People.cpp
+./People.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./People.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Resource.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Player.cpp
 ./Player.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Player.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Resource.cpp
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Resource.h
+./IoCContainer.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IoCContainer.h
+./IObject.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IObject.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ScoreBoard.cpp
 ./ScoreBoard.h
@@ -273,6 +449,12 @@ cmath
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wall.cpp
 ./Wall.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Wall.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wood.cpp
+./Wood.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Wood.h
+./Resource.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/main.cpp
 ./Game.h

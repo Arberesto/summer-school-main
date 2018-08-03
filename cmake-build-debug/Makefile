@@ -163,6 +163,33 @@ src/Building.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.s
 .PHONY : src/Building.cpp.s
 
+src/Clay.o: src/Clay.cpp.o
+
+.PHONY : src/Clay.o
+
+# target to build an object file
+src/Clay.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Clay.cpp.o
+.PHONY : src/Clay.cpp.o
+
+src/Clay.i: src/Clay.cpp.i
+
+.PHONY : src/Clay.i
+
+# target to preprocess a source file
+src/Clay.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Clay.cpp.i
+.PHONY : src/Clay.cpp.i
+
+src/Clay.s: src/Clay.cpp.s
+
+.PHONY : src/Clay.s
+
+# target to generate assembly for a file
+src/Clay.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Clay.cpp.s
+.PHONY : src/Clay.cpp.s
+
 src/Coin.o: src/Coin.cpp.o
 
 .PHONY : src/Coin.o
@@ -244,6 +271,33 @@ src/Floor.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Floor.cpp.s
 .PHONY : src/Floor.cpp.s
 
+src/Food.o: src/Food.cpp.o
+
+.PHONY : src/Food.o
+
+# target to build an object file
+src/Food.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Food.cpp.o
+.PHONY : src/Food.cpp.o
+
+src/Food.i: src/Food.cpp.i
+
+.PHONY : src/Food.i
+
+# target to preprocess a source file
+src/Food.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Food.cpp.i
+.PHONY : src/Food.cpp.i
+
+src/Food.s: src/Food.cpp.s
+
+.PHONY : src/Food.s
+
+# target to generate assembly for a file
+src/Food.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Food.cpp.s
+.PHONY : src/Food.cpp.s
+
 src/Game.o: src/Game.cpp.o
 
 .PHONY : src/Game.o
@@ -324,6 +378,33 @@ src/GameRender.s: src/GameRender.cpp.s
 src/GameRender.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.s
 .PHONY : src/GameRender.cpp.s
+
+src/Gold.o: src/Gold.cpp.o
+
+.PHONY : src/Gold.o
+
+# target to build an object file
+src/Gold.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Gold.cpp.o
+.PHONY : src/Gold.cpp.o
+
+src/Gold.i: src/Gold.cpp.i
+
+.PHONY : src/Gold.i
+
+# target to preprocess a source file
+src/Gold.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Gold.cpp.i
+.PHONY : src/Gold.cpp.i
+
+src/Gold.s: src/Gold.cpp.s
+
+.PHONY : src/Gold.s
+
+# target to generate assembly for a file
+src/Gold.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Gold.cpp.s
+.PHONY : src/Gold.cpp.s
 
 src/House.o: src/House.cpp.o
 
@@ -487,6 +568,60 @@ src/ObjectRender.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ObjectRender.cpp.s
 .PHONY : src/ObjectRender.cpp.s
 
+src/Ore.o: src/Ore.cpp.o
+
+.PHONY : src/Ore.o
+
+# target to build an object file
+src/Ore.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.o
+.PHONY : src/Ore.cpp.o
+
+src/Ore.i: src/Ore.cpp.i
+
+.PHONY : src/Ore.i
+
+# target to preprocess a source file
+src/Ore.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.i
+.PHONY : src/Ore.cpp.i
+
+src/Ore.s: src/Ore.cpp.s
+
+.PHONY : src/Ore.s
+
+# target to generate assembly for a file
+src/Ore.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.s
+.PHONY : src/Ore.cpp.s
+
+src/People.o: src/People.cpp.o
+
+.PHONY : src/People.o
+
+# target to build an object file
+src/People.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/People.cpp.o
+.PHONY : src/People.cpp.o
+
+src/People.i: src/People.cpp.i
+
+.PHONY : src/People.i
+
+# target to preprocess a source file
+src/People.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/People.cpp.i
+.PHONY : src/People.cpp.i
+
+src/People.s: src/People.cpp.s
+
+.PHONY : src/People.s
+
+# target to generate assembly for a file
+src/People.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/People.cpp.s
+.PHONY : src/People.cpp.s
+
 src/Player.o: src/Player.cpp.o
 
 .PHONY : src/Player.o
@@ -513,6 +648,33 @@ src/Player.s: src/Player.cpp.s
 src/Player.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
+
+src/Resource.o: src/Resource.cpp.o
+
+.PHONY : src/Resource.o
+
+# target to build an object file
+src/Resource.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Resource.cpp.o
+.PHONY : src/Resource.cpp.o
+
+src/Resource.i: src/Resource.cpp.i
+
+.PHONY : src/Resource.i
+
+# target to preprocess a source file
+src/Resource.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Resource.cpp.i
+.PHONY : src/Resource.cpp.i
+
+src/Resource.s: src/Resource.cpp.s
+
+.PHONY : src/Resource.s
+
+# target to generate assembly for a file
+src/Resource.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Resource.cpp.s
+.PHONY : src/Resource.cpp.s
 
 src/ScoreBoard.o: src/ScoreBoard.cpp.o
 
@@ -595,6 +757,33 @@ src/Wall.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wall.cpp.s
 .PHONY : src/Wall.cpp.s
 
+src/Wood.o: src/Wood.cpp.o
+
+.PHONY : src/Wood.o
+
+# target to build an object file
+src/Wood.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wood.cpp.o
+.PHONY : src/Wood.cpp.o
+
+src/Wood.i: src/Wood.cpp.i
+
+.PHONY : src/Wood.i
+
+# target to preprocess a source file
+src/Wood.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wood.cpp.i
+.PHONY : src/Wood.cpp.i
+
+src/Wood.s: src/Wood.cpp.s
+
+.PHONY : src/Wood.s
+
+# target to generate assembly for a file
+src/Wood.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wood.cpp.s
+.PHONY : src/Wood.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -635,6 +824,9 @@ help:
 	@echo "... src/Building.o"
 	@echo "... src/Building.i"
 	@echo "... src/Building.s"
+	@echo "... src/Clay.o"
+	@echo "... src/Clay.i"
+	@echo "... src/Clay.s"
 	@echo "... src/Coin.o"
 	@echo "... src/Coin.i"
 	@echo "... src/Coin.s"
@@ -644,6 +836,9 @@ help:
 	@echo "... src/Floor.o"
 	@echo "... src/Floor.i"
 	@echo "... src/Floor.s"
+	@echo "... src/Food.o"
+	@echo "... src/Food.i"
+	@echo "... src/Food.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
@@ -653,6 +848,9 @@ help:
 	@echo "... src/GameRender.o"
 	@echo "... src/GameRender.i"
 	@echo "... src/GameRender.s"
+	@echo "... src/Gold.o"
+	@echo "... src/Gold.i"
+	@echo "... src/Gold.s"
 	@echo "... src/House.o"
 	@echo "... src/House.i"
 	@echo "... src/House.s"
@@ -671,9 +869,18 @@ help:
 	@echo "... src/ObjectRender.o"
 	@echo "... src/ObjectRender.i"
 	@echo "... src/ObjectRender.s"
+	@echo "... src/Ore.o"
+	@echo "... src/Ore.i"
+	@echo "... src/Ore.s"
+	@echo "... src/People.o"
+	@echo "... src/People.i"
+	@echo "... src/People.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/Resource.o"
+	@echo "... src/Resource.i"
+	@echo "... src/Resource.s"
 	@echo "... src/ScoreBoard.o"
 	@echo "... src/ScoreBoard.i"
 	@echo "... src/ScoreBoard.s"
@@ -683,6 +890,9 @@ help:
 	@echo "... src/Wall.o"
 	@echo "... src/Wall.i"
 	@echo "... src/Wall.s"
+	@echo "... src/Wood.o"
+	@echo "... src/Wood.i"
+	@echo "... src/Wood.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -48,6 +48,7 @@ void LevelManager::setSecondsUsed(double newSecondsUsed) {
     level.secondsUsed = newSecondsUsed;
     if (static_cast<int>(getSecondsUsed()) - getLastSecond() > 0) {
         setLastSecond(static_cast<int>(getSecondsUsed()));
+        abracadabra = true;
     }
 }
 
@@ -197,7 +198,7 @@ void LevelManager::loadLevel(int levelNumber) {
         }
         // delete parametersAndMap[i+1];
     }
-    setMapSymbol(variables[4], variables[5], player->getSymbol());
+    // setMapSymbol(variables[4], variables[5], player->getSymbol());
     // delete parametersAndMap;
     // delete fileObject;
     delete fileObject;

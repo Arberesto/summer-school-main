@@ -17,6 +17,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.o"
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/ObjectRender.cpp.o"
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Resource.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Gold.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Food.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/People.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wood.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Clay.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.o"
   "dmitrij-bagaev-main-game.pdb"
   "dmitrij-bagaev-main-game"
 )
