@@ -1,8 +1,7 @@
 #include "./Ore.h"
+#include <string>
 #include "./Resource.h"
-Ore::Ore(int newId, char symbol) {
-    SetId(newId);
-    SetSymbol(symbol);
+Ore::Ore(int newId, std::string title) : Resource::Resource(newId, title) {
 }
 
 bool Ore::IsA(size_t type) {
@@ -10,5 +9,5 @@ bool Ore::IsA(size_t type) {
 }
 
 IObject* Ore::Create(size_t type, IoCContainer *iocContainer, int newId) {
-    return new Ore(newId, 'O');
+    return new Ore(newId, "Ore");
 }

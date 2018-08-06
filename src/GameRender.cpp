@@ -14,18 +14,17 @@
     }
 
     void GameRender::redrawConsole(IoCContainer *container) {  // Render
-        mvwprintw(stdscr, CONSOLEROW, CONSOLECOL, "|%c : ", container->Get<People>(1)->GetSymbol());
-        mvwprintw(stdscr, CONSOLEROW, CONSOLECOL + 7, "%i | ", container->Get<People>(1)->GetValue());
-        mvwprintw(stdscr, CONSOLEROW + 2, CONSOLECOL, "|%c : ", container->Get<Gold>(1)->GetSymbol());
-        mvwprintw(stdscr, CONSOLEROW + 2, CONSOLECOL + 7, "%i | ", container->Get<Gold>(1)->GetValue());
-        mvwprintw(stdscr, CONSOLEROW + 4, CONSOLECOL, "|%c : ", container->Get<Food>(1)->GetSymbol());
-        mvwprintw(stdscr, CONSOLEROW + 4, CONSOLECOL + 7, "%i | ", container->Get<Food>(1)->GetValue());
-        mvwprintw(stdscr, CONSOLEROW + 6, CONSOLECOL, "|%c : ", container->Get<Clay>(1)->GetSymbol());
-        mvwprintw(stdscr, CONSOLEROW + 6, CONSOLECOL + 7, "%i | ", container->Get<Clay>(1)->GetValue());
-        mvwprintw(stdscr, CONSOLEROW + 8, CONSOLECOL, "|%c : ", container->Get<Wood>(1)->GetSymbol());
-        mvwprintw(stdscr, CONSOLEROW + 8, CONSOLECOL + 7, "%i | ", container->Get<Wood>(1)->GetValue());
-        mvwprintw(stdscr, CONSOLEROW + 10, CONSOLECOL, "|%c : ", container->Get<Ore>(1)->GetSymbol());
-        mvwprintw(stdscr, CONSOLEROW + 10, CONSOLECOL + 7, "%i | ", container->Get<Ore>(1)->GetValue());
+        // auto resourceTitleList = container->GetTextFieldList<Resource>();
+        auto resourceIdList = container->GetIdList<Resource>();
+        for (int i = 1; i < resourceIdList[0]; i++) {
+            auto objectTemp = container->Get<Resource>(resourceIdList[i]);
+            auto temp = objectTemp->GetTextField();
+            auto intTemp = objectTemp->GetValue();
+            mvwprintw(stdscr, CONSOLEROW - 2 + i * 2,
+                      CONSOLECOL + 10, "|%s : ", temp);
+            mvwprintw(stdscr, CONSOLEROW - 2 + i * 2,
+                      CONSOLECOL + 10, "%i | ", intTemp);
+        }
     }
 
     void GameRender::redrawMap(int rowSize, int colSize, char **Map) {  // Render

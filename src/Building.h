@@ -7,7 +7,7 @@ class Building : public IObject {
     int row;
     int col;
     Building() = default;
-    explicit Building(int row, int col, int newId, char symbol);
+    explicit Building(int row, int col, int newId, const char * symbol);
 
     int GetId();
 
@@ -17,16 +17,19 @@ class Building : public IObject {
 
     int GetCol();
 
+    const char* GetTextField();
+    void SetTextField(const char* newTextField);
+
     void SetCol(int newCol);
 
     void Delete();
 
     void SetId(int newId);
 
-    void SetSymbol(char newSymbol);
-
-    char GetSymbol();
-
+    template<class T>
+    bool IsA() {
+        return IsA(typeid(T).hash_code());
+    }
     bool IsA(size_t type);
 };
 #endif  // DMITRIJ_BAGAEV_MAIN_GAME_BUILDING_H

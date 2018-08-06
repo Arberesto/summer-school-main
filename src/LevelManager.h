@@ -17,7 +17,6 @@ struct Level{
 };
 class LevelManager : public IObject{
  public:
-    bool abracadabra = true;
     explicit LevelManager(int newId);
     char **getMap();
     void loadLevel(int level);
@@ -54,12 +53,19 @@ class LevelManager : public IObject{
     int getLastSecond();
     int GetId();
     void SetId(int newId);
+    void SetIsNewSecondNow(bool newIsNewSecondNow);
+    bool GetIsNewSecondNow();
+    template<class T>
+    bool IsA() {
+        return IsA(typeid(T).hash_code());
+    }
     bool IsA(size_t type);
     char GetSymbol();
     void Delete();
     static IObject* Create(size_t type, IoCContainer *iocContainer, int newId);
 
  private:
+    bool isNewSecondNow = true;
     const int START_LEVEL = 1;
     Level level;
     int lastSecond;

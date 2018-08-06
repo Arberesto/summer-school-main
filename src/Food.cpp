@@ -1,9 +1,7 @@
 #include "./Food.h"
+#include <string>
 #include "./Resource.h"
-
-Food::Food(int newId, char symbol) {
-    SetId(newId);
-    SetSymbol(symbol);
+Food::Food(int newId, std::string title) : Resource::Resource(newId, title) {
 }
 
 bool Food::IsA(size_t type) {
@@ -11,5 +9,5 @@ bool Food::IsA(size_t type) {
 }
 
 IObject* Food::Create(size_t type, IoCContainer *iocContainer, int newId) {
-    return new Food(newId, 'F');
+    return new Food(newId, "Food");
 }

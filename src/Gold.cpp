@@ -1,8 +1,7 @@
 #include "./Gold.h"
+#include <string>
 #include "./Resource.h"
-Gold::Gold(int newId, char symbol) {
-    SetId(newId);
-    SetSymbol(symbol);
+Gold::Gold(int newId, std::string title) : Resource::Resource(newId, title) {
 }
 
 bool Gold::IsA(size_t type) {
@@ -10,5 +9,5 @@ bool Gold::IsA(size_t type) {
 }
 
 IObject* Gold::Create(size_t type, IoCContainer *iocContainer, int newId) {
-    return new Gold(newId, 'G');
+    return new Gold(newId, "Gold");
 }

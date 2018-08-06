@@ -101,6 +101,14 @@ Game::Game(int gameMode) {
 //        // здесь производить ресурсы и прочее посекундное дело
 //    }
 
+    void Game::eachSecondUpdate(IoCContainer *container) {
+        if (container->Get<LevelManager>(1)->getLastSecond() % 10 == 0) {
+            container->Get<Food>(1)->SetValue(container->Get<Food>(1)->GetValue() + 3);
+            container->Get<People>(1)->SetValue(container->Get<People>(1)->GetValue() + 3);
+        }
+        container->Get<LevelManager>(1)->SetIsNewSecondNow(false);
+    }
+
     void Game::update(InputController *inputObject, IoCContainer *container,
                       ScoreBoard *scoreBoard, double deltaTime) {
         auto levelObject = container->Get<LevelManager>(1);
@@ -108,12 +116,8 @@ Game::Game(int gameMode) {
             levelObject->setSecondsUsed(levelObject->getSecondsUsed() + deltaTime);
             levelObject->setTickCounter(levelObject->getTickCounter() + 1);
         }
-        if (levelObject->getLastSecond() % 10 == 0) {
-            if (levelObject->abracadabra) {
-                container->Get<Food>(1)->SetValue(container->Get<Food>(1)->GetValue() + 3);
-                container->Get<People>(1)->SetValue(container->Get<People>(1)->GetValue() + 3);
-                levelObject->abracadabra = false;
-            }
+        if (container->Get<LevelManager>(1)->GetIsNewSecondNow()) {
+            eachSecondUpdate(container);
         }
 //        if (levelObject->getSecondsUsed() - levelObject->getCoinCount() *
 //                                            levelObject->getCoinValue()
@@ -175,12 +179,13 @@ Game::Game(int gameMode) {
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
         double lag = 0.0;
+        auto tempText = container->Get<House>(1)->GetTextField();
         container->Get<LevelManager>(1)->setMapSymbol(container->Get<House>(1)->GetRow(),
                                                       container->Get<House>(1)->GetCol(),
-                                                      container->Get<House>(1)->GetSymbol());
+                                                      tempText[1]);
         container->Get<LevelManager>(1)->setMapSymbol(container->Get<MainBuilding>(1)->GetRow(),
                                                       container->Get<MainBuilding>(1)->GetCol(),
-                                                      container->Get<MainBuilding>(1)->GetSymbol());
+                                                      container->Get<MainBuilding>(1)->GetTextField()[1]);
         while (getLooping()) {
             auto current =  std::chrono::system_clock::now();
             std::chrono::duration<double> elapsed = current - previous;

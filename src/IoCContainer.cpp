@@ -1,6 +1,8 @@
 #include "./IoCContainer.h"
 #include <map>
 #include <utility>
+#include <vector>
+#include <string>
 #include "./IObject.h"
 void IoCContainer::Register(size_t type, OBJECT_CREATE_FUNC createFunc) {
     objectTypes.insert(std::pair<size_t, OBJECT_CREATE_FUNC>(type, createFunc));
@@ -49,6 +51,22 @@ void IoCContainer::Delete(IObject* object) {
     pos->second = nullptr;
     objectContainer.erase(pos);
 }
+
+int* IoCContainer::GetIdList(size_t type) {
+    std::vector<int> myVector;
+    for (auto it : objectContainer) {
+        if (it.second->IsA(type)) {
+            myVector.insert(myVector.end(), it.second->GetId());
+        }
+    }
+    auto result = new int[myVector.size() + 1];
+    result[0] = static_cast<int>(myVector.size());
+    for (int i = 0; i < result[0]; i++) {
+        result[i + 1] = myVector[i];
+    }
+    return result;
+}
+
 
 IoCContainer::IoCContainer() {
 }

@@ -2,6 +2,7 @@
 #define DMITRIJ_BAGAEV_MAIN_GAME_IOCCONTAINER_H
 #include <map>
 #include <typeinfo>
+#include <string>
 #include "./IObject.h"
 class IoCContainer {
     typedef IObject* (*OBJECT_CREATE_FUNC)(size_t type, IoCContainer *iocContainer, int newId);
@@ -47,6 +48,11 @@ class IoCContainer {
 
     void Delete(IObject* object);
     int GetNextId(size_t type);
+    template<class T>
+    int* GetIdList() {
+        return GetIdList(typeid(T).hash_code());
+    }
+    int* GetIdList(size_t type);
     ~IoCContainer();
 
  private:

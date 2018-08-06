@@ -1,8 +1,7 @@
 #include "./People.h"
+#include <string>
 #include "./Resource.h"
-People::People(int newId, char symbol) {
-    SetId(newId);
-    SetSymbol(symbol);
+People::People(int newId, std::string title) : Resource::Resource(newId, title) {
 }
 
 bool People::IsA(size_t type) {
@@ -10,5 +9,5 @@ bool People::IsA(size_t type) {
 }
 
 IObject* People::Create(size_t type, IoCContainer *iocContainer, int newId) {
-    return new People(newId, 'P');
+    return new People(newId, "People");
 }

@@ -48,7 +48,7 @@ void LevelManager::setSecondsUsed(double newSecondsUsed) {
     level.secondsUsed = newSecondsUsed;
     if (static_cast<int>(getSecondsUsed()) - getLastSecond() > 0) {
         setLastSecond(static_cast<int>(getSecondsUsed()));
-        abracadabra = true;
+        SetIsNewSecondNow(true);
     }
 }
 
@@ -130,6 +130,14 @@ void LevelManager::setMapSymbol(int row, int col, char symbol) {
 
 Level LevelManager::getStructLevel() {
     return level;
+}
+
+void  LevelManager::SetIsNewSecondNow(bool newIsNewSecondNow) {
+    isNewSecondNow = newIsNewSecondNow;
+}
+
+bool  LevelManager::GetIsNewSecondNow() {
+    return  isNewSecondNow;
 }
 
 void LevelManager::setStructLevel(int *variables, int levelNumber) {

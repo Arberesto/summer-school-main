@@ -1,9 +1,11 @@
 #include "./Building.h"
+#include <string>
 #include "./IoCContainer.h"
 #include "./IObject.h"
-Building::Building(int row, int col, int newId, char symbol) {
+
+Building::Building(int row, int col, int newId, const char* symbol) {
     SetId(newId);
-    SetSymbol(symbol);
+    SetTextField(symbol);
     SetRow(row);
     SetCol(col);
 }
@@ -39,10 +41,12 @@ bool Building::IsA(size_t type) {
     return typeid(Building).hash_code() == type;
 }
 
-void Building::SetSymbol(char newSymbol) {
-    symbol = newSymbol;
+const char* Building::GetTextField() {
+    std::string result;
+    result.append(std::to_string(symbol));
+    return result.c_str();
 }
 
-char Building::GetSymbol() {
-    return  symbol;
+void Building::SetTextField(const char* newTextField) {
+    symbol = newTextField[0];
 }

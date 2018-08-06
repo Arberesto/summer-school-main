@@ -3,7 +3,11 @@
 #include "./Building.h"
 class MainBuilding :public Building {
  public:
-    explicit MainBuilding(int row, int col, int newId, char symbol);
+    explicit MainBuilding(int row, int col, int newId, const char* symbol);
+    template<class T>
+    bool IsA() {
+        return IsA(typeid(T).hash_code());
+    }
     bool IsA(size_t type) override;
     static IObject* Create(size_t type, IoCContainer *iocContainer, int newId);
 };

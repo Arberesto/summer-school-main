@@ -1,8 +1,7 @@
 #include "./Wood.h"
+#include <string>
 #include "./Resource.h"
-Wood::Wood(int newId, char symbol) {
-    SetId(newId);
-    SetSymbol(symbol);
+Wood::Wood(int newId, std::string title) : Resource::Resource(newId, title) {
 }
 
 bool Wood::IsA(size_t type) {
@@ -10,5 +9,5 @@ bool Wood::IsA(size_t type) {
 }
 
 IObject* Wood::Create(size_t type, IoCContainer *iocContainer, int newId) {
-    return new Wood(newId, 'W');
+    return new Wood(newId, "Wood");
 }

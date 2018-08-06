@@ -1,9 +1,10 @@
 #include "./Resource.h"
+#include <string>
 #include "./IoCContainer.h"
 #include "./IObject.h"
-Resource::Resource(int newId, char symbol) {
+Resource::Resource(int newId, std::string newTitle) {
     SetId(newId);
-    SetSymbol(symbol);
+    SetTextField(newTitle.c_str());
 }
 
 int Resource::GetId() {
@@ -17,12 +18,12 @@ void Resource::SetId(int newId) {
     id = newId;
 }
 
-void Resource::SetSymbol(char newSymbol) {
-    symbol = newSymbol;
+void Resource::SetTextField(const char* newTitle) {
+    title = std::string(newTitle);
 }
 
-char Resource::GetSymbol() {
-    return symbol;
+const char* Resource::GetTextField() {
+    return title.c_str();
 }
 
 bool Resource::IsA(size_t type) {
