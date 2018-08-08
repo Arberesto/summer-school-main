@@ -89,8 +89,16 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/Gold.cpp.o
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Gold.cpp
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.o
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././IObject.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Clay.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Food.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Gold.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IoCContainer.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Ore.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././People.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Wood.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Building.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ResourceList.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./House.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ProducingBuilding.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/House.cpp
@@ -111,14 +119,31 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.o
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Utility.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/LevelManager.cpp
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.o
- /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IObject.h
- /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
- /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Building.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././IObject.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Clay.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Food.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Gold.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IoCContainer.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Ore.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././People.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Wood.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Building.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ResourceList.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./MainBuilding.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ProducingBuilding.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/MainBuilding.cpp
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/ObjectRender.cpp.o
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Resource.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Clay.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Food.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Gold.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Ore.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././People.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Wood.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Building.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IObject.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ResourceList.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ProducingBuilding.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./House.h
@@ -140,8 +165,16 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/Player.cpp.o
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Player.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Player.cpp
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Clay.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Food.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Gold.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IObject.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Ore.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././People.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Wood.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ResourceList.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Building.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ProducingBuilding.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ProducingBuilding.cpp
@@ -174,8 +207,16 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wood.cpp.o
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Wood.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wood.cpp
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././././Resource.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Clay.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Food.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Gold.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Ore.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././People.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Wood.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Building.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././IObject.h
+ /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././ResourceList.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IoCContainer.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Player.h
  /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ProducingBuilding.h

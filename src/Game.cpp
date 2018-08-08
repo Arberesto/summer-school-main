@@ -108,15 +108,23 @@ Game::Game(int gameMode) {
                 int idTemp = static_cast<int>(resourceIdList[0][i]);
                 size_t typeTemp = resourceIdList[1][i];
                 auto objectTemp = static_cast<Resource*>(container->Get(idTemp, typeTemp));
-                objectTemp->SetValue(objectTemp->GetValue() + getProduced(typeTemp));
+                objectTemp->SetValue(objectTemp->GetValue() + getProduced(container, typeTemp));
             }
         }
         container->Get<LevelManager>(1)->SetIsNewSecondNow(false);
     }
 
-    int Game::getProduced(size_t type) {
+    int Game::getProduced(IoCContainer *container, size_t type) {
         int result = 0;
-        result += 3;
+        auto buildingList = container->GetIdList<ProducingBuilding>();
+        for (int i = 1; i <= static_cast<int>(buildingList[0][0]); i++) {
+            int idTemp = static_cast<int>(buildingList[0][i]);
+            size_t typeTemp = buildingList[1][i];
+            auto objectTemp = static_cast<ProducingBuilding*>(container->Get(idTemp, typeTemp));
+            if (objectTemp->GetProduceType() == type) {
+                result += objectTemp->GetRealProduceAmount();
+            }
+        }
         return result;
     }
 
@@ -180,16 +188,16 @@ Game::Game(int gameMode) {
         container->SetCoordinates<MainBuilding>(4, 4);
         container->SetCoordinates<House>(5, 5);
         container->SetCoordinates<Tower>(6, 6);
-        container->New<House>();
-        container->New<LevelManager>();
-        container->New<MainBuilding>();
-        container->New<Tower>();
         container->New<Ore>();
         container->New<Wood>();
         container->New<Food>();
         container->New<People>();
         container->New<Gold>();
         container->New<Clay>();
+        container->New<House>();
+        container->New<MainBuilding>();
+        container->New<Tower>();
+        container->New<LevelManager>();
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
         double lag = 0.0;

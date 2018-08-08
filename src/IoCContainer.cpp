@@ -52,16 +52,30 @@ void IoCContainer::Delete(IObject* object) {
     objectContainer.erase(pos);
 }
 
-size_t** IoCContainer::GetIdList(size_t type) {
+size_t** IoCContainer::GetIdList(size_t type) { // [0][0] - number of types;[i][1] - number of elements in row
     std::vector<int> idVector;
     std::vector<size_t> typeVector;
+    std::map<size_t, int> typeCounterMap;
     for (auto it : objectContainer) {
         if (it.second->IsA(type)) {
             idVector.insert(idVector.end(), it.second->GetId());
-            typeVector.insert(typeVector.end(), it.first - it.second->GetId());
+            typeVector.insert(typeVector.end(), it.second->GetType());
+            if ( typeCounterMap.find(it.second->GetType()) == typeCounterMap.end()) {
+                typeCounterMap.insert(std::pair<size_t, int>(it.second->GetType(), 1));
+            }
+            else {
+                typeCounterMap.insert(std::pair<size_t, int>(it.second->GetType(),
+                                                             typeCounterMap.find(it.second->GetType())->second + 1));
+            }
         }
     }
-    auto result = new size_t*[2];
+    auto result = new size_t*[typeCounterMap.size()];
+    int i = 0;
+    for (auto it : typeCounterMap) {
+        result[i] = new size_t[ + 1];
+        result[i][0] = typeCounterMap.find(it.second->GetType())->second;
+        i++;
+    }
     result[0] = new size_t[idVector.size() + 1];
     result[1] = new size_t[typeVector.size() + 1];
     result[0][0] = idVector.size();

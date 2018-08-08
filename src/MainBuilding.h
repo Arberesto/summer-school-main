@@ -1,10 +1,10 @@
 #ifndef DMITRIJ_BAGAEV_MAIN_GAME_MAINBUILDING_H
 #define DMITRIJ_BAGAEV_MAIN_GAME_MAINBUILDING_H
-#include "./Building.h"
-class MainBuilding :public Building {
+#include "./ProducingBuilding.h"
+class MainBuilding :public ProducingBuilding {
  public:
-    explicit MainBuilding(int row, int col, int newId, const char* symbol,
-                          int health, int level, int maxLevel, double levelMultiplier);
+    explicit MainBuilding(int row, int col, int newId, const char* symbol, int health,
+                          int level, int maxLevel, size_t produceType, int produceAmount, double levelMultiplier);
     template<class T>
     bool IsA() {
         return IsA(typeid(T).hash_code());

@@ -16,9 +16,9 @@
     void GameRender::redrawConsole(IoCContainer *container) {  // Render
         // auto resourceTitleList = container->GetTextFieldList<Resource>();
         auto resourceIdList = container->GetIdList<Resource>();
-        for (int i = 1; i < static_cast<int>(resourceIdList[0][0]); i++) {
+        for (int i = 2; i < static_cast<int>(resourceIdList[0][0] + 2); i++) {
             int idTemp = static_cast<int>(resourceIdList[0][i]);
-            size_t typeTemp = resourceIdList[1][i];
+            size_t typeTemp = resourceIdList[i][1];
             auto objectTemp = static_cast<Resource*>(container->Get(idTemp, typeTemp));
             if (!objectTemp->IsA(typeTemp)) {
                 return;

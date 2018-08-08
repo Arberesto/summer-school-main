@@ -4,7 +4,7 @@
 class House :public ProducingBuilding {
  public:
     explicit House(int row, int col, int newId, const char* symbol, int health,
-                   int level, int maxLevel, double levelMultiplier);
+                   int level, int maxLevel, size_t produceType, int produceAmount, double levelMultiplier);
     template<class T>
     bool IsA() {
         return IsA(typeid(T).hash_code());
