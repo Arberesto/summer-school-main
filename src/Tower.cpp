@@ -6,6 +6,7 @@ Tower::Tower(int row, int col, int newId, const char* symbol, int health, int le
     SetAttackDamage(attackDamage);
     SetAttackSpeed(attackSpeed);
     SetAttackRadius(attackRadius);
+    SetType(typeid(Tower).hash_code());
 }
 
 bool Tower::IsA(size_t type) {

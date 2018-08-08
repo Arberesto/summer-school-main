@@ -5,6 +5,7 @@ House::House(int row, int col, int newId, const char* symbol, int health, int le
              size_t produceType, int produceAmount, double levelMultiplier) :
         ProducingBuilding(row, col, newId, symbol, health, level, maxLevel,
                           produceType, produceAmount, levelMultiplier) {
+    SetType(typeid(House).hash_code());
 }
 
 bool House::IsA(size_t type) {

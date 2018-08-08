@@ -5,10 +5,11 @@ MainBuilding::MainBuilding(int row, int col, int newId, const char* symbol, int 
                            size_t produceType, int produceAmount, double levelMultiplier) :
         ProducingBuilding(row, col, newId, symbol, health, level, maxLevel,
                           produceType, produceAmount, levelMultiplier) {
+    SetType(typeid(MainBuilding).hash_code());
 }
 
 bool MainBuilding::IsA(size_t type) {
-    return typeid(MainBuilding).hash_code() == type || Building::IsA(type);
+    return typeid(MainBuilding).hash_code() == type || ProducingBuilding::IsA(type);
 }
 
 IObject* MainBuilding::Create(size_t type, IoCContainer *iocContainer, int newId) {

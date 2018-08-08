@@ -2,6 +2,7 @@
 #include <string>
 #include "./Resource.h"
 Clay::Clay(int newId, std::string title) : Resource::Resource(newId, title) {
+    SetType(typeid(Clay).hash_code());
 }
 
 bool Clay::IsA(size_t type) {

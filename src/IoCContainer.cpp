@@ -52,7 +52,7 @@ void IoCContainer::Delete(IObject* object) {
     objectContainer.erase(pos);
 }
 
-size_t** IoCContainer::GetIdList(size_t type) { // [0][0] - number of types;[i][1] - number of elements in row
+size_t** IoCContainer::GetIdList(size_t type) {  // [0][0]-number of types;[i][1]-number of elements in row;[i][2]-type
     std::vector<int> idVector;
     std::vector<size_t> typeVector;
     std::map<size_t, int> typeCounterMap;
@@ -60,10 +60,9 @@ size_t** IoCContainer::GetIdList(size_t type) { // [0][0] - number of types;[i][
         if (it.second->IsA(type)) {
             idVector.insert(idVector.end(), it.second->GetId());
             typeVector.insert(typeVector.end(), it.second->GetType());
-            if ( typeCounterMap.find(it.second->GetType()) == typeCounterMap.end()) {
+            if (typeCounterMap.find(it.second->GetType()) == typeCounterMap.end()) {
                 typeCounterMap.insert(std::pair<size_t, int>(it.second->GetType(), 1));
-            }
-            else {
+            } else {
                 typeCounterMap.insert(std::pair<size_t, int>(it.second->GetType(),
                                                              typeCounterMap.find(it.second->GetType())->second + 1));
             }
@@ -72,17 +71,23 @@ size_t** IoCContainer::GetIdList(size_t type) { // [0][0] - number of types;[i][
     auto result = new size_t*[typeCounterMap.size()];
     int i = 0;
     for (auto it : typeCounterMap) {
-        result[i] = new size_t[ + 1];
-        result[i][0] = typeCounterMap.find(it.second->GetType())->second;
+        result[i] = new size_t[it.second + 3];
+        result[i][0] = 0;
+        result[i][1] = static_cast<size_t>(it.second);
+        result[i][2] = it.first;
         i++;
     }
-    result[0] = new size_t[idVector.size() + 1];
-    result[1] = new size_t[typeVector.size() + 1];
-    result[0][0] = idVector.size();
-    result[1][0] = typeVector.size();
-    for (int i = 0; i < static_cast<int>(result[0][0]); i++) {
-        result[0][i + 1] = static_cast<size_t>(idVector[i]);
-        result[1][i + 1] = typeVector[i];
+    result[0][0] = typeCounterMap.size();
+    i = 0;
+    for (auto it1 : typeCounterMap) {
+        int j = 3;
+        for (int k = 0; k < static_cast<int>(typeVector.size()); k++) {
+            if (typeVector[k] == it1.first) {
+                result[i][j] = static_cast<size_t>(idVector[k]);
+                j++;
+            }
+        }
+        i++;
     }
     return result;
 }

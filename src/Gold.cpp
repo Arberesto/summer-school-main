@@ -2,6 +2,7 @@
 #include <string>
 #include "./Resource.h"
 Gold::Gold(int newId, std::string title) : Resource::Resource(newId, title) {
+    SetType(typeid(Gold).hash_code());
 }
 
 bool Gold::IsA(size_t type) {

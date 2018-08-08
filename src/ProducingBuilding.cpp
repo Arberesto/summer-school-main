@@ -4,6 +4,7 @@
 ProducingBuilding::ProducingBuilding(int row, int col, int newId, const char* symbol, int health, int level,
                                      int maxLevel, size_t produceType, int produceAmount, double levelMultiplier) :
         Building(row, col, newId, symbol, health, level, maxLevel, levelMultiplier) {
+    SetType(typeid(ProducingBuilding).hash_code());
     SetProduceType(produceType);
     SetProduceAmount(produceAmount);
 }

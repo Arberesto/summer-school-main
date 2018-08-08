@@ -104,11 +104,13 @@ Game::Game(int gameMode) {
     void Game::eachSecondUpdate(IoCContainer *container) {
         if (container->Get<LevelManager>(1)->getLastSecond() % 10 == 0) {
             auto resourceIdList = container->GetIdList<Resource>();
-            for (int i = 1; i < static_cast<int>(resourceIdList[0][0]); i++) {
-                int idTemp = static_cast<int>(resourceIdList[0][i]);
-                size_t typeTemp = resourceIdList[1][i];
-                auto objectTemp = static_cast<Resource*>(container->Get(idTemp, typeTemp));
-                objectTemp->SetValue(objectTemp->GetValue() + getProduced(container, typeTemp));
+            for (int i = 0; i < static_cast<int>(resourceIdList[0][0]); i++) {
+                size_t typeTemp = resourceIdList[i][2];
+                for (int j = 0; j < static_cast<int>(resourceIdList[i][1]); j++) {
+                    int idTemp = static_cast<int>(resourceIdList[i][3 + j]);
+                    auto objectTemp = static_cast<Resource *>(container->Get(idTemp, typeTemp));
+                    objectTemp->SetValue(objectTemp->GetValue() + getProduced(container, typeTemp));
+                }
             }
         }
         container->Get<LevelManager>(1)->SetIsNewSecondNow(false);
@@ -117,12 +119,14 @@ Game::Game(int gameMode) {
     int Game::getProduced(IoCContainer *container, size_t type) {
         int result = 0;
         auto buildingList = container->GetIdList<ProducingBuilding>();
-        for (int i = 1; i <= static_cast<int>(buildingList[0][0]); i++) {
-            int idTemp = static_cast<int>(buildingList[0][i]);
-            size_t typeTemp = buildingList[1][i];
-            auto objectTemp = static_cast<ProducingBuilding*>(container->Get(idTemp, typeTemp));
-            if (objectTemp->GetProduceType() == type) {
-                result += objectTemp->GetRealProduceAmount();
+        for (int i = 0; i < static_cast<int>(buildingList[0][0]); i++) {
+            size_t typeTemp = buildingList[i][2];
+            for (int j = 0; j < static_cast<int>(buildingList[i][1]); j++) {
+                int idTemp = static_cast<int>(buildingList[i][3 + j]);
+                auto objectTemp = static_cast<ProducingBuilding*>(container->Get(idTemp, typeTemp));
+                if (objectTemp->GetProduceType() == type) {
+                    result += objectTemp->GetRealProduceAmount();
+                }
             }
         }
         return result;

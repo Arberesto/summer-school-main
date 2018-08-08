@@ -2,6 +2,7 @@
 #include <string>
 #include "./Resource.h"
 People::People(int newId, std::string title) : Resource::Resource(newId, title) {
+    SetType(typeid(People).hash_code());
 }
 
 bool People::IsA(size_t type) {

@@ -2,6 +2,7 @@
 #include <string>
 #include "./Resource.h"
 Ore::Ore(int newId, std::string title) : Resource::Resource(newId, title) {
+    SetType(typeid(Ore).hash_code());
 }
 
 bool Ore::IsA(size_t type) {

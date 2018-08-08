@@ -2,6 +2,7 @@
 #include <string>
 #include "./Resource.h"
 Food::Food(int newId, std::string title) : Resource::Resource(newId, title) {
+    SetType(typeid(Food).hash_code());
 }
 
 bool Food::IsA(size_t type) {

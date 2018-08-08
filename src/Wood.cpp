@@ -2,6 +2,7 @@
 #include <string>
 #include "./Resource.h"
 Wood::Wood(int newId, std::string title) : Resource::Resource(newId, title) {
+    SetType(typeid(Wood).hash_code());
 }
 
 bool Wood::IsA(size_t type) {
