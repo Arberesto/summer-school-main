@@ -1,9 +1,10 @@
 #ifndef DMITRIJ_BAGAEV_MAIN_GAME_HOUSE_H
 #define DMITRIJ_BAGAEV_MAIN_GAME_HOUSE_H
-#include "./Building.h"
-class House :public Building {
+#include "./ProducingBuilding.h"
+class House :public ProducingBuilding {
  public:
-    explicit House(int row, int col, int newId, const char* symbol);
+    explicit House(int row, int col, int newId, const char* symbol, int health,
+                   int level, int maxLevel, double levelMultiplier);
     template<class T>
     bool IsA() {
         return IsA(typeid(T).hash_code());

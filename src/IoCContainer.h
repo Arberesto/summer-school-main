@@ -20,7 +20,6 @@ class IoCContainer {
     void New(size_t type);
     template<class T>
     T* Get(int id) {
-        // return Get(id, typeid(T).hash_code());
         return static_cast<T*>(Get(id, typeid(T).hash_code()));
     }
     IObject* Get(int id, size_t type);
@@ -49,10 +48,10 @@ class IoCContainer {
     void Delete(IObject* object);
     int GetNextId(size_t type);
     template<class T>
-    int* GetIdList() {
+    size_t** GetIdList() {
         return GetIdList(typeid(T).hash_code());
     }
-    int* GetIdList(size_t type);
+    size_t** GetIdList(size_t type);
     ~IoCContainer();
 
  private:

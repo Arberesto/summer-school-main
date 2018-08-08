@@ -7,6 +7,7 @@
 LevelManager::LevelManager(int newId) {
     SetId(newId);
     loadLevel(START_LEVEL);
+    SetType(typeid(LevelManager).hash_code());
 }
 
 IObject* LevelManager::Create(size_t type, IoCContainer *iocContainer, int newId) {
@@ -225,4 +226,12 @@ char LevelManager::GetSymbol() {
     return 'm';
 }
 void LevelManager::Delete() {
+}
+
+size_t LevelManager::GetType() {
+    return type;
+}
+
+void LevelManager::SetType(size_t newType) {
+    type = newType;
 }

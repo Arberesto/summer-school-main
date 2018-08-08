@@ -8,6 +8,11 @@
 class Game {
  public:
     explicit Game(int gameMode);
+    template<class T>
+    int getProduced() {
+        return getProduced(typeid(T).hash_code());
+    }
+    int getProduced(size_t type);
     bool getLooping();
     void setLooping(bool newLooping);
     int getRowConsole();

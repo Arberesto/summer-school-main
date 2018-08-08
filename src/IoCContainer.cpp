@@ -52,17 +52,23 @@ void IoCContainer::Delete(IObject* object) {
     objectContainer.erase(pos);
 }
 
-int* IoCContainer::GetIdList(size_t type) {
-    std::vector<int> myVector;
+size_t** IoCContainer::GetIdList(size_t type) {
+    std::vector<int> idVector;
+    std::vector<size_t> typeVector;
     for (auto it : objectContainer) {
         if (it.second->IsA(type)) {
-            myVector.insert(myVector.end(), it.second->GetId());
+            idVector.insert(idVector.end(), it.second->GetId());
+            typeVector.insert(typeVector.end(), it.first - it.second->GetId());
         }
     }
-    auto result = new int[myVector.size() + 1];
-    result[0] = static_cast<int>(myVector.size());
-    for (int i = 0; i < result[0]; i++) {
-        result[i + 1] = myVector[i];
+    auto result = new size_t*[2];
+    result[0] = new size_t[idVector.size() + 1];
+    result[1] = new size_t[typeVector.size() + 1];
+    result[0][0] = idVector.size();
+    result[1][0] = typeVector.size();
+    for (int i = 0; i < static_cast<int>(result[0][0]); i++) {
+        result[0][i + 1] = static_cast<size_t>(idVector[i]);
+        result[1][i + 1] = typeVector[i];
     }
     return result;
 }

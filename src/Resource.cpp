@@ -5,6 +5,7 @@
 Resource::Resource(int newId, std::string newTitle) {
     SetId(newId);
     SetTextField(newTitle.c_str());
+    SetType(typeid(Resource).hash_code());
 }
 
 int Resource::GetId() {
@@ -37,4 +38,12 @@ void Resource::SetValue(int newValue) {
 
 int Resource::GetValue() {
     return value;
+}
+
+size_t Resource::GetType() {
+    return type;
+}
+
+void Resource::SetType(size_t newType) {
+    type = newType;
 }

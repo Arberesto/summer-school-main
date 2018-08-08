@@ -16,14 +16,19 @@
     void GameRender::redrawConsole(IoCContainer *container) {  // Render
         // auto resourceTitleList = container->GetTextFieldList<Resource>();
         auto resourceIdList = container->GetIdList<Resource>();
-        for (int i = 1; i < resourceIdList[0]; i++) {
-            auto objectTemp = container->Get<Resource>(resourceIdList[i]);
+        for (int i = 1; i < static_cast<int>(resourceIdList[0][0]); i++) {
+            int idTemp = static_cast<int>(resourceIdList[0][i]);
+            size_t typeTemp = resourceIdList[1][i];
+            auto objectTemp = static_cast<Resource*>(container->Get(idTemp, typeTemp));
+            if (!objectTemp->IsA(typeTemp)) {
+                return;
+            }
             auto temp = objectTemp->GetTextField();
             auto intTemp = objectTemp->GetValue();
             mvwprintw(stdscr, CONSOLEROW - 2 + i * 2,
-                      CONSOLECOL + 10, "|%s : ", temp);
+                      CONSOLECOL, "|%s : ", temp);
             mvwprintw(stdscr, CONSOLEROW - 2 + i * 2,
-                      CONSOLECOL + 10, "%i | ", intTemp);
+                      CONSOLECOL + 10, "%i |", intTemp);
         }
     }
 

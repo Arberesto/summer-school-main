@@ -3,7 +3,8 @@
 #include "./Building.h"
 class MainBuilding :public Building {
  public:
-    explicit MainBuilding(int row, int col, int newId, const char* symbol);
+    explicit MainBuilding(int row, int col, int newId, const char* symbol,
+                          int health, int level, int maxLevel, double levelMultiplier);
     template<class T>
     bool IsA() {
         return IsA(typeid(T).hash_code());

@@ -10,9 +10,13 @@ class Resource : public IObject{
     explicit Resource(int newId, std::string newTitle);
     int GetId();
 
+    void SetId(int newId);
+
     void Delete();
 
-    void SetId(int newId);
+    size_t GetType();
+
+    void SetType(size_t newType);
 
     const char* GetTextField();
 

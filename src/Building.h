@@ -2,14 +2,43 @@
 #define DMITRIJ_BAGAEV_MAIN_GAME_BUILDING_H
 #include "./IoCContainer.h"
 class Building : public IObject {
- public:
+ protected:
     char symbol;
+    int health;
+    int level;
+    int maxLevel;
+    double levelMultiplier;
     int row;
     int col;
+
+ public:
     Building() = default;
-    explicit Building(int row, int col, int newId, const char * symbol);
+    explicit Building(int row, int col, int newId, const char* symbol, int health,
+                      int level, int maxLevel, double levelMultiplier);
+
+    int GetHealth();
+
+    void SetHealth(int newHealth);
+
+    int GetLevel();
+
+    void SetLevel(int newLevel);
+
+    int GetMaxLevel();
+
+    void SetMaxLevel(int newMaxLevel);
+
+    double GetLevelMultiplier();
+
+    void SetLevelMultiplier(double newLevelMultiplier);
 
     int GetId();
+
+    void SetId(int newId);
+
+    size_t GetType();
+
+    void SetType(size_t newType);
 
     int GetRow();
 
@@ -17,14 +46,13 @@ class Building : public IObject {
 
     int GetCol();
 
-    const char* GetTextField();
-    void SetTextField(const char* newTextField);
-
     void SetCol(int newCol);
 
-    void Delete();
+    const char* GetTextField();
 
-    void SetId(int newId);
+    void SetTextField(const char* newTextField);
+
+    void Delete();
 
     template<class T>
     bool IsA() {

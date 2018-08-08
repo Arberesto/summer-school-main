@@ -53,6 +53,8 @@ class LevelManager : public IObject{
     int getLastSecond();
     int GetId();
     void SetId(int newId);
+    size_t GetType();
+    void SetType(size_t newType);
     void SetIsNewSecondNow(bool newIsNewSecondNow);
     bool GetIsNewSecondNow();
     template<class T>

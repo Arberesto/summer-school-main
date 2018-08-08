@@ -103,10 +103,21 @@ Game::Game(int gameMode) {
 
     void Game::eachSecondUpdate(IoCContainer *container) {
         if (container->Get<LevelManager>(1)->getLastSecond() % 10 == 0) {
-            container->Get<Food>(1)->SetValue(container->Get<Food>(1)->GetValue() + 3);
-            container->Get<People>(1)->SetValue(container->Get<People>(1)->GetValue() + 3);
+            auto resourceIdList = container->GetIdList<Resource>();
+            for (int i = 1; i < static_cast<int>(resourceIdList[0][0]); i++) {
+                int idTemp = static_cast<int>(resourceIdList[0][i]);
+                size_t typeTemp = resourceIdList[1][i];
+                auto objectTemp = static_cast<Resource*>(container->Get(idTemp, typeTemp));
+                objectTemp->SetValue(objectTemp->GetValue() + getProduced(typeTemp));
+            }
         }
         container->Get<LevelManager>(1)->SetIsNewSecondNow(false);
+    }
+
+    int Game::getProduced(size_t type) {
+        int result = 0;
+        result += 3;
+        return result;
     }
 
     void Game::update(InputController *inputObject, IoCContainer *container,
@@ -159,6 +170,7 @@ Game::Game(int gameMode) {
         container->Register<House>(&House::Create);
         container->Register<LevelManager>(&LevelManager::Create);
         container->Register<MainBuilding>(&MainBuilding::Create);
+        container->Register<Tower>(&Tower::Create);
         container->Register<Ore>(&Ore::Create);
         container->Register<Wood>(&Wood::Create);
         container->Register<Food>(&Food::Create);
@@ -167,9 +179,11 @@ Game::Game(int gameMode) {
         container->Register<Clay>(&Clay::Create);
         container->SetCoordinates<MainBuilding>(4, 4);
         container->SetCoordinates<House>(5, 5);
+        container->SetCoordinates<Tower>(6, 6);
         container->New<House>();
         container->New<LevelManager>();
         container->New<MainBuilding>();
+        container->New<Tower>();
         container->New<Ore>();
         container->New<Wood>();
         container->New<Food>();
@@ -179,13 +193,13 @@ Game::Game(int gameMode) {
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
         double lag = 0.0;
-        auto tempText = container->Get<House>(1)->GetTextField();
-        container->Get<LevelManager>(1)->setMapSymbol(container->Get<House>(1)->GetRow(),
-                                                      container->Get<House>(1)->GetCol(),
-                                                      tempText[1]);
-        container->Get<LevelManager>(1)->setMapSymbol(container->Get<MainBuilding>(1)->GetRow(),
-                                                      container->Get<MainBuilding>(1)->GetCol(),
-                                                      container->Get<MainBuilding>(1)->GetTextField()[1]);
+//        auto tempText = container->Get<House>(1)->GetTextField();
+//        container->Get<LevelManager>(1)->setMapSymbol(container->Get<House>(1)->GetRow(),
+//                                                      container->Get<House>(1)->GetCol(),
+//                                                      tempText[0]);
+//        container->Get<LevelManager>(1)->setMapSymbol(container->Get<MainBuilding>(1)->GetRow(),
+//                                                      container->Get<MainBuilding>(1)->GetCol(),
+//                                                      container->Get<MainBuilding>(1)->GetTextField()[0]);
         while (getLooping()) {
             auto current =  std::chrono::system_clock::now();
             std::chrono::duration<double> elapsed = current - previous;

@@ -649,6 +649,33 @@ src/Player.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
 
+src/ProducingBuilding.o: src/ProducingBuilding.cpp.o
+
+.PHONY : src/ProducingBuilding.o
+
+# target to build an object file
+src/ProducingBuilding.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o
+.PHONY : src/ProducingBuilding.cpp.o
+
+src/ProducingBuilding.i: src/ProducingBuilding.cpp.i
+
+.PHONY : src/ProducingBuilding.i
+
+# target to preprocess a source file
+src/ProducingBuilding.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.i
+.PHONY : src/ProducingBuilding.cpp.i
+
+src/ProducingBuilding.s: src/ProducingBuilding.cpp.s
+
+.PHONY : src/ProducingBuilding.s
+
+# target to generate assembly for a file
+src/ProducingBuilding.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.s
+.PHONY : src/ProducingBuilding.cpp.s
+
 src/Resource.o: src/Resource.cpp.o
 
 .PHONY : src/Resource.o
@@ -702,6 +729,33 @@ src/ScoreBoard.s: src/ScoreBoard.cpp.s
 src/ScoreBoard.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ScoreBoard.cpp.s
 .PHONY : src/ScoreBoard.cpp.s
+
+src/Tower.o: src/Tower.cpp.o
+
+.PHONY : src/Tower.o
+
+# target to build an object file
+src/Tower.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o
+.PHONY : src/Tower.cpp.o
+
+src/Tower.i: src/Tower.cpp.i
+
+.PHONY : src/Tower.i
+
+# target to preprocess a source file
+src/Tower.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.i
+.PHONY : src/Tower.cpp.i
+
+src/Tower.s: src/Tower.cpp.s
+
+.PHONY : src/Tower.s
+
+# target to generate assembly for a file
+src/Tower.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.s
+.PHONY : src/Tower.cpp.s
 
 src/Utility.o: src/Utility.cpp.o
 
@@ -878,12 +932,18 @@ help:
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/ProducingBuilding.o"
+	@echo "... src/ProducingBuilding.i"
+	@echo "... src/ProducingBuilding.s"
 	@echo "... src/Resource.o"
 	@echo "... src/Resource.i"
 	@echo "... src/Resource.s"
 	@echo "... src/ScoreBoard.o"
 	@echo "... src/ScoreBoard.i"
 	@echo "... src/ScoreBoard.s"
+	@echo "... src/Tower.o"
+	@echo "... src/Tower.i"
+	@echo "... src/Tower.s"
 	@echo "... src/Utility.o"
 	@echo "... src/Utility.i"
 	@echo "... src/Utility.s"

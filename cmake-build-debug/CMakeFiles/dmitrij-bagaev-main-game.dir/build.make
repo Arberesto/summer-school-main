@@ -657,6 +657,54 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.o.provides: CMakeFiles/dmitr
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.o.provides.build: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.o
 
 
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o: CMakeFiles/dmitrij-bagaev-main-game.dir/flags.make
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o: ../src/Tower.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o -c /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Tower.cpp
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Tower.cpp > CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.i
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Tower.cpp -o CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.s
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o.requires:
+
+.PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o.requires
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o.provides: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o.requires
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o.provides.build
+.PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o.provides
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o.provides.build: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o
+
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o: CMakeFiles/dmitrij-bagaev-main-game.dir/flags.make
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o: ../src/ProducingBuilding.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o -c /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ProducingBuilding.cpp
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ProducingBuilding.cpp > CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.i
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ProducingBuilding.cpp -o CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.s
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o.requires:
+
+.PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o.requires
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o.provides: CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o.requires
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o.provides.build
+.PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o.provides
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o.provides.build: CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o
+
+
 # Object files for target dmitrij-bagaev-main-game
 dmitrij__bagaev__main__game_OBJECTS = \
 "CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o" \
@@ -683,7 +731,9 @@ dmitrij__bagaev__main__game_OBJECTS = \
 "CMakeFiles/dmitrij-bagaev-main-game.dir/src/People.cpp.o" \
 "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wood.cpp.o" \
 "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Clay.cpp.o" \
-"CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.o"
+"CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.o" \
+"CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o" \
+"CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o"
 
 # External object files for target dmitrij-bagaev-main-game
 dmitrij__bagaev__main__game_EXTERNAL_OBJECTS =
@@ -713,10 +763,12 @@ dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/People.cpp
 dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wood.cpp.o
 dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Clay.cpp.o
 dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.o
+dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o
+dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o
 dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/build.make
 dmitrij-bagaev-main-game: /usr/lib/x86_64-linux-gnu/libcurses.so
 dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable dmitrij-bagaev-main-game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable dmitrij-bagaev-main-game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dmitrij-bagaev-main-game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -749,6 +801,8 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main
 CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wood.cpp.o.requires
 CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Clay.cpp.o.requires
 CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.o.requires
+CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o.requires
+CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o.requires
 
 .PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/requires
 
