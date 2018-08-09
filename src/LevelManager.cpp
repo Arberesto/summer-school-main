@@ -4,7 +4,7 @@
 #include "./FileManager.h"
 #include "./Player.h"
 #include "./IObject.h"
-#include "TerrainList.h"
+#include "./TerrainList.h"
 LevelManager::LevelManager(IoCContainer* container, int newId) {
     SetId(newId);
     loadLevel(container, START_LEVEL);
@@ -125,7 +125,9 @@ void LevelManager::loadLevel(IoCContainer* container, int levelNumber) {
     // delete variables;
     for (int i = 0; i < getSizeRow(); i++) {
         for (int j = 0; j < getSizeCol(); j++) {
-            container->New(ConvertTileToObject(container, parametersAndMap[i+1][j]));
+            size_t tileType = ConvertTileToObject(container, parametersAndMap[i+1][j]);
+            container->SetCoordinates(i + 1, j , tileType);
+            container->New(tileType);
         }
         // delete parametersAndMap[i+1];
     }
@@ -136,8 +138,19 @@ void LevelManager::loadLevel(IoCContainer* container, int levelNumber) {
 }
 
 size_t LevelManager::ConvertTileToObject(IoCContainer* container, char tile) {
-    size_t result = 0;
-    container->obj
+    size_t result = typeid(Plane).hash_code();
+    switch (tile) {
+        case 35 :  {  // #
+            result = typeid(Mountain).hash_code();
+            break;
+        }
+        case 46 :  {  // .
+            result = typeid(Plane).hash_code();
+            break;
+        }
+        default:
+            break;
+    }
     return result;
 }
 
@@ -150,9 +163,7 @@ void LevelManager::SetId(int newId) {
 bool LevelManager::IsA(size_t type) {
     return typeid(LevelManager).hash_code() == type;
 }
-char LevelManager::GetSymbol() {
-    return 'm';
-}
+
 void LevelManager::Delete() {
 }
 

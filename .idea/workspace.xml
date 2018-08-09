@@ -13,13 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="710a03f9-8e18-4640-a9b4-46bd55d6f3e3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Plane.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Plane.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Terrain.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Terrain.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TerrainList.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Unit.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Unit.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mountain.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mountain.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
@@ -33,34 +28,21 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Floor.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Floor.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lint.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lint.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lint.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lint.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dmitrij-bagaev-main-game" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dmitrij-bagaev-main-game" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Building.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Building.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Building.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Building.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Floor.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Floor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameCamera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameCamera.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameCamera.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameCamera.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameRender.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameRender.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/House.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/House.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IncludeObjects.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/IncludeObjects.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IoCContainer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/IoCContainer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IoCContainer.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/IoCContainer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LevelManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/LevelManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LevelManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/LevelManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainBuilding.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainBuilding.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tower.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tower.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitList.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TerrainList.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/TerrainList.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,37 +54,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            <state relative-caret-position="180">
+              <caret line="150" column="47" selection-start-line="150" selection-start-column="47" selection-end-line="150" selection-end-column="47" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IoCContainer.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IoCContainer.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
-              <folding>
-                <element signature="e#96#110#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LevelManager.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/LevelManager.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="139" column="18" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,8 +69,8 @@
       <file leaf-file-name="GameCamera.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameCamera.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+            <state relative-caret-position="83">
+              <caret line="34" column="41" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="41" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -120,11 +78,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LevelManager.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LevelManager.h">
+      <file leaf-file-name="IoCContainer.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IoCContainer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+            <state relative-caret-position="345">
+              <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelManager.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LevelManager.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mountain.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Mountain.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -142,8 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ObjectRender.h" />
-        <option value="$PROJECT_DIR$/src/GameMap.cpp" />
         <option value="$PROJECT_DIR$/src/ResourceList.h" />
         <option value="$PROJECT_DIR$/src/GameRender.h" />
         <option value="$PROJECT_DIR$/src/ObjectRender.cpp" />
@@ -153,7 +130,6 @@
         <option value="$PROJECT_DIR$/src/Ore.h" />
         <option value="$PROJECT_DIR$/src/People.h" />
         <option value="$PROJECT_DIR$/src/Wood.h" />
-        <option value="$PROJECT_DIR$/src/IoCContainer.h" />
         <option value="$PROJECT_DIR$/src/IObject.h" />
         <option value="$PROJECT_DIR$/src/Resource.h" />
         <option value="$PROJECT_DIR$/src/Resource.cpp" />
@@ -162,7 +138,6 @@
         <option value="$PROJECT_DIR$/src/ProducingBuilding.h" />
         <option value="$PROJECT_DIR$/src/MainBuilding.h" />
         <option value="$PROJECT_DIR$/src/Game.h" />
-        <option value="$PROJECT_DIR$/src/IoCContainer.cpp" />
         <option value="$PROJECT_DIR$/src/Gold.cpp" />
         <option value="$PROJECT_DIR$/src/Clay.cpp" />
         <option value="$PROJECT_DIR$/src/Food.cpp" />
@@ -182,17 +157,21 @@
         <option value="$PROJECT_DIR$/src/GameRender.cpp" />
         <option value="$PROJECT_DIR$/src/Building.cpp" />
         <option value="$PROJECT_DIR$/src/Floor.h" />
-        <option value="$PROJECT_DIR$/src/TerrainList.h" />
         <option value="$PROJECT_DIR$/src/GameCamera.h" />
-        <option value="$PROJECT_DIR$/src/GameCamera.cpp" />
         <option value="$PROJECT_DIR$/src/Plane.cpp" />
         <option value="$PROJECT_DIR$/src/Terrain.h" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/src/Plane.h" />
         <option value="$PROJECT_DIR$/src/Terrain.cpp" />
-        <option value="$PROJECT_DIR$/src/Game.cpp" />
         <option value="$PROJECT_DIR$/src/LevelManager.h" />
+        <option value="$PROJECT_DIR$/src/Mountain.cpp" />
+        <option value="$PROJECT_DIR$/src/Game.cpp" />
+        <option value="$PROJECT_DIR$/src/TerrainList.h" />
+        <option value="$PROJECT_DIR$/src/GameCamera.cpp" />
         <option value="$PROJECT_DIR$/src/LevelManager.cpp" />
+        <option value="$PROJECT_DIR$/src/Mountain.h" />
+        <option value="$PROJECT_DIR$/src/IoCContainer.cpp" />
+        <option value="$PROJECT_DIR$/src/IoCContainer.h" />
       </list>
     </option>
   </component>
@@ -297,12 +276,12 @@
       <workItem from="1533706710662" duration="16900000" />
       <workItem from="1533726606210" duration="820000" />
       <workItem from="1533747737015" duration="4474000" />
-      <workItem from="1533792737437" duration="9766000" />
+      <workItem from="1533792737437" duration="14438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118316000" />
+    <option name="totallyTimeSpent" value="122988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="29" width="1344" height="729" extended-state="0" />
@@ -360,20 +339,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Food.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gold.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Wood.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -615,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TerrainList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameCamera.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -646,16 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Plane.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -673,13 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Plane.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -707,10 +648,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Plane.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="11" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Plane.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="17" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mountain.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TerrainList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mountain.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LevelManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameCamera.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/IoCContainer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="818">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="345">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
@@ -719,40 +718,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IoCContainer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="383">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding>
             <element signature="e#96#110#0" expanded="true" />
+            <element signature="e#1238#1247#0" expanded="true" />
+            <element signature="e#1369#1378#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        <state relative-caret-position="180">
+          <caret line="150" column="47" selection-start-line="150" selection-start-column="47" selection-end-line="150" selection-end-column="47" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameCamera.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LevelManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="139" column="18" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>

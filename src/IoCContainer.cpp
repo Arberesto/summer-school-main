@@ -36,9 +36,19 @@ void IoCContainer::SetCoordinates(int Y, int X, size_t type) {
     coordinatesContainer.insert(std::pair<size_t, int>(type, Y * 200 + X));
 }
 
+void IoCContainer::SetNextId(size_t type, int nextId) {
+    nextIdContainer.insert(std::pair<size_t, int>(type, nextId));
+}
 
 int IoCContainer::GetNextId(size_t type) {
-    return 1;
+    auto result = nextIdContainer.find(type);
+    if (result == nextIdContainer.end()) {
+        SetNextId(type, 2);
+        return 1;
+    }
+    int lastId = result->second;
+    SetNextId(type, lastId + 1);
+    return lastId;
 }
 
 void IoCContainer::Delete(IObject* object) {

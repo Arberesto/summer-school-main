@@ -29,19 +29,6 @@ bool GameCamera::isCorrectCoordinates(int cameraRow, int cameraCol, int levelSiz
 }
 
 void GameCamera::render(IoCContainer* container) {
-    auto buildingList = container->GetIdList<Building>();
-    if (buildingList[0][0] != 0) {
-        for (int i = 0; i < static_cast<int>(buildingList[0][0]); i++) {
-            if (buildingList[i][1] != 0) {
-                size_t typeTemp = buildingList[i][2];
-                for (int j = 0; j < static_cast<int>(buildingList[i][1]); j++) {
-                    auto idTemp = static_cast<int>(buildingList[i][3 + j]);
-                    auto objectTemp = static_cast<Building *>(container->Get(idTemp, typeTemp));
-                    Draw(container, objectTemp);
-                }
-            }
-        }
-    }
     auto terrainList = container->GetIdList<Terrain>();
     if (terrainList[0][0] != 0) {
         for (int i = 0; i < static_cast<int>(terrainList[0][0]); i++) {
@@ -50,6 +37,19 @@ void GameCamera::render(IoCContainer* container) {
                 for (int j = 0; j < static_cast<int>(terrainList[i][1]); j++) {
                     auto idTemp = static_cast<int>(terrainList[i][3 + j]);
                     auto objectTemp = static_cast<Terrain *>(container->Get(idTemp, typeTemp));
+                    Draw(container, objectTemp);
+                }
+            }
+        }
+    }
+    auto buildingList = container->GetIdList<Building>();
+    if (buildingList[0][0] != 0) {
+        for (int i = 0; i < static_cast<int>(buildingList[0][0]); i++) {
+            if (buildingList[i][1] != 0) {
+                size_t typeTemp = buildingList[i][2];
+                for (int j = 0; j < static_cast<int>(buildingList[i][1]); j++) {
+                    auto idTemp = static_cast<int>(buildingList[i][3 + j]);
+                    auto objectTemp = static_cast<Building *>(container->Get(idTemp, typeTemp));
                     Draw(container, objectTemp);
                 }
             }

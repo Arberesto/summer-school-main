@@ -148,6 +148,7 @@ Game::Game(int gameMode) {
         container->Register<Gold>(&Gold::Create);
         container->Register<Clay>(&Clay::Create);
         container->Register<Plane>(&Plane::Create);
+        container->Register<Mountain>(&Mountain::Create);
         container->SetCoordinates<MainBuilding>(4, 4);
         container->SetCoordinates<House>(5, 8);
         container->SetCoordinates<Tower>(6, 6);
