@@ -53,7 +53,7 @@ class IoCContainer {
     int GetNextId(size_t type);
     template<class T>
     void SetNextId(int nextId) {
-        void SetNextId(typeid(T).hash_code(), int nextId);
+        SetNextId(typeid(T).hash_code(), nextId);
     }
     void SetNextId(size_t type, int nextId);
     template<class T>

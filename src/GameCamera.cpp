@@ -104,8 +104,6 @@ void GameCamera::Draw(IoCContainer* container, Terrain * object) {
         for (int j = 0; j < localDrawField[0][1]; j++) {
             if (isInCameraRadius(container, i + localRow, j + localCol)) {
                 mvaddch(CLUR - LUR + (localRow + i), CLUC - LUC + (localCol + j), localDrawField[i + 1][j]);
-            } else {
-                mvaddch(CLUR - LUR + (localRow + i), CLUC - LUC + (localCol + j), ' ');
             }
         }
     }

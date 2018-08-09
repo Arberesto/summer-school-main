@@ -126,7 +126,7 @@ void LevelManager::loadLevel(IoCContainer* container, int levelNumber) {
     for (int i = 0; i < getSizeRow(); i++) {
         for (int j = 0; j < getSizeCol(); j++) {
             size_t tileType = ConvertTileToObject(container, parametersAndMap[i+1][j]);
-            container->SetCoordinates(i + 1, j , tileType);
+            container->SetCoordinates(i, j , tileType);
             container->New(tileType);
         }
         // delete parametersAndMap[i+1];

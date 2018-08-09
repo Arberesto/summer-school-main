@@ -12,6 +12,7 @@ void IoCContainer::New(size_t type) {
     auto pos = objectTypes.find(type);
     if (pos == objectTypes.end()) {
         // raise exception
+        return;
     }
     OBJECT_CREATE_FUNC func = pos->second;
     int newId = GetNextId(type);
@@ -33,16 +34,24 @@ int IoCContainer::GetX(size_t type) {
 }
 
 void IoCContainer::SetCoordinates(int Y, int X, size_t type) {
-    coordinatesContainer.insert(std::pair<size_t, int>(type, Y * 200 + X));
+    auto temp = coordinatesContainer.find(type);
+    if (temp->first == type) {
+        coordinatesContainer.erase(type);
+    }
+    coordinatesContainer.insert(std::pair<size_t, int>(type, (Y * 200) + X));
 }
 
 void IoCContainer::SetNextId(size_t type, int nextId) {
+    auto temp = nextIdContainer.find(type);
+    if (temp->first == type) {
+        nextIdContainer.erase(type);
+    }
     nextIdContainer.insert(std::pair<size_t, int>(type, nextId));
 }
 
 int IoCContainer::GetNextId(size_t type) {
     auto result = nextIdContainer.find(type);
-    if (result == nextIdContainer.end()) {
+    if (result->first != type) {
         SetNextId(type, 2);
         return 1;
     }
@@ -70,11 +79,13 @@ size_t** IoCContainer::GetIdList(size_t type) {  // [0][0]-number of types;[i][1
         if (it.second->IsA(type)) {
             idVector.insert(idVector.end(), it.second->GetId());
             typeVector.insert(typeVector.end(), it.second->GetType());
-            if (typeCounterMap.find(it.second->GetType()) == typeCounterMap.end()) {
+            if (typeCounterMap.find(it.second->GetType())->first != it.second->GetType()) {
                 typeCounterMap.insert(std::pair<size_t, int>(it.second->GetType(), 1));
             } else {
+                int previous = typeCounterMap.find(it.second->GetType())->second;
+                typeCounterMap.erase(it.second->GetType());
                 typeCounterMap.insert(std::pair<size_t, int>(it.second->GetType(),
-                                                             typeCounterMap.find(it.second->GetType())->second + 1));
+                                                             previous + 1));
             }
         }
     }
