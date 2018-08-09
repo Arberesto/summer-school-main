@@ -26,6 +26,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.o"
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o"
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Unit.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Terrain.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Plane.cpp.o"
   "dmitrij-bagaev-main-game.pdb"
   "dmitrij-bagaev-main-game"
 )

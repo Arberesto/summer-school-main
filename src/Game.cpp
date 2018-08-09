@@ -61,45 +61,7 @@ Game::Game(int gameMode) {
 
     void Game::changeMap(InputController *inputObject, IoCContainer *container,
                    ScoreBoard *scoreBoard) {
-        auto levelManager = container->Get<LevelManager>(1);
-        levelManager->getPlayer()->setIsMoving(false);
-        int row = 0;
-        int col = 0;
-        if ((levelManager->getMapSymbol(levelManager->getPlayerRow() + row,
-                                        levelManager->getPlayerCol() + col) == '.' )
-            ||(levelManager->getMapSymbol(levelManager->getPlayerRow() + row,
-                                          levelManager->getPlayerCol() + col) == '$')) {
-            // levelManager->setStepsUsed(levelManager->getStepsUsed() + 1);
-            // наступили на монетку или на пустое пространство
-            if (levelManager->getMapSymbol(levelManager->getPlayerRow() + row,
-                                           levelManager->getPlayerCol() + col) == '$') {
-                levelManager->setCoinCount(levelManager->getCoinCount() + 1);
-            }
-            levelManager->setMapSymbol(levelManager->getPlayerRow(),
-                                       levelManager->getPlayerCol(), '.');
-            levelManager->setPlayerRow(levelManager->getPlayerRow() + row);
-            levelManager->setPlayerCol(levelManager->getPlayerCol() + col);
-            levelManager->setMapSymbol(levelManager->getPlayerRow(),
-                                       levelManager->getPlayerCol(), levelManager->getPlayer()->getSymbol());
-        } else if (levelManager->getMapSymbol(levelManager->getPlayerRow() + row,
-                                              levelManager->getPlayerCol() + col)  == '>') {
-            scoreBoard->addPlayer(inputObject->getPlayerName(getRowConsole(), getColConsole(), 10),
-                                  static_cast<int>(levelManager->getSecondsUsed()));
-            setGameMode(1);
-            bool isNextLevelExist = levelManager->nextLevel();
-            if (!isNextLevelExist) {
-                gameEnd(container,  scoreBoard, true);
-            }
-        } else if (levelManager->getMapSymbol(levelManager->getPlayerRow() + row,
-                                              levelManager->getPlayerCol() + col)  == '<') {
-            // secretLevel();
-        }
     }
-
-//    void Game::eachSecondUpdate(InputController *inputObject, LevelManager *levelObject,
-//                      ScoreBoard *scoreBoard) {
-//        // здесь производить ресурсы и прочее посекундное дело
-//    }
 
     void Game::eachSecondUpdate(IoCContainer *container) {
         if (container->Get<LevelManager>(1)->getLastSecond() % 10 == 0) {
@@ -166,10 +128,6 @@ Game::Game(int gameMode) {
                 }
                 inputObject->setDirection(firstKeyInBuffer);
             }
-            levelObject->DeclarePlayerMovement(inputObject->getAxisY(), inputObject->getAxisX());
-            if (levelObject->getPlayer()->getIsMoving()) {
-                // changeMap(inputObject, container, scoreBoard);
-            }
         }
     }
 
@@ -189,8 +147,9 @@ Game::Game(int gameMode) {
         container->Register<People>(&People::Create);
         container->Register<Gold>(&Gold::Create);
         container->Register<Clay>(&Clay::Create);
+        container->Register<Plane>(&Plane::Create);
         container->SetCoordinates<MainBuilding>(4, 4);
-        container->SetCoordinates<House>(5, 5);
+        container->SetCoordinates<House>(5, 8);
         container->SetCoordinates<Tower>(6, 6);
         container->New<Ore>();
         container->New<Wood>();
@@ -226,7 +185,7 @@ Game::Game(int gameMode) {
                 gameCamera->changePosition(inputObject->getAxisY(), inputObject->getAxisX(),
                                            container->Get<LevelManager>(1)->getSizeRow(),
                                            container->Get<LevelManager>(1)->getSizeCol());
-                gameCamera->render(container->Get<LevelManager>(1));
+                gameCamera->render(container);
                 renderObject->refreshScreen();
             }
         }

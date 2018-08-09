@@ -54,7 +54,7 @@
 
     void GameRender::render(IoCContainer *container, ScoreBoard *scoreBoard, int mode) {
         // mode: 0 map/console ,1 - scoreBoard,  3 - losePicture, 4 - winPicture
-        auto levelObject = container->Get<LevelManager>(1);
+        // auto levelObject = container->Get<LevelManager>(1);
         switch (mode) {
             case 0: {
                 redrawConsole(container);
@@ -64,15 +64,15 @@
                 break;
             }
             case 1: {
-                drawScoreBoard(scoreBoard);
+                //  drawScoreBoard(scoreBoard);
                 break;
             }
             case 3: {
-                drawLosePicture(levelObject);
+                //  drawLosePicture(levelObject);
                 break;
             }
             case 4: {
-                drawWinPicture(levelObject);
+                //  drawWinPicture(levelObject);
                 break;
             }
             default:

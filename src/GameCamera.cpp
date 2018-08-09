@@ -1,6 +1,9 @@
 #include "./GameCamera.h"
 #include <ncurses.h>
 #include <string>
+#include "./BuildingList.h"
+#include "./UnitList.h"
+#include "./TerrainList.h"
 GameCamera::GameCamera() {
     setColSize(50);
     setRowSize(25);
@@ -25,24 +28,95 @@ bool GameCamera::isCorrectCoordinates(int cameraRow, int cameraCol, int levelSiz
            && (cameraCol < levelSizeCol) && (cameraRow >= 0)&& (cameraCol >= 0);
 }
 
-void GameCamera::render(LevelManager *levelObject) {
+void GameCamera::render(IoCContainer* container) {
+    auto buildingList = container->GetIdList<Building>();
+    if (buildingList[0][0] != 0) {
+        for (int i = 0; i < static_cast<int>(buildingList[0][0]); i++) {
+            if (buildingList[i][1] != 0) {
+                size_t typeTemp = buildingList[i][2];
+                for (int j = 0; j < static_cast<int>(buildingList[i][1]); j++) {
+                    auto idTemp = static_cast<int>(buildingList[i][3 + j]);
+                    auto objectTemp = static_cast<Building *>(container->Get(idTemp, typeTemp));
+                    Draw(container, objectTemp);
+                }
+            }
+        }
+    }
+    auto terrainList = container->GetIdList<Terrain>();
+    if (terrainList[0][0] != 0) {
+        for (int i = 0; i < static_cast<int>(terrainList[0][0]); i++) {
+            if (terrainList[i][1] != 0) {
+                size_t typeTemp = terrainList[i][2];
+                for (int j = 0; j < static_cast<int>(terrainList[i][1]); j++) {
+                    auto idTemp = static_cast<int>(terrainList[i][3 + j]);
+                    auto objectTemp = static_cast<Terrain *>(container->Get(idTemp, typeTemp));
+                    Draw(container, objectTemp);
+                }
+            }
+        }
+    }
+//    auto unitList = container->GetIdList<Unit>();
+//    if (unitList[0][0] != 0) {
+//        for (int i = 0; i < static_cast<int>(unitList[0][0]); i++) {
+//            if (unitList[i][1] != 0) {
+//                size_t typeTemp = unitList[i][2];
+//                for (int j = 0; j < static_cast<int>(unitList[i][1]); j++) {
+//                    auto idTemp = static_cast<int>(unitList[i][3 + j]);
+//                    auto objectTemp = static_cast<Unit *>(container->Get(idTemp, typeTemp));
+//                    Draw(container, objectTemp);
+//                }
+//            }
+//        }
+//    }
+}
+
+void GameCamera::Draw(IoCContainer* container, Building* object) {
     int LUR = getLeftUpperCornerRow();
     int LUC = getLeftUpperCornerCol();
     int CLUR = getConsoleLeftUpperCornerRow();
     int CLUC = getConsoleLeftUpperCornerCol();
-    int levelSizeRow = levelObject->getSizeRow();
-    int levelSizeCol = levelObject->getSizeCol();
-    for (int i = 0; i < getRowSize(); i++) {
-        for (int j = 0; j < getColSize(); j++) {
-            if (isCorrectCoordinates(i + LUR, j + LUC, levelSizeRow, levelSizeCol)) {
-                mvaddch(CLUR + i, CLUC + j,
-                        levelObject->getMapSymbol(i + LUR, j + LUC));
+    int localRow = object->GetRow();
+    int localCol = object->GetCol();
+    auto localDrawField = object->GetDrawField();
+    for (int i = 0; i < localDrawField[0][0]; i++) {
+        for (int j = 0; j < localDrawField[0][1]; j++) {
+            if (isInCameraRadius(container, i + localRow, j + localCol)) {
+                mvaddch(CLUR - LUR + (localRow + i), CLUC - LUC + (localCol + j), localDrawField[i + 1][j]);
             } else {
-                mvaddch(CLUR + i, CLUC + j, ' ');
+                mvaddch(CLUR - LUR + (localRow + i), CLUC - LUC + (localCol + j), ' ');
             }
         }
     }
-    // refresh();
+}
+
+void GameCamera::Draw(IoCContainer* container, Unit * object) {
+}
+
+void GameCamera::Draw(IoCContainer* container, Terrain * object) {
+    int LUR = getLeftUpperCornerRow();
+    int LUC = getLeftUpperCornerCol();
+    int CLUR = getConsoleLeftUpperCornerRow();
+    int CLUC = getConsoleLeftUpperCornerCol();
+    int localRow = object->GetRow();
+    int localCol = object->GetCol();
+    auto localDrawField = object->GetDrawField();
+    for (int i = 0; i < localDrawField[0][0]; i++) {
+        for (int j = 0; j < localDrawField[0][1]; j++) {
+            if (isInCameraRadius(container, i + localRow, j + localCol)) {
+                mvaddch(CLUR - LUR + (localRow + i), CLUC - LUC + (localCol + j), localDrawField[i + 1][j]);
+            } else {
+                mvaddch(CLUR - LUR + (localRow + i), CLUC - LUC + (localCol + j), ' ');
+            }
+        }
+    }
+}
+
+bool GameCamera::isInCameraRadius(IoCContainer* container, int coordinateY, int coordinateX) {
+    int LUR = getLeftUpperCornerRow();
+    int LUC = getLeftUpperCornerCol();
+    int RS = getRowSize();
+    int CS = getColSize();
+    return !((coordinateY < LUR) || (coordinateY > LUR + RS) || (coordinateX < LUC) || (coordinateX > LUC + CS));
 }
 
 void GameCamera::refreshCamera() {

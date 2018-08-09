@@ -6,6 +6,8 @@ MainBuilding::MainBuilding(int row, int col, int newId, const char* symbol, int 
         ProducingBuilding(row, col, newId, symbol, health, level, maxLevel,
                           produceType, produceAmount, levelMultiplier) {
     SetType(typeid(MainBuilding).hash_code());
+    SetBuildingSideSize(2);
+    SetDrawField(GenerateDrawField('H'));
 }
 
 bool MainBuilding::IsA(size_t type) {
@@ -14,7 +16,7 @@ bool MainBuilding::IsA(size_t type) {
 
 IObject* MainBuilding::Create(size_t type, IoCContainer *iocContainer, int newId) {
     return new MainBuilding(iocContainer->GetY<MainBuilding>(),
-            iocContainer->GetX<MainBuilding>(), newId, std::string("H").c_str(), 50 , 1, 1,
+            iocContainer->GetX<MainBuilding>(), newId, std::string("Main Building").c_str(), 50 , 1, 1,
                             iocContainer->Get<Food>(1)->GetType(), 1, 2.0);
 }
 

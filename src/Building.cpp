@@ -16,7 +16,13 @@ Building::Building(int row, int col, int newId, const char* symbol,
     SetLevelMultiplier(levelMultiplier);
     SetType(typeid(Building).hash_code());
 }
-
+Building::~Building() {
+    int temp = drawField[0][0];
+    for (int i = 0; i < temp + 1; i++) {
+        delete drawField[i];
+    }
+    delete drawField;
+}
 int Building::GetId() {
     return id;
 }
@@ -62,6 +68,15 @@ const char* Building::GetTextField() {
     return result.c_str();
 }
 
+void Building::SetBuildingSideSize(int newBuildingSideSize) {
+    buildingSideSize = newBuildingSideSize;
+}
+
+int Building::GetBuildingSideSize() {
+    return buildingSideSize;
+}
+
+
 void Building::SetTextField(const char* newTextField) {
     symbol = newTextField[0];
 }
@@ -96,4 +111,35 @@ double Building::GetLevelMultiplier() {
 
 void Building::SetLevelMultiplier(double newLevelMultiplier) {
     levelMultiplier = newLevelMultiplier;
+}
+
+void Building::SetDrawField(char** newDrawField) {
+    drawField = new char*[newDrawField[0][0] + 1];
+    for (int i = 1; i < newDrawField[0][0] + 1; i++) {
+        drawField[i] = new char[newDrawField[0][1]];
+        for (int j = 0; j < newDrawField[0][1]; j++) {
+            drawField[i][j] = newDrawField[i][j];
+        }
+    }
+    drawField[0] = new char[2];
+    drawField[0][0] = newDrawField[0][0];
+    drawField[0][1] = newDrawField[0][1];
+}
+
+char** Building::GetDrawField() {
+    return drawField;
+}
+
+char** Building::GenerateDrawField(char symbol) {
+    auto newDrawField = new char*[GetBuildingSideSize() + 1];
+    for (int i = 1; i < GetBuildingSideSize() + 1; i++) {
+        newDrawField[i] = new char[GetBuildingSideSize()];
+        for (int j = 0; j < GetBuildingSideSize(); j++) {
+            newDrawField[i][j] = symbol;
+        }
+    }
+    newDrawField[0] = new char[2];
+    newDrawField[0][0] = static_cast<char>(GetBuildingSideSize());
+    newDrawField[0][1] = static_cast<char>(GetBuildingSideSize());
+    return newDrawField;
 }

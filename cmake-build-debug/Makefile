@@ -622,6 +622,33 @@ src/People.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/People.cpp.s
 .PHONY : src/People.cpp.s
 
+src/Plane.o: src/Plane.cpp.o
+
+.PHONY : src/Plane.o
+
+# target to build an object file
+src/Plane.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Plane.cpp.o
+.PHONY : src/Plane.cpp.o
+
+src/Plane.i: src/Plane.cpp.i
+
+.PHONY : src/Plane.i
+
+# target to preprocess a source file
+src/Plane.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Plane.cpp.i
+.PHONY : src/Plane.cpp.i
+
+src/Plane.s: src/Plane.cpp.s
+
+.PHONY : src/Plane.s
+
+# target to generate assembly for a file
+src/Plane.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Plane.cpp.s
+.PHONY : src/Plane.cpp.s
+
 src/Player.o: src/Player.cpp.o
 
 .PHONY : src/Player.o
@@ -730,6 +757,33 @@ src/ScoreBoard.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ScoreBoard.cpp.s
 .PHONY : src/ScoreBoard.cpp.s
 
+src/Terrain.o: src/Terrain.cpp.o
+
+.PHONY : src/Terrain.o
+
+# target to build an object file
+src/Terrain.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Terrain.cpp.o
+.PHONY : src/Terrain.cpp.o
+
+src/Terrain.i: src/Terrain.cpp.i
+
+.PHONY : src/Terrain.i
+
+# target to preprocess a source file
+src/Terrain.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Terrain.cpp.i
+.PHONY : src/Terrain.cpp.i
+
+src/Terrain.s: src/Terrain.cpp.s
+
+.PHONY : src/Terrain.s
+
+# target to generate assembly for a file
+src/Terrain.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Terrain.cpp.s
+.PHONY : src/Terrain.cpp.s
+
 src/Tower.o: src/Tower.cpp.o
 
 .PHONY : src/Tower.o
@@ -756,6 +810,33 @@ src/Tower.s: src/Tower.cpp.s
 src/Tower.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.s
 .PHONY : src/Tower.cpp.s
+
+src/Unit.o: src/Unit.cpp.o
+
+.PHONY : src/Unit.o
+
+# target to build an object file
+src/Unit.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Unit.cpp.o
+.PHONY : src/Unit.cpp.o
+
+src/Unit.i: src/Unit.cpp.i
+
+.PHONY : src/Unit.i
+
+# target to preprocess a source file
+src/Unit.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Unit.cpp.i
+.PHONY : src/Unit.cpp.i
+
+src/Unit.s: src/Unit.cpp.s
+
+.PHONY : src/Unit.s
+
+# target to generate assembly for a file
+src/Unit.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Unit.cpp.s
+.PHONY : src/Unit.cpp.s
 
 src/Utility.o: src/Utility.cpp.o
 
@@ -929,6 +1010,9 @@ help:
 	@echo "... src/People.o"
 	@echo "... src/People.i"
 	@echo "... src/People.s"
+	@echo "... src/Plane.o"
+	@echo "... src/Plane.i"
+	@echo "... src/Plane.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
@@ -941,9 +1025,15 @@ help:
 	@echo "... src/ScoreBoard.o"
 	@echo "... src/ScoreBoard.i"
 	@echo "... src/ScoreBoard.s"
+	@echo "... src/Terrain.o"
+	@echo "... src/Terrain.i"
+	@echo "... src/Terrain.s"
 	@echo "... src/Tower.o"
 	@echo "... src/Tower.i"
 	@echo "... src/Tower.s"
+	@echo "... src/Unit.o"
+	@echo "... src/Unit.i"
+	@echo "... src/Unit.s"
 	@echo "... src/Utility.o"
 	@echo "... src/Utility.i"
 	@echo "... src/Utility.s"

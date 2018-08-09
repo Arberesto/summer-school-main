@@ -10,11 +10,24 @@ class Building : public IObject {
     double levelMultiplier;
     int row;
     int col;
+    char ** drawField;  // первая строка: sizeRow,SizeCol; остальные - сам массив символов
+    int buildingSideSize = 1;
 
  public:
     Building() = default;
     explicit Building(int row, int col, int newId, const char* symbol, int health,
                       int level, int maxLevel, double levelMultiplier);
+    ~Building();
+
+    void SetDrawField(char ** newDrawField);
+
+    char** GetDrawField();
+
+    void SetBuildingSideSize(int newBuildingSideSize);
+
+    int GetBuildingSideSize();
+
+    char** GenerateDrawField(char symbol);
 
     int GetHealth();
 

@@ -7,6 +7,8 @@ Tower::Tower(int row, int col, int newId, const char* symbol, int health, int le
     SetAttackSpeed(attackSpeed);
     SetAttackRadius(attackRadius);
     SetType(typeid(Tower).hash_code());
+    SetBuildingSideSize(1);
+    SetDrawField(GenerateDrawField('T'));
 }
 
 bool Tower::IsA(size_t type) {
@@ -15,7 +17,7 @@ bool Tower::IsA(size_t type) {
 
 IObject* Tower::Create(size_t type, IoCContainer *iocContainer, int newId) {
     return new Tower(iocContainer->GetY<Tower>(), iocContainer->GetX<Tower>(),
-            newId, std::string("T").c_str(), 25 , 1, 3, 1.0, CONST_ATK_DMG, CONST_ATK_SPD, CONST_ATK_RDS);
+            newId, std::string("Tower").c_str(), 25 , 1, 3, 1.0, CONST_ATK_DMG, CONST_ATK_SPD, CONST_ATK_RDS);
 }
 
 int Tower::GetAttackDamage() {
