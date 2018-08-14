@@ -1,5 +1,6 @@
 #include "./Utility.h"
 #include <cmath>
+#include <string>
 
 int Pow(int value, int multiplier) {  // Utility
 //    int result = 1;
@@ -22,43 +23,9 @@ int convertCharToInt(char *symbols, int size) {  // Utility
     return result;
 }
 
-char *convertIntToChar(int value, int constSize) {  // Utility
-    // возвращает число в виде
-    // constSize-разрядного в массиве char,где
-    // i-й символ - i-й разряд
-    int size = 0;
-    int value1 = value;
-    if (value != 0) {
-        while (value1 > 0) {
-            size++;
-            value1 /= 10;
-        }
-    } else {
-        size = 1;
-    }
-    auto *result = new char[constSize];
-    if (size < constSize) {
-        for (int i = 0; i < constSize - size; i++) {
-            result[i] = '0';
-        }
-        for (int i = constSize - 1; i >= constSize - size; i--) {
-            int number = value % 10;
-            value /= 10;
-            result[i] = static_cast<char>(48 + number);
-        }
-    } else {
-        for (int i = size - 1; i >= 0; i--) {
-            int number = value % 10;
-            value /= 10;
-            result[i] = static_cast<char>(48 + number);
-        }
-    }
-    return result;
-}
-
-int *convertStringToVariables(const char *stringTemp, int size, int variablesSize) {  // Render-Utility
+int *convertStringToVariables(std::string stringTemp, int size, int variablesSize) {  // Render-Utility
     auto result = new int[size];
-    auto intTemp = new char[variablesSize];
+    auto intTemp  = new char[variablesSize];
     int j = 0;
     int i = 0;
     int counter = 0;
@@ -75,8 +42,8 @@ int *convertStringToVariables(const char *stringTemp, int size, int variablesSiz
         if (!((stringTemp[i + 1] > 47) && (stringTemp[i + 1] < 58))) {
             if (intFulled) {
                 intFulled = false;
+                result[counter] = convertCharToInt(intTemp, j);
                 j = 0;
-                result[counter] = convertCharToInt(intTemp, variablesSize);
                 counter++;
             }
         }

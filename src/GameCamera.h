@@ -27,11 +27,12 @@ class GameCamera {
     void Draw(IoCContainer* container, Building * object);
     void Draw(IoCContainer* container, Unit * object);
     void Draw(IoCContainer* container, Terrain * object);
-    void Draw(IoCContainer* container, IObject* object, size_t type);
+    void Draw(IoCContainer* container, IObject* object);
     bool isInCameraRadius(int row, int col, char** drawField);
     void addToActiveField(size_t id, IObject* object);
     void UpdateTerrain(IoCContainer* container);
     void UpdateBuildings(IoCContainer* container);
+    void ClearActiveField();
 
  private:
     int rowSize;

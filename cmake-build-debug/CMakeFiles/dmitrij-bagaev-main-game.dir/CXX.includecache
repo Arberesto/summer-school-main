@@ -589,6 +589,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Unit.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Utility.h
+string
+-
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Wall.h
 
@@ -892,6 +894,8 @@ string
 ./Utility.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Utility.h
 cmath
+-
+string
 -
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wall.cpp

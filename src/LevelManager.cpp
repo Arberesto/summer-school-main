@@ -125,8 +125,7 @@ void LevelManager::loadLevel(IoCContainer* container, int levelNumber) {
     auto parametersAndMap = fileObject->readWithParameters(24, 3, 6);  // first line - parameters
     std::string stringTemp;
     stringTemp.assign(parametersAndMap[0]);
-    const char *var = stringTemp.c_str();
-    int *variables = convertStringToVariables(var, 6, 3);
+    int *variables = convertStringToVariables(stringTemp, 6, 3);
     // delete parametersAndMap[0];
     // 6 variables(6 whitespace):sizeY(2),sizeX(2),stepLimit(2),coinValue(2),characterY(2),characterX(2),endline(1)
     setStructLevel(variables, levelNumber);
