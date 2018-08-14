@@ -31,5 +31,6 @@ class Resource : public IObject{
     void SetValue(int newValue);
 
     int GetValue();
+    void IncreaseValue(int addedValue);
 };
 #endif  // DMITRIJ_BAGAEV_MAIN_GAME_RESOURCE_H

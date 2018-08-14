@@ -21,12 +21,14 @@ class LevelManager : public IObject{
     int getSizeCol();
     void setSecondsUsed(double newSecondsUsed);
     double getSecondsUsed();
+    void IncreaseSecondsUsed(double newSecondsUsed);
     double getPrevSeconds();
     void setPrevSeconds(double newPrevSeconds);
     size_t ConvertTileToObject(IoCContainer* container, char tile);
     //  bool nextLevel();
     void setTickCounter(int newTickCounter);
     int getTickCounter();
+    void IncreaseTickCounter(int newTickCounter);
     void setLastSecond(int newLastSecond);
     int getLastSecond();
     int GetId();

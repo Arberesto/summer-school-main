@@ -64,18 +64,19 @@ Game::Game(int gameMode) {
     }
 
     void Game::eachSecondUpdate(IoCContainer *container) {
-        if (container->Get<LevelManager>(1)->getLastSecond() % 10 == 0) {
+        auto levelManager = container->Get<LevelManager>(1);
+        if ((levelManager->GetIsNewSecondNow())&&(levelManager->getLastSecond() % 10 == 0)) {
             auto resourceIdList = container->GetIdList<Resource>();
             for (int i = 0; i < static_cast<int>(resourceIdList[0][0]); i++) {
                 size_t typeTemp = resourceIdList[i][2];
                 for (int j = 0; j < static_cast<int>(resourceIdList[i][1]); j++) {
                     int idTemp = static_cast<int>(resourceIdList[i][3 + j]);
                     auto objectTemp = static_cast<Resource *>(container->Get(idTemp, typeTemp));
-                    objectTemp->SetValue(objectTemp->GetValue() + getProduced(container, typeTemp));
+                    objectTemp->IncreaseValue(getProduced(container, typeTemp));
                 }
             }
+            levelManager->SetIsNewSecondNow(false);
         }
-        container->Get<LevelManager>(1)->SetIsNewSecondNow(false);
     }
 
     int Game::getProduced(IoCContainer *container, size_t type) {
@@ -84,7 +85,7 @@ Game::Game(int gameMode) {
         for (int i = 0; i < static_cast<int>(buildingList[0][0]); i++) {
             size_t typeTemp = buildingList[i][2];
             for (int j = 0; j < static_cast<int>(buildingList[i][1]); j++) {
-                int idTemp = static_cast<int>(buildingList[i][3 + j]);
+                auto idTemp = static_cast<int>(buildingList[i][3 + j]);
                 auto objectTemp = static_cast<ProducingBuilding*>(container->Get(idTemp, typeTemp));
                 if (objectTemp->GetProduceType() == type) {
                     result += objectTemp->GetRealProduceAmount();
@@ -98,15 +99,11 @@ Game::Game(int gameMode) {
                       ScoreBoard *scoreBoard, double deltaTime) {
         auto levelObject = container->Get<LevelManager>(1);
         if (getGameMode() == 0) {
-            levelObject->setSecondsUsed(levelObject->getSecondsUsed() + deltaTime);
-            levelObject->setTickCounter(levelObject->getTickCounter() + 1);
+            levelObject->IncreaseSecondsUsed(deltaTime);
+            levelObject->IncreaseTickCounter(1);
         }
-        if (container->Get<LevelManager>(1)->GetIsNewSecondNow()) {
-            eachSecondUpdate(container);
-        }
-//        if (levelObject->getSecondsUsed() - levelObject->getCoinCount() *
-//                                            levelObject->getCoinValue()
-//            >= levelObject->getLevelSecondsLimit()) {
+        eachSecondUpdate(container);
+//        if (container->GetIdList<MainBuilding>[0][0] == 0) {
 //            levelObject->loadLevel(1);
 //            gameEnd(levelObject, scoreBoard, false);
 //            return;
@@ -131,61 +128,76 @@ Game::Game(int gameMode) {
         }
     }
 
+    void Game::CreateResources(IoCContainer *container, int startValue) {
+        container->New<Ore>();
+        container->Get<Ore>(1)->IncreaseValue(50);
+        container->New<Wood>();
+        container->Get<Wood>(1)->IncreaseValue(50);
+        container->New<Food>();
+        container->Get<Food>(1)->IncreaseValue(50);
+        container->New<People>();
+        container->Get<People>(1)->IncreaseValue(50);
+        container->New<Gold>();
+        container->Get<Gold>(1)->IncreaseValue(50);
+        container->New<Clay>();
+        container->Get<Clay>(1)->IncreaseValue(50);
+}
+
     void Game::gameLoop() {
         auto *renderObject = new GameRender();
         auto *inputObject = new InputController();
         auto *scoreBoard = new ScoreBoard(1, 10, 13);
         auto *container = new IoCContainer();
-        auto gameCamera = new GameCamera();
-        container->Register<House>(&House::Create);
         container->Register<LevelManager>(&LevelManager::Create);
-        container->Register<MainBuilding>(&MainBuilding::Create);
         container->Register<Tower>(&Tower::Create);
         container->Register<Ore>(&Ore::Create);
+        container->Register<Mine>(&Mine::Create);
         container->Register<Wood>(&Wood::Create);
+        container->Register<Sawmill>(&Sawmill::Create);
         container->Register<Food>(&Food::Create);
+        container->Register<MainBuilding>(&MainBuilding::Create);
         container->Register<People>(&People::Create);
+        container->Register<House>(&House::Create);
         container->Register<Gold>(&Gold::Create);
         container->Register<Clay>(&Clay::Create);
+        container->Register<ClayPit>(&ClayPit::Create);
         container->Register<Plane>(&Plane::Create);
         container->Register<Mountain>(&Mountain::Create);
-        container->SetCoordinates<MainBuilding>(4, 4);
-        container->SetCoordinates<House>(5, 8);
-        container->SetCoordinates<Tower>(6, 6);
-        container->New<Ore>();
-        container->New<Wood>();
-        container->New<Food>();
-        container->New<People>();
-        container->New<Gold>();
-        container->New<Clay>();
-        container->New<House>();
+        CreateResources(container, 50);
+        //
+        container->SetCoordinates<MainBuilding>(5, 5);
         container->New<MainBuilding>();
+        container->SetCoordinates<Mine>(2, 2);
+        container->New<Mine>();
+        container->SetCoordinates<House>(2, 5);
+        container->New<House>();
+        container->SetCoordinates<ClayPit>(5, 2);
+        container->New<ClayPit>();
+        container->SetCoordinates<Sawmill>(2, 8);
+        container->New<Sawmill>();
+        //
+        container->SetCoordinates<Tower>(4, 7);
         container->New<Tower>();
+        container->SetCoordinates<Tower>(7, 7);
+        container->New<Tower>();
+        //
         container->New<LevelManager>();
+        auto gameCamera = new GameCamera(container);
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
         double lag = 0.0;
-//        auto tempText = container->Get<House>(1)->GetTextField();
-//        container->Get<LevelManager>(1)->setMapSymbol(container->Get<House>(1)->GetRow(),
-//                                                      container->Get<House>(1)->GetCol(),
-//                                                      tempText[0]);
-//        container->Get<LevelManager>(1)->setMapSymbol(container->Get<MainBuilding>(1)->GetRow(),
-//                                                      container->Get<MainBuilding>(1)->GetCol(),
-//                                                      container->Get<MainBuilding>(1)->GetTextField()[0]);
         while (getLooping()) {
             auto current =  std::chrono::system_clock::now();
             std::chrono::duration<double> elapsed = current - previous;
             previous = current;
             lag += elapsed.count();
-            while (lag >= MS_PER_UPDATE) {
+            while ((lag >= MS_PER_UPDATE)&&(getLooping())) {
                 inputObject->symbolInput();
-                update(inputObject, container, scoreBoard, MS_PER_UPDATE);
                 lag -= MS_PER_UPDATE;
+                update(inputObject, container, scoreBoard, MS_PER_UPDATE);
                 renderObject->clearScreen();
                 renderObject->render(container, scoreBoard, getGameMode());
-                gameCamera->changePosition(inputObject->getAxisY(), inputObject->getAxisX(),
-                                           container->Get<LevelManager>(1)->getSizeRow(),
-                                           container->Get<LevelManager>(1)->getSizeCol());
+                gameCamera->changePosition(container, inputObject->getAxisY(), inputObject->getAxisX());
                 gameCamera->render(container);
                 renderObject->refreshScreen();
             }

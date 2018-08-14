@@ -190,6 +190,33 @@ src/Clay.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Clay.cpp.s
 .PHONY : src/Clay.cpp.s
 
+src/ClayPit.o: src/ClayPit.cpp.o
+
+.PHONY : src/ClayPit.o
+
+# target to build an object file
+src/ClayPit.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o
+.PHONY : src/ClayPit.cpp.o
+
+src/ClayPit.i: src/ClayPit.cpp.i
+
+.PHONY : src/ClayPit.i
+
+# target to preprocess a source file
+src/ClayPit.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.i
+.PHONY : src/ClayPit.cpp.i
+
+src/ClayPit.s: src/ClayPit.cpp.s
+
+.PHONY : src/ClayPit.s
+
+# target to generate assembly for a file
+src/ClayPit.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.s
+.PHONY : src/ClayPit.cpp.s
+
 src/Coin.o: src/Coin.cpp.o
 
 .PHONY : src/Coin.o
@@ -541,6 +568,33 @@ src/MainBuilding.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.s
 .PHONY : src/MainBuilding.cpp.s
 
+src/Mine.o: src/Mine.cpp.o
+
+.PHONY : src/Mine.o
+
+# target to build an object file
+src/Mine.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o
+.PHONY : src/Mine.cpp.o
+
+src/Mine.i: src/Mine.cpp.i
+
+.PHONY : src/Mine.i
+
+# target to preprocess a source file
+src/Mine.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.i
+.PHONY : src/Mine.cpp.i
+
+src/Mine.s: src/Mine.cpp.s
+
+.PHONY : src/Mine.s
+
+# target to generate assembly for a file
+src/Mine.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.s
+.PHONY : src/Mine.cpp.s
+
 src/Mountain.o: src/Mountain.cpp.o
 
 .PHONY : src/Mountain.o
@@ -756,6 +810,33 @@ src/Resource.s: src/Resource.cpp.s
 src/Resource.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Resource.cpp.s
 .PHONY : src/Resource.cpp.s
+
+src/Sawmill.o: src/Sawmill.cpp.o
+
+.PHONY : src/Sawmill.o
+
+# target to build an object file
+src/Sawmill.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o
+.PHONY : src/Sawmill.cpp.o
+
+src/Sawmill.i: src/Sawmill.cpp.i
+
+.PHONY : src/Sawmill.i
+
+# target to preprocess a source file
+src/Sawmill.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.i
+.PHONY : src/Sawmill.cpp.i
+
+src/Sawmill.s: src/Sawmill.cpp.s
+
+.PHONY : src/Sawmill.s
+
+# target to generate assembly for a file
+src/Sawmill.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.s
+.PHONY : src/Sawmill.cpp.s
 
 src/ScoreBoard.o: src/ScoreBoard.cpp.o
 
@@ -989,6 +1070,9 @@ help:
 	@echo "... src/Clay.o"
 	@echo "... src/Clay.i"
 	@echo "... src/Clay.s"
+	@echo "... src/ClayPit.o"
+	@echo "... src/ClayPit.i"
+	@echo "... src/ClayPit.s"
 	@echo "... src/Coin.o"
 	@echo "... src/Coin.i"
 	@echo "... src/Coin.s"
@@ -1028,6 +1112,9 @@ help:
 	@echo "... src/MainBuilding.o"
 	@echo "... src/MainBuilding.i"
 	@echo "... src/MainBuilding.s"
+	@echo "... src/Mine.o"
+	@echo "... src/Mine.i"
+	@echo "... src/Mine.s"
 	@echo "... src/Mountain.o"
 	@echo "... src/Mountain.i"
 	@echo "... src/Mountain.s"
@@ -1052,6 +1139,9 @@ help:
 	@echo "... src/Resource.o"
 	@echo "... src/Resource.i"
 	@echo "... src/Resource.s"
+	@echo "... src/Sawmill.o"
+	@echo "... src/Sawmill.i"
+	@echo "... src/Sawmill.s"
 	@echo "... src/ScoreBoard.o"
 	@echo "... src/ScoreBoard.i"
 	@echo "... src/ScoreBoard.s"

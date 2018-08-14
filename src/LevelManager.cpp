@@ -54,6 +54,10 @@ double LevelManager::getSecondsUsed() {
     return level.secondsUsed;
 }
 
+void LevelManager::IncreaseSecondsUsed(double newSecondsUsed) {
+    setSecondsUsed(getSecondsUsed() + newSecondsUsed);
+}
+
 int LevelManager::getLevelNumber() {
     return level.levelNumber;
 }
@@ -107,6 +111,10 @@ void LevelManager::setTickCounter(int newTickCounter) {
 
 int LevelManager::getTickCounter() {
     return tickCounter;
+}
+
+void LevelManager::IncreaseTickCounter(int newTickCounter) {
+    setTickCounter(getTickCounter() + newTickCounter);
 }
 
 void LevelManager::loadLevel(IoCContainer* container, int levelNumber) {

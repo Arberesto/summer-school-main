@@ -801,6 +801,78 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mountain.cpp.o.provides: CMakeFiles/
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mountain.cpp.o.provides.build: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mountain.cpp.o
 
 
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o: CMakeFiles/dmitrij-bagaev-main-game.dir/flags.make
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o: ../src/Mine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o -c /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Mine.cpp
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Mine.cpp > CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.i
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Mine.cpp -o CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.s
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o.requires:
+
+.PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o.requires
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o.provides: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o.requires
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o.provides.build
+.PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o.provides
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o.provides.build: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o
+
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o: CMakeFiles/dmitrij-bagaev-main-game.dir/flags.make
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o: ../src/ClayPit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o -c /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ClayPit.cpp
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ClayPit.cpp > CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.i
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ClayPit.cpp -o CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.s
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o.requires:
+
+.PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o.requires
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o.provides: CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o.requires
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o.provides.build
+.PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o.provides
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o.provides.build: CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o
+
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o: CMakeFiles/dmitrij-bagaev-main-game.dir/flags.make
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o: ../src/Sawmill.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o -c /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Sawmill.cpp
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Sawmill.cpp > CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.i
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Sawmill.cpp -o CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.s
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o.requires:
+
+.PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o.requires
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o.provides: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o.requires
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o.provides.build
+.PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o.provides
+
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o.provides.build: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o
+
+
 # Object files for target dmitrij-bagaev-main-game
 dmitrij__bagaev__main__game_OBJECTS = \
 "CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o" \
@@ -833,7 +905,10 @@ dmitrij__bagaev__main__game_OBJECTS = \
 "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Unit.cpp.o" \
 "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Terrain.cpp.o" \
 "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Plane.cpp.o" \
-"CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mountain.cpp.o"
+"CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mountain.cpp.o" \
+"CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o" \
+"CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o" \
+"CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o"
 
 # External object files for target dmitrij-bagaev-main-game
 dmitrij__bagaev__main__game_EXTERNAL_OBJECTS =
@@ -869,10 +944,13 @@ dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Unit.cpp.o
 dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Terrain.cpp.o
 dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Plane.cpp.o
 dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mountain.cpp.o
+dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o
+dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o
+dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o
 dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/build.make
 dmitrij-bagaev-main-game: /usr/lib/x86_64-linux-gnu/libcurses.so
 dmitrij-bagaev-main-game: CMakeFiles/dmitrij-bagaev-main-game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX executable dmitrij-bagaev-main-game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Linking CXX executable dmitrij-bagaev-main-game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dmitrij-bagaev-main-game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -911,6 +989,9 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main
 CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Terrain.cpp.o.requires
 CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Plane.cpp.o.requires
 CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mountain.cpp.o.requires
+CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o.requires
+CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o.requires
+CMakeFiles/dmitrij-bagaev-main-game.dir/requires: CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o.requires
 
 .PHONY : CMakeFiles/dmitrij-bagaev-main-game.dir/requires
 

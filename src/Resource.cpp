@@ -40,6 +40,10 @@ int Resource::GetValue() {
     return value;
 }
 
+void Resource::IncreaseValue(int addedValue) {
+    SetValue(GetValue() + addedValue);
+}
+
 size_t Resource::GetType() {
     return type;
 }

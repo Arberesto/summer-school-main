@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Building.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Building.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Clay.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Clay.cpp.o"
+  "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ClayPit.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Coin.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Coin.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/FileManager.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/FileManager.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Floor.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Floor.cpp.o"
@@ -19,6 +20,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/IoCContainer.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/LevelManager.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/LevelManager.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/MainBuilding.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/MainBuilding.cpp.o"
+  "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Mine.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Mountain.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mountain.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ObjectRender.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/ObjectRender.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Ore.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Ore.cpp.o"
@@ -27,6 +29,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Player.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Player.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ProducingBuilding.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/ProducingBuilding.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Resource.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Resource.cpp.o"
+  "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Sawmill.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ScoreBoard.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/ScoreBoard.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Terrain.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Terrain.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Tower.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Tower.cpp.o"

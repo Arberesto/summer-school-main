@@ -6,7 +6,6 @@ class GameRender {
  public:
     explicit GameRender();
     void redrawConsole(IoCContainer *container);
-    void redrawMap(int rowSize, int colSize, char** Map);
     void render(IoCContainer *container, ScoreBoard *scoreBoard, int mode);
     void drawScoreBoard(ScoreBoard *scoreBoard);
     void drawLosePicture(LevelManager *levelObject);

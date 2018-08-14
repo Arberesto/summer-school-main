@@ -22,6 +22,7 @@ class Game {
     void gameEnd(IoCContainer *container, ScoreBoard *scoreBoard, bool WinNotLose);
     void changeMap(InputController *inputObject, IoCContainer *container,
                    ScoreBoard *scoreBoard);
+    void CreateResources(IoCContainer *container, int startValue);
     void eachSecondUpdate(IoCContainer *container);
     void update(InputController *inputObject, IoCContainer *container, ScoreBoard *scoreBoard, double deltaTime);
     void gameLoop();

@@ -29,14 +29,6 @@
         }
     }
 
-    void GameRender::redrawMap(int rowSize, int colSize, char **Map) {  // Render
-        for (int i = 0; i < rowSize; i++) {
-            for (int j = 0; j < colSize; j++) {
-                mvaddch(i, j, Map[i][j]);
-            }
-        }
-    }
-
     void GameRender::drawScoreBoard(ScoreBoard *scoreBoard) {
         mvwprintw(stdscr, 20 - 2, 10 + 2, "Level %i%", scoreBoard->getLevelNumber());
         for (int i = 0; i < scoreBoard->getScoreRow(); i++) {
