@@ -50,7 +50,8 @@
         int i = 0;
         for (auto it : typeList) {
             auto objectTemp = static_cast<Building*>(it.second);
-            mvwprintw(stdscr, CONSOLEROW - 2 + i * 2, CONSOLECOL + 30, " %s - ", objectTemp->GetTextField());
+            auto temp = objectTemp->GetTextField();
+            mvwprintw(stdscr, CONSOLEROW - 2 + i * 2, CONSOLECOL + 30, " %s - ", temp.c_str());
 //            if (i == inputObject->GetCurrentLine()) {
 //                for (auto cost: objectTemp->GetCostList()) {
 //
