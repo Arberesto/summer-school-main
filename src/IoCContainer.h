@@ -68,6 +68,6 @@ class IoCContainer {
     std::map<size_t, IObject*> objectContainer;  // index = type + id
     std::map<size_t, int> coordinatesContainer;  // type, y * 200 + x
     std::map<size_t, int> nextIdContainer;
-    const int TYPE_MULTIPLIER = 100;
+    const int TYPE_MULTIPLIER = 200;
 };
 #endif  // DMITRIJ_BAGAEV_MAIN_GAME_IOCCONTAINER_H

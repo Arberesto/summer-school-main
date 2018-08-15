@@ -244,6 +244,33 @@ src/Coin.cpp.s:
 	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Coin.cpp.s
 .PHONY : src/Coin.cpp.s
 
+src/Farm.o: src/Farm.cpp.o
+
+.PHONY : src/Farm.o
+
+# target to build an object file
+src/Farm.cpp.o:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Farm.cpp.o
+.PHONY : src/Farm.cpp.o
+
+src/Farm.i: src/Farm.cpp.i
+
+.PHONY : src/Farm.i
+
+# target to preprocess a source file
+src/Farm.cpp.i:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Farm.cpp.i
+.PHONY : src/Farm.cpp.i
+
+src/Farm.s: src/Farm.cpp.s
+
+.PHONY : src/Farm.s
+
+# target to generate assembly for a file
+src/Farm.cpp.s:
+	$(MAKE) -f CMakeFiles/dmitrij-bagaev-main-game.dir/build.make CMakeFiles/dmitrij-bagaev-main-game.dir/src/Farm.cpp.s
+.PHONY : src/Farm.cpp.s
+
 src/FileManager.o: src/FileManager.cpp.o
 
 .PHONY : src/FileManager.o
@@ -1076,6 +1103,9 @@ help:
 	@echo "... src/Coin.o"
 	@echo "... src/Coin.i"
 	@echo "... src/Coin.s"
+	@echo "... src/Farm.o"
+	@echo "... src/Farm.i"
+	@echo "... src/Farm.s"
 	@echo "... src/FileManager.o"
 	@echo "... src/FileManager.i"
 	@echo "... src/FileManager.s"

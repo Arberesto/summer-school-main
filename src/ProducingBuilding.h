@@ -1,5 +1,6 @@
 #ifndef DMITRIJ_BAGAEV_MAIN_GAME_PRODUCINGBUILDING_H
 #define DMITRIJ_BAGAEV_MAIN_GAME_PRODUCINGBUILDING_H
+#include <string>
 #include "./Building.h"
 #include "./ResourceList.h"
 class ProducingBuilding :public Building {
@@ -7,7 +8,7 @@ class ProducingBuilding :public Building {
     size_t produceType;
     int produceAmount;
  public:
-    explicit ProducingBuilding(int row, int col, int newId, const char* symbol, int health,
+    explicit ProducingBuilding(int row, int col, int newId, std::string symbol, int health,
                    int level, int maxLevel, size_t produceType, int produceAmount, double levelMultiplier);
     template<class T>
     bool IsA() {

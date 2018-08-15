@@ -114,17 +114,31 @@ Game::Game(int gameMode) {
             inputObject->setDirection(-1);
             while (!inputObject->getKeyBuffer().empty()) {
                 int firstKeyInBuffer = inputObject->getFirstKeyFromBuffer();
-                if ((firstKeyInBuffer == 6) && (gameMode != 0)) {
-                    if (gameMode == 1) {
-                        setGameMode(0);
-                        scoreBoard->setScoreBoard(levelObject->getLevelNumber(), 10, 13);
-                    } else {
-                        setGameMode(1);
-                        levelObject->setPrevSeconds(0);
-                    }
-                }
+                ChangeGameMode(container, firstKeyInBuffer);
                 inputObject->setDirection(firstKeyInBuffer);
             }
+        }
+    }
+
+    void Game::ChangeGameMode(IoCContainer* container, int keyCode) {
+        int localGameMode = getGameMode();
+        if (keyCode == 6) {
+            if (localGameMode == 1) {
+                setGameMode(0);
+            } else if (localGameMode == 2) {
+                setGameMode(1);
+            } else {
+                setGameMode(1);
+            }
+            return;
+        }
+        if (keyCode == 5) {
+            if (localGameMode == 1) {
+                setGameMode(2);
+            } else if (localGameMode == 2) {
+                setGameMode(0);
+            }
+            return;
         }
     }
 
@@ -143,6 +157,28 @@ Game::Game(int gameMode) {
         container->Get<Clay>(1)->IncreaseValue(50);
 }
 
+    void Game::CreateStartBuildings(IoCContainer *container, int value) {
+        container->SetCoordinates<MainBuilding>(value, value);
+        container->New<MainBuilding>();
+        container->SetCoordinates<House>(value  +3, value + 3);
+        container->New<House>();
+    }
+
+    void Game::CreateTypeList(IoCContainer *container, GameRender* gameRender) {
+        gameRender->AddTypeToTypeList(typeid(House).hash_code(),
+                                      House::Create(typeid(House).hash_code(), container, -1));
+        gameRender->AddTypeToTypeList(typeid(Mine).hash_code(),
+                                      Mine::Create(typeid(Mine).hash_code(), container, -1));
+        gameRender->AddTypeToTypeList(typeid(ClayPit).hash_code(),
+                                      ClayPit::Create(typeid(ClayPit).hash_code(), container, -1));
+        gameRender->AddTypeToTypeList(typeid(Sawmill).hash_code(),
+                                      Sawmill::Create(typeid(Sawmill).hash_code(), container, -1));
+        gameRender->AddTypeToTypeList(typeid(Tower).hash_code(),
+                                      Tower::Create(typeid(Tower).hash_code(), container, -1));
+        gameRender->AddTypeToTypeList(typeid(Farm).hash_code(),
+                                      Farm::Create(typeid(Farm).hash_code(), container, -1));
+    }
+
     void Game::gameLoop() {
         auto *renderObject = new GameRender();
         auto *inputObject = new InputController();
@@ -155,6 +191,7 @@ Game::Game(int gameMode) {
         container->Register<Wood>(&Wood::Create);
         container->Register<Sawmill>(&Sawmill::Create);
         container->Register<Food>(&Food::Create);
+        container->Register<Farm>(&Farm::Create);
         container->Register<MainBuilding>(&MainBuilding::Create);
         container->Register<People>(&People::Create);
         container->Register<House>(&House::Create);
@@ -163,26 +200,15 @@ Game::Game(int gameMode) {
         container->Register<ClayPit>(&ClayPit::Create);
         container->Register<Plane>(&Plane::Create);
         container->Register<Mountain>(&Mountain::Create);
-        CreateResources(container, 50);
-        //
-        container->SetCoordinates<MainBuilding>(5, 5);
-        container->New<MainBuilding>();
-        container->SetCoordinates<Mine>(2, 2);
-        container->New<Mine>();
-        container->SetCoordinates<House>(2, 5);
-        container->New<House>();
-        container->SetCoordinates<ClayPit>(5, 2);
-        container->New<ClayPit>();
-        container->SetCoordinates<Sawmill>(2, 8);
-        container->New<Sawmill>();
-        //
-        container->SetCoordinates<Tower>(4, 7);
-        container->New<Tower>();
-        container->SetCoordinates<Tower>(7, 7);
-        container->New<Tower>();
         //
         container->New<LevelManager>();
-        auto gameCamera = new GameCamera(container);
+        //
+        CreateResources(container, 50);
+        //
+        CreateStartBuildings(container, 2);
+        //
+        auto *gameCamera = new GameCamera(container);
+        CreateTypeList(container, renderObject);
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
         double lag = 0.0;
@@ -195,9 +221,11 @@ Game::Game(int gameMode) {
                 inputObject->symbolInput();
                 lag -= MS_PER_UPDATE;
                 update(inputObject, container, scoreBoard, MS_PER_UPDATE);
+                if (getGameMode() != 1) {
+                    gameCamera->changePosition(container, inputObject->getAxisY(), inputObject->getAxisX());
+                }
                 renderObject->clearScreen();
                 renderObject->render(container, scoreBoard, getGameMode());
-                gameCamera->changePosition(container, inputObject->getAxisY(), inputObject->getAxisX());
                 gameCamera->render(container);
                 renderObject->refreshScreen();
             }

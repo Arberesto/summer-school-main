@@ -1,9 +1,10 @@
 #ifndef DMITRIJ_BAGAEV_MAIN_GAME_HOUSE_H
 #define DMITRIJ_BAGAEV_MAIN_GAME_HOUSE_H
+#include <string>
 #include "./ProducingBuilding.h"
 class House :public ProducingBuilding {
  public:
-    explicit House(int row, int col, int newId, const char* symbol, int health,
+    explicit House(int row, int col, int newId, std::string symbol, int health,
                    int level, int maxLevel, size_t produceType, int produceAmount, double levelMultiplier);
     template<class T>
     bool IsA() {

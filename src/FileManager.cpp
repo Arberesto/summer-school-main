@@ -75,15 +75,19 @@ int** FileManager::readConfig() {
 //    }
 //    result[0][0] = variables[0];
 //    fclose(file);
+    const int numberOfKeys = 7;
     auto **result = new int*[2];
     for (int i = 0; i < 2; i++) {
-        result[i] = new int[6 + 1];
+        result[i] = new int[numberOfKeys + 1];
     }
-    result[0][0] = 6;
-    result[1][0] = -1;
+    result[0][0] = numberOfKeys;
+    result[1][0] = 2;
     result[0][1] = 113;
     result[1][1] = 81;
     result[1][6] = 10;
+    result[0][6] = 10;
+    result[1][7] = 98;
+    result[0][7] = 66;
     for (int i = 2; i < 5 + 1; i++) {
         result[0][i] = 256 + i;
         result[1][i] = 256 + i;

@@ -1,9 +1,10 @@
 #ifndef DMITRIJ_BAGAEV_MAIN_GAME_BUILDING_H
 #define DMITRIJ_BAGAEV_MAIN_GAME_BUILDING_H
+#include <string>
 #include "./IoCContainer.h"
 class Building : public IObject {
  protected:
-    char symbol;
+    std::string symbol;
     int health;
     int level;
     int maxLevel;
@@ -15,7 +16,7 @@ class Building : public IObject {
 
  public:
     Building() = default;
-    explicit Building(int row, int col, int newId, const char* symbol, int health,
+    explicit Building(int row, int col, int newId, std::string symbol, int health,
                       int level, int maxLevel, double levelMultiplier);
     ~Building();
 
@@ -61,9 +62,9 @@ class Building : public IObject {
 
     void SetCol(int newCol);
 
-    const char* GetTextField();
+    std::string GetTextField();
 
-    void SetTextField(const char* newTextField);
+    void SetTextField(std::string newTextField);
 
     void Delete();
 

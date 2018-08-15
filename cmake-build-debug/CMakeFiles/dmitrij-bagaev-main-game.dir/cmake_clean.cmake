@@ -33,6 +33,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Mine.cpp.o"
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o"
   "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Sawmill.cpp.o"
+  "CMakeFiles/dmitrij-bagaev-main-game.dir/src/Farm.cpp.o"
   "dmitrij-bagaev-main-game.pdb"
   "dmitrij-bagaev-main-game"
 )

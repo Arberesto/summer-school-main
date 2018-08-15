@@ -4,7 +4,7 @@
 #include "./InputController.h"
 #include "./LevelManager.h"
 #include "./ScoreBoard.h"
-#include "./House.h"
+#include "./GameRender.h"
 class Game {
  public:
     explicit Game(int gameMode);
@@ -23,17 +23,19 @@ class Game {
     void changeMap(InputController *inputObject, IoCContainer *container,
                    ScoreBoard *scoreBoard);
     void CreateResources(IoCContainer *container, int startValue);
+    void CreateStartBuildings(IoCContainer *container, int value);
     void eachSecondUpdate(IoCContainer *container);
     void update(InputController *inputObject, IoCContainer *container, ScoreBoard *scoreBoard, double deltaTime);
     void gameLoop();
-//    void eachSecondUpdate(InputController *inputObject, LevelManager *levelObject,
-//                           ScoreBoard *scoreBoard);
+    void ChangeGameMode(IoCContainer* container, int keyCode);
+    void CreateTypeList(IoCContainer *container, GameRender* gameRender);
+
 
  private:
     char symbol = '@';        // символ игрока
     int rowConsole = 20;      // координаты консоли
     int colConsole = 10;      //
     bool looping = true;  // переменная игровой петли
-    int gameMode = 0;
+    int gameMode = 0;  // 0 - игра, 1 - выбор здания для строительства, 2 - строительство на карте
 };
 #endif  // REAL_TIME_DEMO_GAME_H

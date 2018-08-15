@@ -6,55 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././././Resource.h
-string
--
-./IoCContainer.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././././IoCContainer.h
-
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Clay.h
-string
--
-./Resource.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././././Resource.h
-
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Food.h
-string
--
-./Resource.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././././Resource.h
-
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Gold.h
-string
--
-./Resource.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././././Resource.h
-
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Ore.h
-string
--
-./Resource.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././././Resource.h
-
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././People.h
-string
--
-./Resource.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././././Resource.h
-
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Resource.h
 string
 -
 ./IoCContainer.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././././IoCContainer.h
 
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Wood.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Building.h
 string
 -
-./Resource.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././././Resource.h
-
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Building.h
 ./IoCContainer.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././IoCContainer.h
 
@@ -98,20 +58,6 @@ string
 ./IoCContainer.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././IoCContainer.h
 
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././ResourceList.h
-./Food.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Food.h
-./Wood.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Wood.h
-./Ore.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Ore.h
-./Clay.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Clay.h
-./Gold.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Gold.h
-./People.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././People.h
-
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Wood.h
 string
 -
@@ -119,6 +65,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Building.h
+string
+-
 ./IoCContainer.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././IoCContainer.h
 
@@ -129,6 +77,14 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ClayPit.h
+string
+-
+./ProducingBuilding.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././ProducingBuilding.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Farm.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././ProducingBuilding.h
 
@@ -143,6 +99,12 @@ string
 -
 ./Resource.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././House.h
+string
+-
+./ProducingBuilding.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././ProducingBuilding.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IObject.h
 typeinfo
@@ -159,10 +121,14 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././IObject.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././MainBuilding.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././ProducingBuilding.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Mine.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././ProducingBuilding.h
 
@@ -187,6 +153,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Terrain.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ProducingBuilding.h
+string
+-
 ./Building.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Building.h
 ./ResourceList.h
@@ -213,6 +181,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././People.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Sawmill.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././ProducingBuilding.h
 
@@ -221,6 +191,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././IoCContainer.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Tower.h
+string
+-
 ./Building.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Building.h
 
@@ -235,6 +207,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Building.h
+string
+-
 ./IoCContainer.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IoCContainer.h
 
@@ -249,6 +223,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ProducingBuilding.h
 ./Mine.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Mine.h
+./Farm.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Farm.h
 ./ClayPit.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ClayPit.h
 ./Sawmill.h
@@ -261,6 +237,14 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ClayPit.h
+string
+-
+./ProducingBuilding.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ProducingBuilding.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Farm.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ProducingBuilding.h
 
@@ -270,6 +254,14 @@ string
 ./Resource.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././GameRender.h
+map
+-
+./LevelManager.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././LevelManager.h
+./ScoreBoard.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ScoreBoard.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Gold.h
 string
 -
@@ -277,6 +269,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././House.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ProducingBuilding.h
 
@@ -299,10 +293,14 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IoCContainer.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././MainBuilding.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ProducingBuilding.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Mine.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ProducingBuilding.h
 
@@ -327,6 +325,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Terrain.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ProducingBuilding.h
+string
+-
 ./Building.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Building.h
 ./ResourceList.h
@@ -347,6 +347,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././People.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Sawmill.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ProducingBuilding.h
 
@@ -367,6 +369,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Terrain.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Tower.h
+string
+-
 ./Building.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Building.h
 
@@ -385,6 +389,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Building.h
+string
+-
 ./IoCContainer.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
 
@@ -399,6 +405,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ProducingBuilding.h
 ./Mine.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Mine.h
+./Farm.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Farm.h
 ./ClayPit.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ClayPit.h
 ./Sawmill.h
@@ -411,10 +419,18 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ClayPit.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ProducingBuilding.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Coin.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Farm.h
+string
+-
+./ProducingBuilding.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ProducingBuilding.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./FileManager.h
 
@@ -435,8 +451,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././LevelManager.h
 ./ScoreBoard.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ScoreBoard.h
-./House.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././House.h
+./GameRender.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././GameRender.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./GameCamera.h
 map
@@ -451,6 +467,8 @@ map
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././TerrainList.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./GameRender.h
+map
+-
 ./LevelManager.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././LevelManager.h
 ./ScoreBoard.h
@@ -463,6 +481,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./House.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ProducingBuilding.h
 
@@ -499,10 +519,14 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./MainBuilding.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ProducingBuilding.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Mine.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ProducingBuilding.h
 
@@ -533,6 +557,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Player.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ProducingBuilding.h
+string
+-
 ./Building.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Building.h
 ./ResourceList.h
@@ -559,6 +585,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././People.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Sawmill.h
+string
+-
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ProducingBuilding.h
 
@@ -579,6 +607,8 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Terrain.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Tower.h
+string
+-
 ./Building.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Building.h
 
@@ -631,6 +661,14 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Coin.cpp
 ./Coin.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Coin.h
+
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Farm.cpp
+./Farm.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Farm.h
+string
+-
+./ProducingBuilding.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ProducingBuilding.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/FileManager.cpp
 ./FileManager.h
@@ -705,12 +743,18 @@ string
 -
 cmath
 -
+utility
+-
 ./Utility.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Utility.h
 ./ObjectRender.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ObjectRender.h
+./InputController.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./InputController.h
 ./ResourceList.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ResourceList.h
+./BuildingList.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./BuildingList.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Gold.cpp
 ./Gold.h

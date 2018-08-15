@@ -1,9 +1,10 @@
 #ifndef DMITRIJ_BAGAEV_MAIN_GAME_TOWER_H
 #define DMITRIJ_BAGAEV_MAIN_GAME_TOWER_H
+#include <string>
 #include "./Building.h"
 class Tower : public Building{
  public:
-    explicit Tower(int row, int col, int newId, const char* symbol, int health, int level,
+    explicit Tower(int row, int col, int newId, std::string symbol, int health, int level,
                    int maxLevel, double levelMultiplier, int attackDamage, int attackSpeed, int attackRadius);
     template<class T>
     bool IsA() {

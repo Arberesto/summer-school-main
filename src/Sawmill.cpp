@@ -1,7 +1,7 @@
 #include "./Sawmill.h"
 #include <string>
 #include "./ProducingBuilding.h"
-Sawmill::Sawmill(int row, int col, int newId, const char* symbol, int health, int level, int maxLevel,
+Sawmill::Sawmill(int row, int col, int newId, std::string symbol, int health, int level, int maxLevel,
                  size_t produceType, int produceAmount, double levelMultiplier) :
         ProducingBuilding(row, col, newId, symbol, health, level, maxLevel,
                           produceType, produceAmount, levelMultiplier) {
@@ -16,5 +16,5 @@ bool Sawmill::IsA(size_t type) {
 
 IObject* Sawmill::Create(size_t type, IoCContainer *iocContainer, int newId) {
     return new Sawmill(iocContainer->GetY<Sawmill>(), iocContainer->GetX<Sawmill>(),
-                       newId, std::string("Sawmill").c_str(), 10 , 1, 3, iocContainer->Get<Wood>(1)->GetType(), 1, 1.0);
+                       newId, "Sawmill", 10 , 1, 3, iocContainer->Get<Wood>(1)->GetType(), 1, 1.0);
 }

@@ -1,9 +1,10 @@
 #ifndef DMITRIJ_BAGAEV_MAIN_GAME_CLAYPIT_H
 #define DMITRIJ_BAGAEV_MAIN_GAME_CLAYPIT_H
+#include <string>
 #include "./ProducingBuilding.h"
-class ClayPit : ProducingBuilding{
+class ClayPit : ProducingBuilding {
  public:
-    explicit ClayPit(int row, int col, int newId, const char* symbol, int health,
+    explicit ClayPit(int row, int col, int newId, std::string symbol, int health,
                    int level, int maxLevel, size_t produceType, int produceAmount, double levelMultiplier);
     template<class T>
     bool IsA() {

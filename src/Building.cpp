@@ -4,7 +4,7 @@
 #include "./IoCContainer.h"
 #include "./IObject.h"
 
-Building::Building(int row, int col, int newId, const char* symbol,
+Building::Building(int row, int col, int newId, std::string symbol,
                    int health, int level, int maxLevel, double levelMultiplier) {
     SetId(newId);
     SetTextField(symbol);
@@ -62,10 +62,8 @@ bool Building::IsA(size_t type) {
     return typeid(Building).hash_code() == type;
 }
 
-const char* Building::GetTextField() {
-    std::string result;
-    result.insert(result.end(), symbol);
-    return result.c_str();
+std::string Building::GetTextField() {
+    return symbol;
 }
 
 void Building::SetBuildingSideSize(int newBuildingSideSize) {
@@ -77,8 +75,8 @@ int Building::GetBuildingSideSize() {
 }
 
 
-void Building::SetTextField(const char* newTextField) {
-    symbol = newTextField[0];
+void Building::SetTextField(std::string newTextField) {
+    symbol = newTextField;
 }
 
 int Building::GetHealth() {

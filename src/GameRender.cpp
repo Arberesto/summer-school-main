@@ -2,9 +2,12 @@
 #include <ncurses.h>
 #include <string>
 #include <cmath>
+#include <utility>
 #include "./Utility.h"
 #include "./ObjectRender.h"
+#include "./InputController.h"
 #include "./ResourceList.h"
+#include "./BuildingList.h"
     GameRender::GameRender() {
         initWindow();
     }
@@ -22,10 +25,8 @@
             auto objectTemp = static_cast<Resource*>(container->Get(idTemp, typeTemp));
             auto temp = objectTemp->GetTextField();
             auto intTemp = objectTemp->GetValue();
-            mvwprintw(stdscr, CONSOLEROW - 2 + i * 2,
-                      CONSOLECOL, "|%s : ", temp);
-            mvwprintw(stdscr, CONSOLEROW - 2 + i * 2,
-                      CONSOLECOL + 10, "%i |", intTemp);
+            mvwprintw(stdscr, CONSOLEROW - 2 + i * 2, CONSOLECOL, "|%s : ", temp);
+            mvwprintw(stdscr, CONSOLEROW - 2 + i * 2, CONSOLECOL + 10, "%i |", intTemp);
         }
     }
 
@@ -44,6 +45,21 @@
                   "Press Enter to load next map(or finish)");
     }
 
+    void GameRender::RedrawBuildingTypes(IoCContainer *container) {
+        // auto inputObject = container->Get<InputController>();
+        int i = 0;
+        for (auto it : typeList) {
+            auto objectTemp = static_cast<Building*>(it.second);
+            mvwprintw(stdscr, CONSOLEROW - 2 + i * 2, CONSOLECOL + 30, " %s - ", objectTemp->GetTextField());
+//            if (i == inputObject->GetCurrentLine()) {
+//                for (auto cost: objectTemp->GetCostList()) {
+//
+//                }
+//            }
+            i++;
+        }
+    }
+
     void GameRender::render(IoCContainer *container, ScoreBoard *scoreBoard, int mode) {
         // mode: 0 map/console ,1 - scoreBoard,  3 - losePicture, 4 - winPicture
         // auto levelObject = container->Get<LevelManager>(1);
@@ -56,6 +72,8 @@
                 break;
             }
             case 1: {
+                redrawConsole(container);
+                RedrawBuildingTypes(container);
                 //  drawScoreBoard(scoreBoard);
                 break;
             }
@@ -102,5 +120,17 @@
     }
 
     void GameRender::refreshScreen() {
-    refresh();
+        refresh();
+    }
+
+    void GameRender::AddTypeToTypeList(size_t type, IObject* exemplar) {
+        if (typeList.find(type)->first != type) {
+            typeList.insert(std::pair<size_t, IObject *>(type, exemplar));
+        }
+    }
+
+    void GameRender::RemoveTypeFromTypeList(size_t type) {
+        if (typeList.find(type)->first != type) {
+            typeList.erase(type);
+        }
     }

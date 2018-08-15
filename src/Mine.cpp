@@ -1,7 +1,7 @@
 #include "./Mine.h"
 #include <string>
 #include "./ProducingBuilding.h"
-Mine::Mine(int row, int col, int newId, const char* symbol, int health, int level, int maxLevel,
+Mine::Mine(int row, int col, int newId, std::string symbol, int health, int level, int maxLevel,
              size_t produceType, int produceAmount, double levelMultiplier) :
         ProducingBuilding(row, col, newId, symbol, health, level, maxLevel,
                           produceType, produceAmount, levelMultiplier) {
@@ -26,5 +26,5 @@ bool Mine::IsA(size_t type) {
 
 IObject* Mine::Create(size_t type, IoCContainer *iocContainer, int newId) {
     return new Mine(iocContainer->GetY<Mine>(), iocContainer->GetX<Mine>(),
-                     newId, std::string("Mine").c_str(), 10 , 1, 3, iocContainer->Get<Ore>(1)->GetType(), 1, 1.0);
+                     newId, "Mine", 10 , 1, 3, iocContainer->Get<Ore>(1)->GetType(), 1, 1.0);
 }

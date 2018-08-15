@@ -24,13 +24,13 @@ IObject* IoCContainer::Get(int id, size_t type) {
 }
 
 int IoCContainer::GetY(size_t type) {
-    return coordinatesContainer.find(type)->second / 200;
+    return coordinatesContainer.find(type)->second / TYPE_MULTIPLIER;
 }
 
 int IoCContainer::GetX(size_t type) {
     int temp = coordinatesContainer.find(type)->second;
-    int temp1 = temp / 200;
-    return temp - temp1 * 200;
+    int temp1 = temp / TYPE_MULTIPLIER;
+    return temp - temp1 * TYPE_MULTIPLIER;
 }
 
 void IoCContainer::SetCoordinates(int Y, int X, size_t type) {
@@ -38,7 +38,7 @@ void IoCContainer::SetCoordinates(int Y, int X, size_t type) {
     if (temp->first == type) {
         coordinatesContainer.erase(type);
     }
-    coordinatesContainer.insert(std::pair<size_t, int>(type, (Y * 200) + X));
+    coordinatesContainer.insert(std::pair<size_t, int>(type, (Y * TYPE_MULTIPLIER) + X));
 }
 
 void IoCContainer::SetNextId(size_t type, int nextId) {
