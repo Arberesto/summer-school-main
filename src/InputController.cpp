@@ -3,14 +3,20 @@
 #include <string>
 #include <vector>
 #include <iterator>
+#include "./IoCContainer.h"
 #include "./FileManager.h"
-InputController::InputController() {
+InputController::InputController(size_t type, IoCContainer *iocContainer, int newId) {
     setLastKey(32);
     setKeyCodes();
     setLastKeyCode(getLastKey());
     setDirection(-1);
+    SetType(type);
+    SetId(newId);
 }
 
+IObject* InputController::Create(size_t type, IoCContainer *iocContainer, int newId) {
+    return new InputController(type,  iocContainer, newId);
+}
 void InputController::setKeyCodes() {
     std::string stringPath = "./src/keys_config.cfg";
     const char *path = stringPath.c_str();
@@ -199,4 +205,38 @@ void InputController::clearBuffer() {
         keyBuffer.erase(keyBuffer.end());
     }
     setLastKeyCode(32);
+}
+
+int InputController::GetId() {
+    return id;
+}
+void InputController::SetId(int newId) {
+    id = newId;
+}
+void InputController::SetType(size_t newType) {
+    type = newType;
+}
+size_t InputController::GetType() {
+    return type;
+}
+bool InputController::IsA(size_t type) {
+    return type == typeid(InputController).hash_code();
+}
+void InputController::Delete() {
+}
+
+int InputController::GetCurrentLine() {
+    return currentLine;
+}
+
+void InputController::SetCurrentLine(int newCurrentLine) {
+    currentLine = newCurrentLine;
+}
+
+void InputController::ShiftCurrentLine(int upOrDown, int MaxLineSize) {
+    if ((upOrDown > 0)&&(currentLine > 0)) {
+        currentLine += upOrDown;
+    } else if (currentLine < MaxLineSize) {
+        currentLine += upOrDown;
+    }
 }

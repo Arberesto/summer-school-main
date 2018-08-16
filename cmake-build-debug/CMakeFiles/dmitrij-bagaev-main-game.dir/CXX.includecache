@@ -254,9 +254,11 @@ string
 ./Resource.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././Resource.h
 
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././GameRender.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Game.h
 map
 -
+./InputController.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././InputController.h
 ./LevelManager.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././LevelManager.h
 ./ScoreBoard.h
@@ -274,9 +276,15 @@ string
 ./ProducingBuilding.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././ProducingBuilding.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IObject.h
+typeinfo
+-
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././InputController.h
 vector
 -
+./IoCContainer.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./././IoCContainer.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
 map
@@ -445,14 +453,14 @@ string
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Resource.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Game.h
+map
+-
 ./InputController.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././InputController.h
 ./LevelManager.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././LevelManager.h
 ./ScoreBoard.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ScoreBoard.h
-./GameRender.h
-/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././GameRender.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./GameCamera.h
 map
@@ -473,6 +481,8 @@ map
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././LevelManager.h
 ./ScoreBoard.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././ScoreBoard.h
+./Game.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Game.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Gold.h
 string
@@ -503,6 +513,8 @@ typeinfo
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./InputController.h
 vector
 -
+./IoCContainer.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IoCContainer.h
 map
@@ -701,6 +713,8 @@ string
 -
 chrono
 -
+utility
+-
 ./Utility.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Utility.h
 ./GameRender.h
@@ -783,6 +797,8 @@ vector
 -
 iterator
 -
+./IoCContainer.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IoCContainer.h
 ./FileManager.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./FileManager.h
 

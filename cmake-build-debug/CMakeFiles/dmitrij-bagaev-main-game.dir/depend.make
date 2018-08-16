@@ -136,6 +136,7 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.o: ../src/././Clay.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.o: ../src/././ClayPit.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.o: ../src/././Farm.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.o: ../src/././Food.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.o: ../src/././Game.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.o: ../src/././Gold.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.o: ../src/././House.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameRender.cpp.o: ../src/././IoCContainer.h
@@ -178,8 +179,10 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.o: ../src/./House.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.o: ../src/./ProducingBuilding.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/House.cpp.o: ../src/House.cpp
 
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.o: ../src/././IObject.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.o: ../src/./FileManager.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.o: ../src/./InputController.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.o: ../src/./IoCContainer.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/InputController.cpp.o: ../src/InputController.cpp
 
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/IoCContainer.cpp.o: ../src/./IObject.h
@@ -339,7 +342,6 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/Wood.cpp.o: ../src/Wood.cpp
 
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/././././IObject.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/./././IoCContainer.h
-CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/././GameRender.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/././InputController.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/././LevelManager.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/main.cpp.o: ../src/././ScoreBoard.h

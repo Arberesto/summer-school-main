@@ -8,7 +8,7 @@ class IObject {
  public:
     virtual int GetId()  = 0;
     virtual void SetId(int newId) = 0;
-    virtual void SetType(size_t type) = 0;
+    virtual void SetType(size_t newType) = 0;
     virtual size_t GetType() = 0;
     virtual bool IsA(size_t type) = 0;
     virtual void Delete() = 0;

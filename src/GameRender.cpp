@@ -45,23 +45,21 @@
                   "Press Enter to load next map(or finish)");
     }
 
-    void GameRender::RedrawBuildingTypes(IoCContainer *container) {
-        // auto inputObject = container->Get<InputController>();
-        int i = 0;
-        for (auto it : typeList) {
-            auto objectTemp = static_cast<Building*>(it.second);
+    void GameRender::RedrawBuildingTypes(IoCContainer *container, Game* gameObject) {
+        auto inputObject = container->Get<InputController>(1);
+        auto ObjectList = gameObject->GetTypeList();
+        for (int i = 0; i < gameObject->GetTypeListSize(); i++) {
+            auto objectTemp = static_cast<Building*>(ObjectList[i]);
             auto temp = objectTemp->GetTextField();
             mvwprintw(stdscr, CONSOLEROW - 2 + i * 2, CONSOLECOL + 30, " %s - ", temp.c_str());
-//            if (i == inputObject->GetCurrentLine()) {
-//                for (auto cost: objectTemp->GetCostList()) {
-//
-//                }
-//            }
+            if (i == inputObject->GetCurrentLine()) {
+                    mvaddch(CONSOLEROW - 2 + i * 2, CONSOLECOL + 29, '>');
+            }
             i++;
         }
     }
 
-    void GameRender::render(IoCContainer *container, ScoreBoard *scoreBoard, int mode) {
+    void GameRender::render(IoCContainer *container, ScoreBoard *scoreBoard, int mode, Game* gameObject) {
         // mode: 0 map/console ,1 - scoreBoard,  3 - losePicture, 4 - winPicture
         // auto levelObject = container->Get<LevelManager>(1);
         switch (mode) {
@@ -74,7 +72,7 @@
             }
             case 1: {
                 redrawConsole(container);
-                RedrawBuildingTypes(container);
+                RedrawBuildingTypes(container, gameObject);
                 //  drawScoreBoard(scoreBoard);
                 break;
             }
@@ -122,16 +120,4 @@
 
     void GameRender::refreshScreen() {
         refresh();
-    }
-
-    void GameRender::AddTypeToTypeList(size_t type, IObject* exemplar) {
-        if (typeList.find(type)->first != type) {
-            typeList.insert(std::pair<size_t, IObject *>(type, exemplar));
-        }
-    }
-
-    void GameRender::RemoveTypeFromTypeList(size_t type) {
-        if (typeList.find(type)->first != type) {
-            typeList.erase(type);
-        }
     }

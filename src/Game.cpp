@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <string>
 #include <chrono>
+#include <utility>
 #include "./Utility.h"
 #include "./GameRender.h"
 #include "./InputController.h"
@@ -102,6 +103,9 @@ Game::Game(int gameMode) {
             levelObject->IncreaseSecondsUsed(deltaTime);
             levelObject->IncreaseTickCounter(1);
         }
+        if (getGameMode() == 1) {
+            inputObject->ShiftCurrentLine(inputObject->getAxisY(), static_cast<int>(typeList.size()));
+        }
         eachSecondUpdate(container);
 //        if (container->GetIdList<MainBuilding>[0][0] == 0) {
 //            levelObject->loadLevel(1);
@@ -127,8 +131,10 @@ Game::Game(int gameMode) {
                 setGameMode(0);
             } else if (localGameMode == 2) {
                 setGameMode(1);
+                container->Get<InputController>(1)->SetCurrentLine(1);
             } else {
                 setGameMode(1);
+                container->Get<InputController>(1)->SetCurrentLine(1);
             }
             return;
         }
@@ -164,27 +170,27 @@ Game::Game(int gameMode) {
         container->New<House>();
     }
 
-    void Game::CreateTypeList(IoCContainer *container, GameRender* gameRender) {
-        gameRender->AddTypeToTypeList(typeid(House).hash_code(),
+    void Game::CreateTypeList(IoCContainer *container) {
+        AddTypeToTypeList(typeid(House).hash_code(),
                                       House::Create(typeid(House).hash_code(), container, -1));
-        gameRender->AddTypeToTypeList(typeid(Mine).hash_code(),
+        AddTypeToTypeList(typeid(Mine).hash_code(),
                                       Mine::Create(typeid(Mine).hash_code(), container, -1));
-        gameRender->AddTypeToTypeList(typeid(ClayPit).hash_code(),
+        AddTypeToTypeList(typeid(ClayPit).hash_code(),
                                       ClayPit::Create(typeid(ClayPit).hash_code(), container, -1));
-        gameRender->AddTypeToTypeList(typeid(Sawmill).hash_code(),
+        AddTypeToTypeList(typeid(Sawmill).hash_code(),
                                       Sawmill::Create(typeid(Sawmill).hash_code(), container, -1));
-        gameRender->AddTypeToTypeList(typeid(Tower).hash_code(),
+        AddTypeToTypeList(typeid(Tower).hash_code(),
                                       Tower::Create(typeid(Tower).hash_code(), container, -1));
-        gameRender->AddTypeToTypeList(typeid(Farm).hash_code(),
+        AddTypeToTypeList(typeid(Farm).hash_code(),
                                       Farm::Create(typeid(Farm).hash_code(), container, -1));
     }
 
     void Game::gameLoop() {
         auto *renderObject = new GameRender();
-        auto *inputObject = new InputController();
         auto *scoreBoard = new ScoreBoard(1, 10, 13);
         auto *container = new IoCContainer();
         container->Register<LevelManager>(&LevelManager::Create);
+        container->Register<InputController>(&InputController::Create);
         container->Register<Tower>(&Tower::Create);
         container->Register<Ore>(&Ore::Create);
         container->Register<Mine>(&Mine::Create);
@@ -202,13 +208,15 @@ Game::Game(int gameMode) {
         container->Register<Mountain>(&Mountain::Create);
         //
         container->New<LevelManager>();
+        container->New<InputController>();
         //
         CreateResources(container, 50);
         //
         CreateStartBuildings(container, 2);
         //
+        auto *inputObject = container->Get<InputController>(1);
         auto *gameCamera = new GameCamera(container);
-        CreateTypeList(container, renderObject);
+        CreateTypeList(container);
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
         double lag = 0.0;
@@ -225,10 +233,36 @@ Game::Game(int gameMode) {
                     gameCamera->changePosition(container, inputObject->getAxisY(), inputObject->getAxisX());
                 }
                 renderObject->clearScreen();
-                renderObject->render(container, scoreBoard, getGameMode());
+                renderObject->render(container, scoreBoard, getGameMode(), this);
                 gameCamera->render(container);
                 renderObject->refreshScreen();
             }
         }
         renderObject->endWindow();
+    }
+
+    void Game::AddTypeToTypeList(size_t type, IObject* exemplar) {
+        if (typeList.find(type)->first != type) {
+            typeList.insert(std::pair<size_t, IObject *>(type, exemplar));
+        }
+    }
+
+    void Game::RemoveTypeFromTypeList(size_t type) {
+        if (typeList.find(type)->first != type) {
+            typeList.erase(type);
+        }
+    }
+
+    IObject** Game::GetTypeList() {
+        IObject** result = new IObject*[typeList.size()];
+        int i = 0;
+        for (auto it : typeList) {
+            result[i] = it.second;
+            i++;
+        }
+        return  result;
+    }
+
+    int Game::GetTypeListSize() {
+        return typeList.size();
     }
