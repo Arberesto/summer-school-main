@@ -48,14 +48,14 @@
     void GameRender::RedrawBuildingTypes(IoCContainer *container, Game* gameObject) {
         auto inputObject = container->Get<InputController>(1);
         auto ObjectList = gameObject->GetTypeList();
-        for (int i = 0; i < gameObject->GetTypeListSize(); i++) {
+        int size = gameObject->GetTypeListSize();
+        for (int i = 0; i < size; i++) {
             auto objectTemp = static_cast<Building*>(ObjectList[i]);
             auto temp = objectTemp->GetTextField();
-            mvwprintw(stdscr, CONSOLEROW - 2 + i * 2, CONSOLECOL + 30, " %s - ", temp.c_str());
+            mvwprintw(stdscr, CONSOLEROW - 2 + i * 2, CONSOLECOL + 30, " %s - now free(special offer!)", temp.c_str());
             if (i == inputObject->GetCurrentLine()) {
                     mvaddch(CONSOLEROW - 2 + i * 2, CONSOLECOL + 29, '>');
             }
-            i++;
         }
     }
 
@@ -76,7 +76,16 @@
                 //  drawScoreBoard(scoreBoard);
                 break;
             }
+            case 2: {
+                redrawConsole(container);
+                mvwprintw(stdscr, CONSOLEROW - 10, CONSOLECOL, "Press Enter to create building of your dreams");
+                //  drawScoreBoard(scoreBoard);
+                break;
+            }
             case 3: {
+                redrawConsole(container);
+                RedrawBuildingTypes(container, gameObject);
+                mvwprintw(stdscr, CONSOLEROW - 10, CONSOLECOL, "Sorry, we run out of buildings.Try again later");
                 //  drawLosePicture(levelObject);
                 break;
             }

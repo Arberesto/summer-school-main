@@ -234,9 +234,9 @@ void InputController::SetCurrentLine(int newCurrentLine) {
 }
 
 void InputController::ShiftCurrentLine(int upOrDown, int MaxLineSize) {
-    if ((upOrDown > 0)&&(currentLine > 0)) {
+    if ((upOrDown < 0)&&(currentLine > 0)) {
         currentLine += upOrDown;
-    } else if (currentLine < MaxLineSize) {
+    } else if ((upOrDown > 0)&&(currentLine < MaxLineSize - 1)) {
         currentLine += upOrDown;
     }
 }

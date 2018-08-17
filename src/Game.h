@@ -31,8 +31,10 @@ class Game {
     void CreateTypeList(IoCContainer *container);
     void AddTypeToTypeList(size_t type, IObject* exemplar);
     void RemoveTypeFromTypeList(size_t type);
+    size_t GetTypeOnIndex(int index);
     IObject** GetTypeList();
     int GetTypeListSize();
+    void CreateNewBuilding(size_t type, IoCContainer* container);
 
  private:
     char symbol = '@';        // символ игрока
@@ -41,5 +43,8 @@ class Game {
     bool looping = true;  // переменная игровой петли
     int gameMode = 0;  // 0 - игра, 1 - выбор здания для строительства, 2 - строительство на карте
     std::map<size_t, IObject*> typeList;
+    int HardcodedBuildingY = 7;
+    int HardcodedBuildingX = 4;
+    bool canBuild = true;
 };
 #endif  // REAL_TIME_DEMO_GAME_H

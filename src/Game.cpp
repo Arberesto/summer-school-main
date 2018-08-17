@@ -13,6 +13,7 @@
 #include "./IncludeObjects.h"
 Game::Game(int gameMode) {
     setGameMode(gameMode);
+    canBuild = true;
 }
 
     bool Game::getLooping() {
@@ -131,10 +132,10 @@ Game::Game(int gameMode) {
                 setGameMode(0);
             } else if (localGameMode == 2) {
                 setGameMode(1);
-                container->Get<InputController>(1)->SetCurrentLine(1);
+                container->Get<InputController>(1)->SetCurrentLine(0);
             } else {
                 setGameMode(1);
-                container->Get<InputController>(1)->SetCurrentLine(1);
+                container->Get<InputController>(1)->SetCurrentLine(0);
             }
             return;
         }
@@ -142,6 +143,14 @@ Game::Game(int gameMode) {
             if (localGameMode == 1) {
                 setGameMode(2);
             } else if (localGameMode == 2) {
+                if (canBuild) {
+                    CreateNewBuilding(GetTypeOnIndex(container->Get<InputController>(1)->GetCurrentLine()), container);
+                    setGameMode(0);
+                } else {
+                    setGameMode(3);
+                }
+
+            } else if (localGameMode == 3) {
                 setGameMode(0);
             }
             return;
@@ -166,7 +175,7 @@ Game::Game(int gameMode) {
     void Game::CreateStartBuildings(IoCContainer *container, int value) {
         container->SetCoordinates<MainBuilding>(value, value);
         container->New<MainBuilding>();
-        container->SetCoordinates<House>(value  +3, value + 3);
+        container->SetCoordinates<House>(value  + 3, value + 3);
         container->New<House>();
     }
 
@@ -265,4 +274,26 @@ Game::Game(int gameMode) {
 
     int Game::GetTypeListSize() {
         return typeList.size();
+    }
+
+    size_t Game::GetTypeOnIndex(int index) {
+        int i = 0;
+        for (auto it : typeList) {
+            if (i == index) {
+                return it.first;
+            }
+            i++;
+        }
+        return static_cast<size_t>(-1);
+    }
+    void Game::CreateNewBuilding(size_t type, IoCContainer* container) {
+        if (type != static_cast<size_t >(-1)) {
+            container->SetCoordinates(HardcodedBuildingY, HardcodedBuildingX, type);
+            container->New(type);
+            if (HardcodedBuildingX + 3 < container->Get<LevelManager>(1)->getSizeCol()) {
+                HardcodedBuildingX += 3;
+            } else {
+                canBuild = false;
+            }
+        }
     }
