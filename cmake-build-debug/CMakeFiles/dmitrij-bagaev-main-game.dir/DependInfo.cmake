@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Clay.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Clay.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ClayPit.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Coin.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Coin.cpp.o"
+  "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Cursor.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Cursor.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Farm.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Farm.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/FileManager.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/FileManager.cpp.o"
   "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Floor.cpp" "/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/CMakeFiles/dmitrij-bagaev-main-game.dir/src/Floor.cpp.o"

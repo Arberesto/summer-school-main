@@ -121,6 +121,8 @@
         keypad(stdscr, TRUE);
         curs_set(0);
         nodelay(stdscr, true);
+        start_color();
+        init_pair(1, COLOR_WHITE, COLOR_WHITE);
     }
 
     void GameRender::endWindow() {

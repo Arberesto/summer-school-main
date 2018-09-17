@@ -25,7 +25,7 @@ class Game {
     void CreateResources(IoCContainer *container, int startValue);
     void CreateStartBuildings(IoCContainer *container, int value);
     void eachSecondUpdate(IoCContainer *container);
-    void update(InputController *inputObject, IoCContainer *container, ScoreBoard *scoreBoard, double deltaTime);
+    void update(IoCContainer *container, ScoreBoard *scoreBoard, double deltaTime);
     void gameLoop();
     void ChangeGameMode(IoCContainer* container, int keyCode);
     void CreateTypeList(IoCContainer *container);
@@ -35,7 +35,8 @@ class Game {
     IObject** GetTypeList();
     int GetTypeListSize();
     void CreateNewBuilding(size_t type, IoCContainer* container);
-
+    bool GetCanBuild();
+    void SetCanBuild(bool newCanBuild);
  private:
     char symbol = '@';        // символ игрока
     int rowConsole = 20;      // координаты консоли
@@ -45,6 +46,6 @@ class Game {
     std::map<size_t, IObject*> typeList;
     int HardcodedBuildingY = 7;
     int HardcodedBuildingX = 4;
-    bool canBuild = true;
+    bool canBuild = false;
 };
 #endif  // REAL_TIME_DEMO_GAME_H

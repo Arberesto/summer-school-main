@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="dmitrij-bagaev-main-game"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lint">
+				<Option working_dir="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 lint"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dmitrij-bagaev-main-game">
+				<Option output="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/dmitrij-bagaev-main-game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 dmitrij-bagaev-main-game"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dmitrij-bagaev-main-game/fast">
+				<Option output="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/dmitrij-bagaev-main-game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 dmitrij-bagaev-main-game/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/arcades/CLionProjects/dmitrij-bagaev-main-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Building.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Building.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/BuildingList.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Clay.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Clay.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ClayPit.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ClayPit.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Coin.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Coin.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Cursor.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Cursor.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Farm.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Farm.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/FileManager.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/FileManager.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Floor.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Floor.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Food.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Food.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Game.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Game.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameCamera.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameCamera.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameRender.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameRender.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Gold.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Gold.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/House.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/House.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/IObject.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/IncludeObjects.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/InputController.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/InputController.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/IoCContainer.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/IoCContainer.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/LevelManager.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/LevelManager.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/MainBuilding.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/MainBuilding.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Mine.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Mine.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Mountain.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Mountain.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ObjectRender.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ObjectRender.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Ore.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Ore.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/People.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/People.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Plane.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Plane.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Player.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Player.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ProducingBuilding.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ProducingBuilding.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Resource.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Resource.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ResourceList.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Sawmill.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Sawmill.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ScoreBoard.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/ScoreBoard.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Terrain.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Terrain.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/TerrainList.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Tower.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Tower.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Unit.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Unit.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/UnitList.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Utility.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Utility.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wall.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wall.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wood.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Wood.h">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/main.cpp">
+			<Option target="dmitrij-bagaev-main-game"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/arcades/CLionProjects/dmitrij-bagaev-main-game/CMake/CppLint.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

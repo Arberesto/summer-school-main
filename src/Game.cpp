@@ -8,6 +8,7 @@
 #include "./GameRender.h"
 #include "./InputController.h"
 #include "./LevelManager.h"
+#include "./Cursor.h"
 #include "./ScoreBoard.h"
 #include "./GameCamera.h"
 #include "./IncludeObjects.h"
@@ -97,8 +98,9 @@ Game::Game(int gameMode) {
         return result;
     }
 
-    void Game::update(InputController *inputObject, IoCContainer *container,
+    void Game::update(IoCContainer *container,
                       ScoreBoard *scoreBoard, double deltaTime) {
+        auto *inputObject = container->Get<InputController>(1);
         auto levelObject = container->Get<LevelManager>(1);
         if (getGameMode() == 0) {
             levelObject->IncreaseSecondsUsed(deltaTime);
@@ -127,10 +129,10 @@ Game::Game(int gameMode) {
 
     void Game::ChangeGameMode(IoCContainer* container, int keyCode) {
         int localGameMode = getGameMode();
-        if (keyCode == 6) {
-            if (localGameMode == 1) {
-                setGameMode(0);
-            } else if (localGameMode == 2) {
+        if (keyCode == 6) { // Building
+            if (localGameMode == 1) { // 1 - choose building to build
+                setGameMode(0); // move cursor
+            } else if (localGameMode == 2) { // 2 - find place to build
                 setGameMode(1);
                 container->Get<InputController>(1)->SetCurrentLine(0);
             } else {
@@ -139,15 +141,15 @@ Game::Game(int gameMode) {
             }
             return;
         }
-        if (keyCode == 5) {
+        if (keyCode == 5) { // Accept
             if (localGameMode == 1) {
                 setGameMode(2);
             } else if (localGameMode == 2) {
-                if (canBuild) {
+                if ( GetCanBuild()) {
                     CreateNewBuilding(GetTypeOnIndex(container->Get<InputController>(1)->GetCurrentLine()), container);
                     setGameMode(0);
                 } else {
-                    setGameMode(3);
+                    // setGameMode(3);
                 }
 
             } else if (localGameMode == 3) {
@@ -201,6 +203,7 @@ Game::Game(int gameMode) {
         container->Register<LevelManager>(&LevelManager::Create);
         container->Register<InputController>(&InputController::Create);
         container->Register<Tower>(&Tower::Create);
+        container->Register<Cursor>(&Cursor::Create);
         container->Register<Ore>(&Ore::Create);
         container->Register<Mine>(&Mine::Create);
         container->Register<Wood>(&Wood::Create);
@@ -217,6 +220,8 @@ Game::Game(int gameMode) {
         container->Register<Mountain>(&Mountain::Create);
         //
         container->New<LevelManager>();
+        container->SetCoordinates<Cursor>(1,1);
+        container->New<Cursor>();
         container->New<InputController>();
         //
         CreateResources(container, 50);
@@ -225,6 +230,7 @@ Game::Game(int gameMode) {
         //
         auto *inputObject = container->Get<InputController>(1);
         auto *gameCamera = new GameCamera(container);
+        auto *gameCursor = container->Get<Cursor>(1);
         CreateTypeList(container);
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
@@ -237,9 +243,13 @@ Game::Game(int gameMode) {
             while ((lag >= MS_PER_UPDATE)&&(getLooping())) {
                 inputObject->symbolInput();
                 lag -= MS_PER_UPDATE;
-                update(inputObject, container, scoreBoard, MS_PER_UPDATE);
+                update(container, scoreBoard, MS_PER_UPDATE);
                 if (getGameMode() != 1) {
+                    gameCursor->changePosition(container, inputObject->getAxisY(), inputObject->getAxisX());
                     gameCamera->changePosition(container, inputObject->getAxisY(), inputObject->getAxisX());
+                }
+                if (getGameMode() == 2) {
+                    // gameCamera->CheckBuildLegality(container, gameCamera);
                 }
                 renderObject->clearScreen();
                 renderObject->render(container, scoreBoard, getGameMode(), this);
@@ -263,7 +273,7 @@ Game::Game(int gameMode) {
     }
 
     IObject** Game::GetTypeList() {
-        IObject** result = new IObject*[typeList.size()];
+        IObject** result = new IObject*[GetTypeListSize()];
         int i = 0;
         for (auto it : typeList) {
             result[i] = it.second;
@@ -293,7 +303,15 @@ Game::Game(int gameMode) {
             if (HardcodedBuildingX + 3 < container->Get<LevelManager>(1)->getSizeCol()) {
                 HardcodedBuildingX += 3;
             } else {
-                canBuild = false;
+                SetCanBuild(false);
             }
         }
+    }
+
+    bool Game::GetCanBuild() {
+        return canBuild;
+    }
+
+    void Game::SetCanBuild(bool newCanBuild) {
+        canBuild = newCanBuild;
     }
