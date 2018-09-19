@@ -30,6 +30,12 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/ClayPit.cpp.o: ../src/ClayPit.cpp
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Coin.cpp.o: ../src/./Coin.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Coin.cpp.o: ../src/Coin.cpp
 
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Cursor.cpp.o: ../src/././IoCContainer.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Cursor.cpp.o: ../src/./Cursor.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Cursor.cpp.o: ../src/./IObject.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Cursor.cpp.o: ../src/./LevelManager.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Cursor.cpp.o: ../src/Cursor.cpp
+
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Farm.cpp.o: ../src/././././IObject.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Farm.cpp.o: ../src/././././Resource.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Farm.cpp.o: ../src/./././Clay.h
@@ -69,7 +75,6 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./././Farm.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./././Food.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./././Gold.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./././House.h
-CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./././IObject.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./././MainBuilding.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./././Mine.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./././Mountain.h
@@ -84,10 +89,12 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./././Unit.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./././Wall.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./././Wood.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/././BuildingList.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/././IObject.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/././IoCContainer.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/././ResourceList.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/././TerrainList.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/././UnitList.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./Cursor.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./Game.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./GameCamera.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/Game.cpp.o: ../src/./GameRender.h
@@ -102,16 +109,16 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/./././././R
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././././Clay.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././././Food.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././././Gold.h
-CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././././IObject.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././././Ore.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././././People.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././././Wood.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/./././Building.h
-CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/./././IoCContainer.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/./././ResourceList.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././ClayPit.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././Farm.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././House.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././IObject.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././IoCContainer.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././LevelManager.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././MainBuilding.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././Mine.h
@@ -124,6 +131,7 @@ CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././Tower.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././Unit.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/././Wall.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/./BuildingList.h
+CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/./Cursor.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/./GameCamera.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/./TerrainList.h
 CMakeFiles/dmitrij-bagaev-main-game.dir/src/GameCamera.cpp.o: ../src/./UnitList.h

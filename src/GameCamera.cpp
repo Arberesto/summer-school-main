@@ -6,6 +6,7 @@
 #include "./BuildingList.h"
 #include "./UnitList.h"
 #include "./TerrainList.h"
+#include "./Cursor.h"
 GameCamera::GameCamera(IoCContainer* container) {
     setColSize(50);
     setRowSize(25);
@@ -27,6 +28,20 @@ void GameCamera::changePosition(IoCContainer* container, int rowShift, int colSh
             ClearActiveField();
             UpdateTerrain(container);
             UpdateBuildings(container);
+            auto objectTemp = container->Get<Cursor>(1);
+            auto newDrawField = new char *[1 + 1];
+            for (int i = 1; i < 1 + 1; i++) {
+                newDrawField[i] = new char[1];
+                for (int j = 0; j < 1; j++) {
+                    newDrawField[i][j] = ' ';
+                }
+            }
+            newDrawField[0] = new char[2];
+            newDrawField[0][0] = static_cast<char>(1);
+            newDrawField[0][1] = static_cast<char>(1);
+            if (isInCameraRadius(objectTemp->GetRow(), objectTemp->GetCol(), newDrawField)) {
+                addToActiveField(objectTemp->GetType() + objectTemp->GetId(), objectTemp);
+            }
         }
     }
 }
@@ -42,6 +57,8 @@ void GameCamera::render(IoCContainer* container) {
     for (auto it : activeField) {
         Draw(container, it.second);
     }
+    auto result = activeField.find(typeid(Cursor).hash_code());
+    Draw(container, result->second);
 //    auto unitList = container->GetIdList<Unit>();
 //    if (unitList[0][0] != 0) {
 //        for (int i = 0; i < static_cast<int>(unitList[0][0]); i++) {
@@ -74,6 +91,26 @@ void GameCamera::Draw(IoCContainer* container, Building* object) {
     }
 }
 
+void GameCamera::Draw(IoCContainer* container, Cursor* object) {
+    int localRow = object->GetRow();
+    int localCol = object->GetCol();
+    int CLUR = getConsoleLeftUpperCornerRow();
+    int LUR = getLeftUpperCornerRow();
+    int CLUC = getConsoleLeftUpperCornerCol();
+    int LUC = getLeftUpperCornerCol();
+    ChangeColorPair(1);
+    mvaddch(CLUR - LUR + localRow, CLUC - LUC + localCol, ' ');
+    //  auto localDrawField = object->GetDrawField();
+//    for (int i = 0; i < localDrawField[0][0]; i++) {
+//        for (int j = 0; j < localDrawField[0][1]; j++) {
+//            mvaddch(CLUR - LUR + (localRow + i),
+//                    CLUC - LUC + (localCol + j),
+//                    localDrawField[i + 1][j]);
+//        }
+//    }
+    ChangeColorPair(0);
+}
+
 void GameCamera::Draw(IoCContainer* container, Unit * object) {
 }
 
@@ -82,6 +119,8 @@ void GameCamera::Draw(IoCContainer* container, IObject* object) {
         Draw(container, static_cast<Building*>(object));
     } else if (object->IsA(typeid(Terrain).hash_code())) {
         Draw(container, static_cast<Terrain*>(object));
+    } else if (object->IsA(typeid(Unit).hash_code())) {
+        //  Draw(container, static_cast<Unit*>(object));
     }
 }
 
@@ -200,4 +239,8 @@ void GameCamera::UpdateBuildings(IoCContainer* container) {
 
 void GameCamera::ClearActiveField() {
     activeField.clear();
+}
+
+void GameCamera::ChangeColorPair(int newPairNumber) {
+    wattron(stdscr, COLOR_PAIR(newPairNumber));
 }

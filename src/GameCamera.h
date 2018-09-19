@@ -5,6 +5,7 @@
 #include "./BuildingList.h"
 #include "./UnitList.h"
 #include "./TerrainList.h"
+#include "./Cursor.h"
 class GameCamera {
  public:
     explicit GameCamera(IoCContainer* container);
@@ -25,6 +26,7 @@ class GameCamera {
     void changePosition(IoCContainer* container, int rowShift, int colShift);
     bool isCorrectCoordinates(int cameraRow, int cameraCol, int levelSizeRow, int levelSizeCol);
     void Draw(IoCContainer* container, Building * object);
+    void Draw(IoCContainer* container, Cursor * object);
     void Draw(IoCContainer* container, Unit * object);
     void Draw(IoCContainer* container, Terrain * object);
     void Draw(IoCContainer* container, IObject* object);
@@ -33,6 +35,7 @@ class GameCamera {
     void UpdateTerrain(IoCContainer* container);
     void UpdateBuildings(IoCContainer* container);
     void ClearActiveField();
+    void ChangeColorPair(int newPairNumber);
 
  private:
     int rowSize;

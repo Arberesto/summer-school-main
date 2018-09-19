@@ -37,6 +37,7 @@ class Game {
     void CreateNewBuilding(size_t type, IoCContainer* container);
     bool GetCanBuild();
     void SetCanBuild(bool newCanBuild);
+
  private:
     char symbol = '@';        // символ игрока
     int rowConsole = 20;      // координаты консоли

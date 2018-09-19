@@ -129,10 +129,10 @@ Game::Game(int gameMode) {
 
     void Game::ChangeGameMode(IoCContainer* container, int keyCode) {
         int localGameMode = getGameMode();
-        if (keyCode == 6) { // Building
-            if (localGameMode == 1) { // 1 - choose building to build
-                setGameMode(0); // move cursor
-            } else if (localGameMode == 2) { // 2 - find place to build
+        if (keyCode == 6) {  // Building
+            if (localGameMode == 1) {  // 1 - choose building to build
+                setGameMode(0);  // move cursor
+            } else if (localGameMode == 2) {   // 2 - find place to build
                 setGameMode(1);
                 container->Get<InputController>(1)->SetCurrentLine(0);
             } else {
@@ -141,11 +141,11 @@ Game::Game(int gameMode) {
             }
             return;
         }
-        if (keyCode == 5) { // Accept
+        if (keyCode == 5) {  // Accept
             if (localGameMode == 1) {
                 setGameMode(2);
             } else if (localGameMode == 2) {
-                if ( GetCanBuild()) {
+                if (GetCanBuild()) {
                     CreateNewBuilding(GetTypeOnIndex(container->Get<InputController>(1)->GetCurrentLine()), container);
                     setGameMode(0);
                 } else {
@@ -220,7 +220,7 @@ Game::Game(int gameMode) {
         container->Register<Mountain>(&Mountain::Create);
         //
         container->New<LevelManager>();
-        container->SetCoordinates<Cursor>(1,1);
+        container->SetCoordinates<Cursor>(5, 2);
         container->New<Cursor>();
         container->New<InputController>();
         //
@@ -249,7 +249,7 @@ Game::Game(int gameMode) {
                     gameCamera->changePosition(container, inputObject->getAxisY(), inputObject->getAxisX());
                 }
                 if (getGameMode() == 2) {
-                    // gameCamera->CheckBuildLegality(container, gameCamera);
+                    //  gameCamera->CheckBuildLegality(container, gameCamera);
                 }
                 renderObject->clearScreen();
                 renderObject->render(container, scoreBoard, getGameMode(), this);

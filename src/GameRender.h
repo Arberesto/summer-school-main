@@ -17,6 +17,7 @@ class GameRender {
     void endWindow();
     void clearScreen();
     void refreshScreen();
+    void ChangeColorPair(int newPairNumber);
     void RedrawBuildingTypes(IoCContainer *container, Game* gameObject);
 
  private:

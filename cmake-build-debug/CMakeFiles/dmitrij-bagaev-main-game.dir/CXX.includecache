@@ -434,6 +434,18 @@ string
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Coin.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Cursor.h
+map
+-
+typeinfo
+-
+string
+-
+./IoCContainer.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IoCContainer.h
+./IObject.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././IObject.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Farm.h
 string
 -
@@ -473,6 +485,8 @@ map
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././UnitList.h
 ./TerrainList.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././TerrainList.h
+./Cursor.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/././Cursor.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./GameRender.h
 map
@@ -674,6 +688,20 @@ string
 ./Coin.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Coin.h
 
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Cursor.cpp
+./Cursor.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Cursor.h
+map
+-
+typeinfo
+-
+string
+-
+./IObject.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./IObject.h
+./LevelManager.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./LevelManager.h
+
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/Farm.cpp
 ./Farm.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Farm.h
@@ -723,6 +751,8 @@ utility
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./InputController.h
 ./LevelManager.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./LevelManager.h
+./Cursor.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Cursor.h
 ./ScoreBoard.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./ScoreBoard.h
 ./GameCamera.h
@@ -747,6 +777,8 @@ utility
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./UnitList.h
 ./TerrainList.h
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./TerrainList.h
+./Cursor.h
+/home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/./Cursor.h
 
 /home/arcades/CLionProjects/dmitrij-bagaev-main-game/src/GameRender.cpp
 ./GameRender.h
