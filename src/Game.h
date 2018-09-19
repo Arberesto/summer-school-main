@@ -5,6 +5,7 @@
 #include "./InputController.h"
 #include "./LevelManager.h"
 #include "./ScoreBoard.h"
+#include "./GameCamera.h"
 class Game {
  public:
     explicit Game(int gameMode);
@@ -25,9 +26,9 @@ class Game {
     void CreateResources(IoCContainer *container, int startValue);
     void CreateStartBuildings(IoCContainer *container, int value);
     void eachSecondUpdate(IoCContainer *container);
-    void update(IoCContainer *container, ScoreBoard *scoreBoard, double deltaTime);
+    void update(IoCContainer *container, ScoreBoard *scoreBoard, double deltaTime, GameCamera* gameCamera);
     void gameLoop();
-    void ChangeGameMode(IoCContainer* container, int keyCode);
+    void ChangeGameMode(IoCContainer* container, int keyCode, GameCamera* camera);
     void CreateTypeList(IoCContainer *container);
     void AddTypeToTypeList(size_t type, IObject* exemplar);
     void RemoveTypeFromTypeList(size_t type);

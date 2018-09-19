@@ -61,7 +61,7 @@ void Cursor::changePosition(IoCContainer* container, int rowShift, int colShift)
     if (rowShift + colShift != 0) {
         auto mapMaxRow = container->Get<LevelManager>(1)->getSizeRow();
         auto mapMaxCol = container->Get<LevelManager>(1)->getSizeCol();
-        if (isCorrectCoordinates(GetRow() + rowShift, GetCol() + colShift,
+        if (isCorrectCoordinates(GetRow() + rowShift - 1, GetCol() + colShift - 1,
                                  mapMaxRow, mapMaxCol)) {
             SetRow((GetRow() + rowShift));
             SetCol((GetCol() + colShift));

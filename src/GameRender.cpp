@@ -123,6 +123,7 @@
         nodelay(stdscr, true);
         start_color();
         init_pair(1, COLOR_WHITE, COLOR_WHITE);
+        init_pair(2, COLOR_WHITE, COLOR_BLACK);
     }
 
     void GameRender::endWindow() {

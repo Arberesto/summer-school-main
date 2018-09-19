@@ -36,6 +36,7 @@ class GameCamera {
     void UpdateBuildings(IoCContainer* container);
     void ClearActiveField();
     void ChangeColorPair(int newPairNumber);
+    const int CAMERA_FOLLOW_CONSTANT = 5;
 
  private:
     int rowSize;

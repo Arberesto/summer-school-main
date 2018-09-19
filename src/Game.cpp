@@ -99,7 +99,7 @@ Game::Game(int gameMode) {
     }
 
     void Game::update(IoCContainer *container,
-                      ScoreBoard *scoreBoard, double deltaTime) {
+                      ScoreBoard *scoreBoard, double deltaTime, GameCamera* gameCamera) {
         auto *inputObject = container->Get<InputController>(1);
         auto levelObject = container->Get<LevelManager>(1);
         if (getGameMode() == 0) {
@@ -121,13 +121,13 @@ Game::Game(int gameMode) {
             inputObject->setDirection(-1);
             while (!inputObject->getKeyBuffer().empty()) {
                 int firstKeyInBuffer = inputObject->getFirstKeyFromBuffer();
-                ChangeGameMode(container, firstKeyInBuffer);
+                ChangeGameMode(container, firstKeyInBuffer, gameCamera);
                 inputObject->setDirection(firstKeyInBuffer);
             }
         }
     }
 
-    void Game::ChangeGameMode(IoCContainer* container, int keyCode) {
+    void Game::ChangeGameMode(IoCContainer* container, int keyCode, GameCamera* gameCamera) {
         int localGameMode = getGameMode();
         if (keyCode == 6) {  // Building
             if (localGameMode == 1) {  // 1 - choose building to build
@@ -147,6 +147,7 @@ Game::Game(int gameMode) {
             } else if (localGameMode == 2) {
                 if (GetCanBuild()) {
                     CreateNewBuilding(GetTypeOnIndex(container->Get<InputController>(1)->GetCurrentLine()), container);
+                    gameCamera->UpdateBuildings(container);
                     setGameMode(0);
                 } else {
                     // setGameMode(3);
@@ -220,9 +221,9 @@ Game::Game(int gameMode) {
         container->Register<Mountain>(&Mountain::Create);
         //
         container->New<LevelManager>();
-        container->SetCoordinates<Cursor>(5, 2);
-        container->New<Cursor>();
         container->New<InputController>();
+        container->SetCoordinates<Cursor>(7, 7);
+        container->New<Cursor>();
         //
         CreateResources(container, 50);
         //
@@ -235,6 +236,9 @@ Game::Game(int gameMode) {
         auto previous = std::chrono::system_clock::now();
         double MS_PER_UPDATE = 0.03;  // 30 тиков в секунду
         double lag = 0.0;
+        gameCamera->ClearActiveField();
+        gameCamera->UpdateTerrain(container);
+        gameCamera->UpdateBuildings(container);
         while (getLooping()) {
             auto current =  std::chrono::system_clock::now();
             std::chrono::duration<double> elapsed = current - previous;
@@ -243,7 +247,7 @@ Game::Game(int gameMode) {
             while ((lag >= MS_PER_UPDATE)&&(getLooping())) {
                 inputObject->symbolInput();
                 lag -= MS_PER_UPDATE;
-                update(container, scoreBoard, MS_PER_UPDATE);
+                update(container, scoreBoard, MS_PER_UPDATE, gameCamera);
                 if (getGameMode() != 1) {
                     gameCursor->changePosition(container, inputObject->getAxisY(), inputObject->getAxisX());
                     gameCamera->changePosition(container, inputObject->getAxisY(), inputObject->getAxisX());
@@ -298,13 +302,9 @@ Game::Game(int gameMode) {
     }
     void Game::CreateNewBuilding(size_t type, IoCContainer* container) {
         if (type != static_cast<size_t >(-1)) {
-            container->SetCoordinates(HardcodedBuildingY, HardcodedBuildingX, type);
+            auto cursor = container->Get<Cursor>(1);
+            container->SetCoordinates(cursor->GetRow(), cursor->GetCol(), type);
             container->New(type);
-            if (HardcodedBuildingX + 3 < container->Get<LevelManager>(1)->getSizeCol()) {
-                HardcodedBuildingX += 3;
-            } else {
-                SetCanBuild(false);
-            }
         }
     }
 
