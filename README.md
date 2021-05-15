@@ -1,3 +1,7 @@
+Requirements:
+
+cmake
+
 Controls:
 
   Arrows - move cursor, camera should follow him.
